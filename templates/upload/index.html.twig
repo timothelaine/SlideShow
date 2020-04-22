@@ -3,18 +3,36 @@
 {% block title %}Hello UploadController!{% endblock %}
 
 {% block body %}
-    {{ form (form) }}
-{#    {{  }}#}
-{#    <div class="flex w-full h-screen items-center justify-center bg-grey-lighter">#}
-{#        <label class="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">#}
-{#            <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">#}
-{#                <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />#}
-{#            </svg>#}
-{#            <span class="mt-2 text-base leading-normal">Select a file</span>#}
-{#            <input type='file' class="hidden" />#}
-{#        </label>#}
-{#    </div>#}
+<body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
 
+    <div class="flex flex-wrap w-full items-center justify-center">
+        <div class="flex items-center justify-center m-2">
+                {{ form_start(form) }}
+                <div class="flex w-full items-center justify-center">
+                    <label class="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-black hover:text-white">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 488.455 488.455" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m287.396 216.317c23.845 23.845 23.845 62.505 0 86.35s-62.505 23.845-86.35 0-23.845-62.505 0-86.35 62.505-23.845 86.35 0"/><path d="m427.397 91.581h-42.187l-30.544-61.059h-220.906l-30.515 61.089-42.127.075c-33.585.06-60.925 27.429-60.954 61.029l-.164 244.145c0 33.675 27.384 61.074 61.059 61.074h366.338c33.675 0 61.059-27.384 61.059-61.059v-244.236c-.001-33.674-27.385-61.058-61.059-61.058zm-183.177 290.029c-67.335 0-122.118-54.783-122.118-122.118s54.783-122.118 122.118-122.118 122.118 54.783 122.118 122.118-54.783 122.118-122.118 122.118z"/></svg>
+                        <span class="mt-2 text-base leading-normal font-mono">Sélectionner des images</span>
 
+                        {{ form_widget(form.name, {'attr': {'class':'hidden'}} ) }}
+
+                    </label>
+                </div>
+            </div>
+        <div class="flex   items-center justify-center m-2">
+            <div class="flex w-full items-center justify-center bg-grey-lighter">
+                <label class="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-black hover:text-white">
+                    <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                    </svg>
+                    <span class="mt-2 text-base leading-normal font-mono">Envoyer</span>
+
+                    {{ form_widget(form.submit, {'attr': {'class':'hidden'}}) }}
+
+                </label>
+            </div>
+        </div>
+            {{ form_end(form) }}
     </div>
+</body>
+
 {% endblock %}
