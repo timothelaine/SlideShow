@@ -27,7 +27,6 @@ class ComposerStaticInit892d7015f006db7039e1841047016b88
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
-            'Webimpress\\SafeWriter\\' => 22,
         ),
         'V' => 
         array (
@@ -112,7 +111,6 @@ class ComposerStaticInit892d7015f006db7039e1841047016b88
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
-            'ProxyManager\\' => 13,
             'PhpParser\\' => 10,
             'PackageVersions\\' => 16,
         ),
@@ -164,10 +162,6 @@ class ComposerStaticInit892d7015f006db7039e1841047016b88
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
-        ),
-        'Webimpress\\SafeWriter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webimpress/safe-writer/src',
         ),
         'Vich\\UploaderBundle\\' => 
         array (
@@ -457,10 +451,6 @@ class ComposerStaticInit892d7015f006db7039e1841047016b88
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
         ),
-        'ProxyManager\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src/ProxyManager',
-        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
@@ -558,6 +548,16 @@ class ComposerStaticInit892d7015f006db7039e1841047016b88
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'ProxyManager\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'Collator' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/Collator.php',
         'IntlDateFormatter' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/IntlDateFormatter.php',
@@ -573,6 +573,7 @@ class ComposerStaticInit892d7015f006db7039e1841047016b88
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit892d7015f006db7039e1841047016b88::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit892d7015f006db7039e1841047016b88::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit892d7015f006db7039e1841047016b88::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit892d7015f006db7039e1841047016b88::$classMap;
 
         }, null, ClassLoader::class);
