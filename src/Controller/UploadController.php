@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Upload;
 use App\Form\UploadType;
+use App\Repository\UploadRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,7 +15,7 @@ class UploadController extends AbstractController
     /**
      * @Route("/upload", name="upload")
      */
-    public function index(Request $request, EntityManagerInterface $manager)
+    public function index(Request $request, EntityManagerInterface $manager, UploadRepository $repo)
     {
         $uploadForm = new Upload();
         $form = $this->createForm(UploadType::class, $uploadForm);
@@ -41,8 +42,10 @@ class UploadController extends AbstractController
             $manager->flush();
 
         }
+
+        $upload = $repo->findAll();
         return $this->render('upload/index.html.twig', [
-            'form' => $form->createView(),
+            'form' => $form->createView(), 'imagesUploaded' => $upload
         ]);
     }
 

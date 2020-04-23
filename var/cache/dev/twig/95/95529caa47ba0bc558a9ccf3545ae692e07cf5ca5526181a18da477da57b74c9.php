@@ -84,12 +84,8 @@ class __TwigTemplate_ffdfd0d19799ab591538d096cd615dd7ed6bf00b8bdbcccf2ff0e38afd4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "<body class=\"h-screen overflow-hidden flex items-center justify-center\" style=\"background: #edf2f7;\">
-
-";
         // line 9
-        echo "<section>
+        echo "<section class=\"flex w-full  p-2\">
     <div class=\"flex flex-wrap w-full items-center justify-center\">
         <div class=\"flex items-center justify-center m-2\">
 ";
@@ -109,7 +105,7 @@ class __TwigTemplate_ffdfd0d19799ab591538d096cd615dd7ed6bf00b8bdbcccf2ff0e38afd4
 
                     </label>
                 </div>
-            </div>
+         </div>
 ";
         // line 25
         echo "        <div class=\"flex   items-center justify-center m-2\">
@@ -136,11 +132,31 @@ class __TwigTemplate_ffdfd0d19799ab591538d096cd615dd7ed6bf00b8bdbcccf2ff0e38afd4
     </div>
 </section>
 ";
-        // line 44
-        echo "
+        // line 43
+        echo "<section class=\"flex flex-wrap w-full m-2 items-center justify-center\">
 ";
-        // line 46
-        echo "<script src=\"/js/upload.js\"></script>
+        // line 44
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["imagesUploaded"]) || array_key_exists("imagesUploaded", $context) ? $context["imagesUploaded"] : (function () { throw new RuntimeError('Variable "imagesUploaded" does not exist.', 44, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
+            // line 45
+            echo " <div class=\"m-1 border-solid border-2 border-gray-800 shadow-2xl \">
+    <img class=\"h-32 object-cover\" id=\"";
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 46), "html", null, true);
+            echo "\" src=\"/uploads/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "name", [], "any", false, false, false, 46), "html", null, true);
+            echo "\">
+</div>
+    <div id=\"log\"></div>
+";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 50
+        echo "</section>
+<script src=\"/js/upload.js\"></script>
 </body>
 
 ";
@@ -164,7 +180,7 @@ class __TwigTemplate_ffdfd0d19799ab591538d096cd615dd7ed6bf00b8bdbcccf2ff0e38afd4
 
     public function getDebugInfo()
     {
-        return array (  143 => 46,  140 => 44,  133 => 39,  124 => 33,  115 => 25,  106 => 19,  97 => 13,  92 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  158 => 50,  146 => 46,  143 => 45,  139 => 44,  136 => 43,  129 => 39,  120 => 33,  111 => 25,  102 => 19,  93 => 13,  88 => 9,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -174,10 +190,10 @@ class __TwigTemplate_ffdfd0d19799ab591538d096cd615dd7ed6bf00b8bdbcccf2ff0e38afd4
 {% block title %}Mettre en ligne mes images{% endblock %}
 
 {% block body %}
-<body class=\"h-screen overflow-hidden flex items-center justify-center\" style=\"background: #edf2f7;\">
-
+{#<body class=\"h-screen overflow-hidden flex items-center justify-center\" style=\"background: #edf2f7;\">#}
+{#<body>#}
 {#Upload section#}
-<section>
+<section class=\"flex w-full  p-2\">
     <div class=\"flex flex-wrap w-full items-center justify-center\">
         <div class=\"flex items-center justify-center m-2\">
 {#            start of Upload files form#}
@@ -191,7 +207,7 @@ class __TwigTemplate_ffdfd0d19799ab591538d096cd615dd7ed6bf00b8bdbcccf2ff0e38afd4
 
                     </label>
                 </div>
-            </div>
+         </div>
 {#        Button to send files#}
         <div class=\"flex   items-center justify-center m-2\">
             <div class=\"flex w-full items-center justify-center bg-grey-lighter\">
@@ -211,9 +227,14 @@ class __TwigTemplate_ffdfd0d19799ab591538d096cd615dd7ed6bf00b8bdbcccf2ff0e38afd4
     </div>
 </section>
 {#Display of uploaded images section#}
-{#<section class=\"w-full items-center justify-center bg-red-500\">#}
-
-{#</section>#}
+<section class=\"flex flex-wrap w-full m-2 items-center justify-center\">
+{% for image in imagesUploaded %}
+ <div class=\"m-1 border-solid border-2 border-gray-800 shadow-2xl \">
+    <img class=\"h-32 object-cover\" id=\"{{ image.id }}\" src=\"/uploads/{{ image.name }}\">
+</div>
+    <div id=\"log\"></div>
+{% endfor %}
+</section>
 <script src=\"/js/upload.js\"></script>
 </body>
 

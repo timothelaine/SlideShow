@@ -52,20 +52,34 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link href=\"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css\" rel=\"stylesheet\">
-        ";
+";
         // line 7
-        $this->displayBlock('stylesheets', $context, $blocks);
-        // line 8
-        echo "    </head>
-    <body>
+        echo "        <link href=\"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css\" rel=\"stylesheet\">
         ";
-        // line 10
+        // line 8
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 9
+        echo "    </head>
+    <body style=\"background: #edf2f7;\">
+";
+        // line 16
+        echo "
+";
+        // line 53
+        echo "
+            ";
+        // line 54
         $this->displayBlock('body', $context, $blocks);
-        // line 11
-        echo "        ";
+        // line 55
+        echo "        </div>
+
+        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"></script>
+        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>
+        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>
+        ";
+        // line 60
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 12
+        // line 61
         echo "    </body>
 </html>
 ";
@@ -96,7 +110,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     }
 
-    // line 7
+    // line 8
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -114,7 +128,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     }
 
-    // line 10
+    // line 54
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -132,7 +146,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     }
 
-    // line 11
+    // line 60
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -157,7 +171,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     public function getDebugInfo()
     {
-        return array (  136 => 11,  118 => 10,  100 => 7,  81 => 5,  69 => 12,  66 => 11,  64 => 10,  60 => 8,  58 => 7,  53 => 5,  47 => 1,);
+        return array (  150 => 60,  132 => 54,  114 => 8,  95 => 5,  83 => 61,  81 => 60,  74 => 55,  72 => 54,  69 => 53,  66 => 16,  62 => 9,  60 => 8,  57 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -167,11 +181,60 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
     <head>
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
+{#        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">#}
         <link href=\"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css\" rel=\"stylesheet\">
         {% block stylesheets %}{% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body style=\"background: #edf2f7;\">
+{#        <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">#}
+{#            <a class=\"navbar-brand\" href=\"{{ path('home') }}\">Slide</a>#}
+{#            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">#}
+{#                <span class=\"navbar-toggler-icon\"></span>#}
+{#            </button>#}
+
+{#            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">#}
+{#                <ul class=\"navbar-nav mr-auto\">#}
+{#                    <li class=\"nav-item\">#}
+{#                        <a class=\"nav-link\" href=\"{{ path('home') }}\">Accueil</a>#}
+{#                    </li>#}
+{#                    {% if(app.user) %}#}
+{#                        {% if is_granted('ROLE_ADMIN') %}#}
+{#                            <li class=\"nav-item\">#}
+{#                                <a class=\"nav-link\" href=\"{{ path('upload') }}\">Upload</a>#}
+{#                            </li>#}
+{#                        {% endif %}#}
+{#                    {% endif %}#}
+{#                </ul>#}
+{#                <ul class=\"navbar-nav ml-auto\">#}
+{#                    {% if(app.user) %}#}
+{#                        <li class=\"nav-item\">#}
+{#                            <a class=\"nav-link\" href=\"/logout\">Déconnexion</a>#}
+{#                        </li>#}
+{#                    {% else %}#}
+{#                        <li class=\"nav-item\">#}
+{#                            <a class=\"nav-link\" href=\"{{ path('login') }}\">Connexion</a>#}
+{#                        </li>#}
+{#                        <li class=\"nav-item\">#}
+{#                            <a class=\"nav-link\" href=\"{{ path('register') }}\">Inscription</a>#}
+{#                        </li>#}
+{#                    {% endif %}#}
+{#                </ul>#}
+{#            </div>#}
+{#        </nav>#}
+{#        <div class=\"container mt-3\">#}
+{#            {% for message in app.flashes('success') %}#}
+{#                <div class=\"alert alert-success\" role=\"alert\">#}
+{#                    <h4 class=\"alert-heading\">Succès !</h4>#}
+{#                    <p>{{ message }}</p>#}
+{#                </div>#}
+{#            {% endfor %}#}
+
+            {% block body %}{% endblock %}
+        </div>
+
+        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"></script>
+        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>
+        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

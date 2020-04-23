@@ -3,10 +3,10 @@
 {% block title %}Mettre en ligne mes images{% endblock %}
 
 {% block body %}
-<body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
-
+{#<body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">#}
+{#<body>#}
 {#Upload section#}
-<section>
+<section class="flex w-full  p-2">
     <div class="flex flex-wrap w-full items-center justify-center">
         <div class="flex items-center justify-center m-2">
 {#            start of Upload files form#}
@@ -20,7 +20,7 @@
 
                     </label>
                 </div>
-            </div>
+         </div>
 {#        Button to send files#}
         <div class="flex   items-center justify-center m-2">
             <div class="flex w-full items-center justify-center bg-grey-lighter">
@@ -40,9 +40,14 @@
     </div>
 </section>
 {#Display of uploaded images section#}
-{#<section class="w-full items-center justify-center bg-red-500">#}
-
-{#</section>#}
+<section class="flex flex-wrap w-full m-2 items-center justify-center">
+{% for image in imagesUploaded %}
+ <div class="m-1 border-solid border-2 border-gray-800 shadow-2xl ">
+    <img class="h-32 object-cover" id="{{ image.id }}" src="/uploads/{{ image.name }}">
+</div>
+    <div id="log"></div>
+{% endfor %}
+</section>
 <script src="/js/upload.js"></script>
 </body>
 
