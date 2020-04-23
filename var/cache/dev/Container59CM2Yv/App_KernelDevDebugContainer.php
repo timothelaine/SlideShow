@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerPG9uTHb;
+namespace Container59CM2Yv;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -1117,9 +1117,13 @@ class App_KernelDevDebugContainer extends Container
         $a->setQuoteStrategy(new \Doctrine\ORM\Mapping\DefaultQuoteStrategy());
         $a->setEntityListenerResolver(new \Doctrine\Bundle\DoctrineBundle\Mapping\ContainerEntityListenerResolver($this));
         $a->setRepositoryFactory(new \Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory(new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
+            'App\\Repository\\SlideRepository' => ['privates', 'App\\Repository\\SlideRepository', 'getSlideRepositoryService', false],
+            'App\\Repository\\SlideUploadRepository' => ['privates', 'App\\Repository\\SlideUploadRepository', 'getSlideUploadRepositoryService', false],
             'App\\Repository\\UploadRepository' => ['privates', 'App\\Repository\\UploadRepository', 'getUploadRepositoryService', false],
             'App\\Repository\\UserRepository' => ['privates', 'App\\Repository\\UserRepository', 'getUserRepositoryService', false],
         ], [
+            'App\\Repository\\SlideRepository' => '?',
+            'App\\Repository\\SlideUploadRepository' => '?',
             'App\\Repository\\UploadRepository' => '?',
             'App\\Repository\\UserRepository' => '?',
         ])));
@@ -2063,6 +2067,40 @@ class App_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).'/src/Form/UploadType.php';
 
         return $this->privates['App\\Form\\UploadType'] = new \App\Form\UploadType();
+    }
+
+    /**
+     * Gets the private 'App\Repository\SlideRepository' shared autowired service.
+     *
+     * @return \App\Repository\SlideRepository
+     */
+    protected function getSlideRepositoryService()
+    {
+        include_once \dirname(__DIR__, 4).'/vendor/doctrine/persistence/lib/Doctrine/Persistence/ObjectRepository.php';
+        include_once \dirname(__DIR__, 4).'/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Selectable.php';
+        include_once \dirname(__DIR__, 4).'/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php';
+        include_once \dirname(__DIR__, 4).'/vendor/doctrine/doctrine-bundle/Repository/ServiceEntityRepositoryInterface.php';
+        include_once \dirname(__DIR__, 4).'/vendor/doctrine/doctrine-bundle/Repository/ServiceEntityRepository.php';
+        include_once \dirname(__DIR__, 4).'/src/Repository/SlideRepository.php';
+
+        return $this->privates['App\\Repository\\SlideRepository'] = new \App\Repository\SlideRepository(($this->services['doctrine'] ?? $this->getDoctrineService()));
+    }
+
+    /**
+     * Gets the private 'App\Repository\SlideUploadRepository' shared autowired service.
+     *
+     * @return \App\Repository\SlideUploadRepository
+     */
+    protected function getSlideUploadRepositoryService()
+    {
+        include_once \dirname(__DIR__, 4).'/vendor/doctrine/persistence/lib/Doctrine/Persistence/ObjectRepository.php';
+        include_once \dirname(__DIR__, 4).'/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Selectable.php';
+        include_once \dirname(__DIR__, 4).'/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php';
+        include_once \dirname(__DIR__, 4).'/vendor/doctrine/doctrine-bundle/Repository/ServiceEntityRepositoryInterface.php';
+        include_once \dirname(__DIR__, 4).'/vendor/doctrine/doctrine-bundle/Repository/ServiceEntityRepository.php';
+        include_once \dirname(__DIR__, 4).'/src/Repository/SlideUploadRepository.php';
+
+        return $this->privates['App\\Repository\\SlideUploadRepository'] = new \App\Repository\SlideUploadRepository(($this->services['doctrine'] ?? $this->getDoctrineService()));
     }
 
     /**
