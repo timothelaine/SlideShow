@@ -347,6 +347,13 @@
         <argument type="service" id=".service_locator.pNNo5z3.App\Controller\SecurityController"/>
       </call>
     </service>
+    <service id="App\Controller\SlideController" class="App\Controller\SlideController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\SlideController"/>
+      </call>
+    </service>
     <service id="App\Controller\UploadController" class="App\Controller\UploadController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -5023,6 +5030,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SlideController" class="App\Controller\SlideController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SlideController" class="App\Controller\SlideController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SlideController" class="App\Controller\SlideController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UploadController" class="App\Controller\UploadController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UploadController" class="App\Controller\UploadController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UploadController" class="App\Controller\UploadController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5572,6 +5582,12 @@
     <service id=".service_locator.pNNo5z3.App\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\SecurityController"/>
       <argument>App\Controller\SecurityController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.pNNo5z3" method="withContext"/>
+    </service>
+    <service id=".service_locator.pNNo5z3.App\Controller\SlideController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\SlideController"/>
+      <argument>App\Controller\SlideController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.pNNo5z3" method="withContext"/>
     </service>

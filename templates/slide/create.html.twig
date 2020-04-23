@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un slide{% endblock %}
+
+{% block body %}
+    {% for image in images %}
+        <img src="{{ asset('/uploads/'~image.name) }}" id="{{ image.id }}" onclick="slideCreate()" />
+    {% endfor %}
+
+    <form action="{{ path('slide_store') }}" method="post">
+        <div class="form-group">
+            <label for="name">Nom du slide</label>
+            <input id="name" name="name" class="form-control">
+        </div>
+
+        <div id="list-image">
+
+        </div>
+
+        <button type="submit">test</button>
+    </form>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        function slideCreate() {
+            var idImage = event.srcElement.id;
+
+            var listImage = document.getElementById('list-image');
+
+            let hr = document.createElement("hr");
+            listImage.appendChild(hr);
+
+            let inputHiden = document.createElement("input");
+            inputHiden.setAttribute("type", "hidden");
+            inputHiden.setAttribute("name", "imageid[]");
+            inputHiden.value = idImage;
+            listImage.appendChild(inputHiden);
+
+            /////////////////////////////////////////////
+
+            let formGroup1 = document.createElement("div");
+            formGroup1.classList.add("form-group");
+            listImage.appendChild(formGroup1);
+
+            let labelX1 = document.createElement("label");
+            let labelTextX1 = document.createTextNode("Coordonnées X1");
+            labelX1.appendChild(labelTextX1);
+            formGroup1.appendChild(labelX1);
+
+            let inputX1 = document.createElement("input");
+            inputX1.setAttribute("name", "x1[]");
+            formGroup1.appendChild(inputX1);
+
+            let labelY1 = document.createElement("label");
+            let labelTextY1 = document.createTextNode("Coordonnées Y1");
+            labelY1.appendChild(labelTextY1);
+            formGroup1.appendChild(labelY1);
+
+            let inputY1 = document.createElement("input");
+            inputY1.setAttribute("name", "y1[]");
+            formGroup1.appendChild(inputY1);
+
+            let labelZ1 = document.createElement("label");
+            let labelTextZ1 = document.createTextNode("Coordonnées Z1");
+            labelZ1.appendChild(labelTextZ1);
+            formGroup1.appendChild(labelZ1);
+
+            let inputZ1 = document.createElement("input");
+            inputZ1.setAttribute("name", "z1[]");
+            formGroup1.appendChild(inputZ1);
+
+            /////////////////////////////////////////////
+
+            let formGroup2 = document.createElement("div");
+            formGroup2.classList.add("form-group");
+            listImage.appendChild(formGroup2);
+
+            let labelX2 = document.createElement("label");
+            let labelTextX2 = document.createTextNode("Coordonnées X2");
+            labelX2.appendChild(labelTextX2);
+            formGroup2.appendChild(labelX2);
+
+            let inputX2 = document.createElement("input");
+            inputX2.setAttribute("name", "x2[]");
+            formGroup2.appendChild(inputX2);
+
+            let labelY2 = document.createElement("label");
+            let labelTextY2 = document.createTextNode("Coordonnées Y2");
+            labelY2.appendChild(labelTextY2);
+            formGroup2.appendChild(labelY2);
+
+            let inputY2 = document.createElement("input");
+            inputY2.setAttribute("name", "y2[]");
+            formGroup2.appendChild(inputY2);
+
+            let labelZ2 = document.createElement("label");
+            let labelTextZ2 = document.createTextNode("Coordonnées Z2");
+            labelZ2.appendChild(labelTextZ2);
+            formGroup2.appendChild(labelZ2);
+
+            let inputZ2 = document.createElement("input");
+            inputZ2.setAttribute("name", "z2[]");
+            formGroup2.appendChild(inputZ2);
+
+            document.getElementById(idImage).onclick = null;
+        }
+    </script>
+{% endblock %}

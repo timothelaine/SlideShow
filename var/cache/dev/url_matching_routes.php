@@ -16,6 +16,8 @@ return [
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\SecurityController::register'], null, null, null, false, false, null]],
+        '/slide/create' => [[['_route' => 'slide_create', '_controller' => 'App\\Controller\\SlideController::create'], null, null, null, false, false, null]],
+        '/slide/store' => [[['_route' => 'slide_store', '_controller' => 'App\\Controller\\SlideController::store'], null, null, null, false, false, null]],
         '/upload' => [[['_route' => 'upload', '_controller' => 'App\\Controller\\UploadController::index'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout'], null, null, null, false, false, null]],
     ],

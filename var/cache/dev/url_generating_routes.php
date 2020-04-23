@@ -18,6 +18,8 @@ return [
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'register' => [[], ['_controller' => 'App\\Controller\\SecurityController::register'], [], [['text', '/register']], [], []],
+    'slide_create' => [[], ['_controller' => 'App\\Controller\\SlideController::create'], [], [['text', '/slide/create']], [], []],
+    'slide_store' => [[], ['_controller' => 'App\\Controller\\SlideController::store'], [], [['text', '/slide/store']], [], []],
     'upload' => [[], ['_controller' => 'App\\Controller\\UploadController::index'], [], [['text', '/upload']], [], []],
     'logout' => [[], [], [], [['text', '/logout']], [], []],
 ];
