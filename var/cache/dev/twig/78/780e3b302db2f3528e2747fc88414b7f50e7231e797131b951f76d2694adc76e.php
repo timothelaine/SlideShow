@@ -65,7 +65,7 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello UploadController!";
+        echo "Mettre en ligne mes images";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -84,15 +84,81 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "    ";
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 6, $this->source); })()), 'form');
-        echo "
+        // line 9
+        echo "<section class=\"flex w-full  p-2\">
+    <div class=\"flex flex-wrap w-full items-center justify-center\">
+        <div class=\"flex items-center justify-center m-2\">
 ";
-        // line 17
+        // line 13
+        echo "                ";
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), 'form_start');
+        echo "
+                <div class=\"flex w-full items-center justify-center\">
+                    <label class=\"w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-black hover:text-white\">
+                        <svg class=\"w-8 h-8\" fill=\"currentColor\" viewBox=\"0 0 488.455 488.455\" width=\"512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m287.396 216.317c23.845 23.845 23.845 62.505 0 86.35s-62.505 23.845-86.35 0-23.845-62.505 0-86.35 62.505-23.845 86.35 0\"/><path d=\"m427.397 91.581h-42.187l-30.544-61.059h-220.906l-30.515 61.089-42.127.075c-33.585.06-60.925 27.429-60.954 61.029l-.164 244.145c0 33.675 27.384 61.074 61.059 61.074h366.338c33.675 0 61.059-27.384 61.059-61.059v-244.236c-.001-33.674-27.385-61.058-61.059-61.058zm-183.177 290.029c-67.335 0-122.118-54.783-122.118-122.118s54.783-122.118 122.118-122.118 122.118 54.783 122.118 122.118-54.783 122.118-122.118 122.118z\"/></svg>
+                        <span class=\"mt-2 text-base leading-normal font-mono\">Sélectionner des images</span>
+";
+        // line 19
+        echo "                        ";
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), "name", [], "any", false, false, false, 19), 'widget', ["attr" => ["class" => "hidden"]]);
         echo "
 
+                    </label>
+                </div>
+         </div>
+";
+        // line 25
+        echo "        <div class=\"flex   items-center justify-center m-2\">
+            <div class=\"flex w-full items-center justify-center bg-grey-lighter\">
+                <label class=\"w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-black hover:text-white\">
+                    <svg class=\"w-8 h-8\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\">
+                        <path d=\"M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z\" />
+                    </svg>
+                    <span class=\"mt-2 text-base leading-normal font-mono\">Envoyer</span>
+";
+        // line 33
+        echo "                    ";
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), "submit", [], "any", false, false, false, 33), 'widget', ["attr" => ["class" => "hidden"]]);
+        echo "
+
+                </label>
+            </div>
+        </div>
+";
+        // line 39
+        echo "            ";
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 39, $this->source); })()), 'form_end');
+        echo "
     </div>
+</section>
+";
+        // line 43
+        echo "<section class=\"flex flex-wrap w-full m-2 items-center justify-center\">
+";
+        // line 44
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["imagesUploaded"]) || array_key_exists("imagesUploaded", $context) ? $context["imagesUploaded"] : (function () { throw new RuntimeError('Variable "imagesUploaded" does not exist.', 44, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
+            // line 45
+            echo " <div class=\"m-1 border-solid border-2 border-gray-800 shadow-2xl \">
+    <img class=\"h-32 object-cover\" id=\"";
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 46), "html", null, true);
+            echo "\" src=\"/uploads/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "name", [], "any", false, false, false, 46), "html", null, true);
+            echo "\">
+</div>
+    <div id=\"log\"></div>
+";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 50
+        echo "</section>
+<script src=\"/js/upload.js\"></script>
+</body>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -114,30 +180,64 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
 
     public function getDebugInfo()
     {
-        return array (  93 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  158 => 50,  146 => 46,  143 => 45,  139 => 44,  136 => 43,  129 => 39,  120 => 33,  111 => 25,  102 => 19,  93 => 13,  88 => 9,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello UploadController!{% endblock %}
+{% block title %}Mettre en ligne mes images{% endblock %}
 
 {% block body %}
-    {{ form (form) }}
-{#    {{  }}#}
-{#    <div class=\"flex w-full h-screen items-center justify-center bg-grey-lighter\">#}
-{#        <label class=\"w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white\">#}
-{#            <svg class=\"w-8 h-8\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\">#}
-{#                <path d=\"M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z\" />#}
-{#            </svg>#}
-{#            <span class=\"mt-2 text-base leading-normal\">Select a file</span>#}
-{#            <input type='file' class=\"hidden\" />#}
-{#        </label>#}
-{#    </div>#}
+{#<body class=\"h-screen overflow-hidden flex items-center justify-center\" style=\"background: #edf2f7;\">#}
+{#<body>#}
+{#Upload section#}
+<section class=\"flex w-full  p-2\">
+    <div class=\"flex flex-wrap w-full items-center justify-center\">
+        <div class=\"flex items-center justify-center m-2\">
+{#            start of Upload files form#}
+                {{ form_start(form) }}
+                <div class=\"flex w-full items-center justify-center\">
+                    <label class=\"w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-black hover:text-white\">
+                        <svg class=\"w-8 h-8\" fill=\"currentColor\" viewBox=\"0 0 488.455 488.455\" width=\"512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m287.396 216.317c23.845 23.845 23.845 62.505 0 86.35s-62.505 23.845-86.35 0-23.845-62.505 0-86.35 62.505-23.845 86.35 0\"/><path d=\"m427.397 91.581h-42.187l-30.544-61.059h-220.906l-30.515 61.089-42.127.075c-33.585.06-60.925 27.429-60.954 61.029l-.164 244.145c0 33.675 27.384 61.074 61.059 61.074h366.338c33.675 0 61.059-27.384 61.059-61.059v-244.236c-.001-33.674-27.385-61.058-61.059-61.058zm-183.177 290.029c-67.335 0-122.118-54.783-122.118-122.118s54.783-122.118 122.118-122.118 122.118 54.783 122.118 122.118-54.783 122.118-122.118 122.118z\"/></svg>
+                        <span class=\"mt-2 text-base leading-normal font-mono\">Sélectionner des images</span>
+{#                        button to upload files#}
+                        {{ form_widget(form.name, {'attr': {'class':'hidden'}} ) }}
 
+                    </label>
+                </div>
+         </div>
+{#        Button to send files#}
+        <div class=\"flex   items-center justify-center m-2\">
+            <div class=\"flex w-full items-center justify-center bg-grey-lighter\">
+                <label class=\"w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-black hover:text-white\">
+                    <svg class=\"w-8 h-8\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\">
+                        <path d=\"M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z\" />
+                    </svg>
+                    <span class=\"mt-2 text-base leading-normal font-mono\">Envoyer</span>
+{#                    Button submit to send the files#}
+                    {{ form_widget(form.submit, {'attr': {'class':'hidden'}}) }}
 
+                </label>
+            </div>
+        </div>
+{#        end of Upload form #}
+            {{ form_end(form) }}
     </div>
+</section>
+{#Display of uploaded images section#}
+<section class=\"flex flex-wrap w-full m-2 items-center justify-center\">
+{% for image in imagesUploaded %}
+ <div class=\"m-1 border-solid border-2 border-gray-800 shadow-2xl \">
+    <img class=\"h-32 object-cover\" id=\"{{ image.id }}\" src=\"/uploads/{{ image.name }}\">
+</div>
+    <div id=\"log\"></div>
+{% endfor %}
+</section>
+<script src=\"/js/upload.js\"></script>
+</body>
+
 {% endblock %}
 ", "upload/index.html.twig", "/home/pierre/Documents/SlideShow/templates/upload/index.html.twig");
     }
