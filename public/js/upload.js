@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+    $("#deleteMessage").hide();
+
     $('#imagesDisplay').bind('click', function(event) {
         if (event.target.parentNode.parentNode.parentNode.id == 'imagesDisplay') {
             let image = $(event.target.parentNode.parentNode);
@@ -26,20 +28,42 @@ var changeStyle = (p_image) => {
 
     $("#btnDelete").click(function() {
 
-         // Get all image checked
         checkedBoxes = document.querySelectorAll('input:checked');
-        [].forEach.call(checkedBoxes, function (image) {
-            data = { "name":image.parentNode.parentNode.id };
-            console.log(data);
-            $.post("/deleteimage", data, function (message) {
 
-                console.log(message);
-                image = image.parentNode.parentNode;
-                image.remove();
+        [].forEach.call(checkedBoxes, function (image) {
+            id =  {"id": image.parentNode.parentNode.id};
+
+            $.post("/deleteimage", id, function (responce) {
+                [].forEach.call(checkedBoxes, function (image) {
+                    image = image.parentNode.parentNode;
+                    image.remove();
+
+                    $("#title").text(responce.message.title);
+                    $("#content").text( responce.message.content);
+                    $("#deleteMessage").show('slow');
+                    setTimeout( () => {  $("#deleteMessage").hide('slow') }, 5000);
+
+                    if (responce.message.type == 'ko'){
+                        $("#svgSuccess").hide();
+                    }else{
+                        $("#svgError").hide();
+                    }
+
+
+                });
             });
         });
 
     });
+
+
+    function hideMessage() {
+        $("#message").hide('slow');
+    }
+    setTimeout(hideMessage, 5000);
+
+
+
 
 
 });

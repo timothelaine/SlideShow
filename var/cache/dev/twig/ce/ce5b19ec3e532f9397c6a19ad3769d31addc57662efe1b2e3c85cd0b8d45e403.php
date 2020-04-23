@@ -109,7 +109,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
                     <input type=\"checkbox\" name=\"checkImage\" id=\"check";
             // line 16
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 16), "html", null, true);
-            echo "\" class=\"opacity-0\">
+            echo "\" class=\"opacity-0\" autocomplete=\"off\">
                 </div>
                 <img class=\"h-32 object-cover\"  src=\"/uploads/";
             // line 18
@@ -246,7 +246,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
                         <polygon style=\"fill:#FFFFFF;\" points=\"235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
 391.88,166.392 \"/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
           </svg>
-                    <input type=\"checkbox\" name=\"checkImage\" id=\"check{{ image.id }}\" class=\"opacity-0\">
+                    <input type=\"checkbox\" name=\"checkImage\" id=\"check{{ image.id }}\" class=\"opacity-0\" autocomplete=\"off\">
                 </div>
                 <img class=\"h-32 object-cover\"  src=\"/uploads/{{ image.name }}\">
             </div>
