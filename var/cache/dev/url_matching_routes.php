@@ -16,7 +16,10 @@ return [
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\SecurityController::register'], null, null, null, false, false, null]],
+        '/creation' => [[['_route' => 'creation', '_controller' => 'App\\Controller\\SlideCreationController::index'], null, null, null, false, false, null]],
+        '/add' => [[['_route' => 'add', '_controller' => 'App\\Controller\\SlideCreationController::addImage'], null, null, null, false, false, null]],
         '/upload' => [[['_route' => 'upload', '_controller' => 'App\\Controller\\UploadController::index'], null, null, null, false, false, null]],
+        '/deleteimage' => [[['_route' => 'deleteimage', '_controller' => 'App\\Controller\\UploadController::deleteImage'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout'], null, null, null, false, false, null]],
     ],
     [ // $regexpList

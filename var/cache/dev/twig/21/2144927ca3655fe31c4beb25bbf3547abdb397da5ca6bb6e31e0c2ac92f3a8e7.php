@@ -73,8 +73,9 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
         // line 55
         echo "        </div>
 
-        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"></script>
-        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>
+";
+        // line 58
+        echo "        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>
         ";
         // line 60
@@ -171,7 +172,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     public function getDebugInfo()
     {
-        return array (  150 => 60,  132 => 54,  114 => 8,  95 => 5,  83 => 61,  81 => 60,  74 => 55,  72 => 54,  69 => 53,  66 => 16,  62 => 9,  60 => 8,  57 => 7,  53 => 5,  47 => 1,);
+        return array (  151 => 60,  133 => 54,  115 => 8,  96 => 5,  84 => 61,  82 => 60,  78 => 58,  74 => 55,  72 => 54,  69 => 53,  66 => 16,  62 => 9,  60 => 8,  57 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -232,7 +233,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
             {% block body %}{% endblock %}
         </div>
 
-        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"></script>
+{#        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"></script>#}
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>
         {% block javascripts %}{% endblock %}

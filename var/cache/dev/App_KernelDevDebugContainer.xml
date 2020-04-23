@@ -347,6 +347,13 @@
         <argument type="service" id=".service_locator.pNNo5z3.App\Controller\SecurityController"/>
       </call>
     </service>
+    <service id="App\Controller\SlideCreationController" class="App\Controller\SlideCreationController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\SlideCreationController"/>
+      </call>
+    </service>
     <service id="App\Controller\UploadController" class="App\Controller\UploadController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -5015,6 +5022,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SlideCreationController" class="App\Controller\SlideCreationController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SlideCreationController" class="App\Controller\SlideCreationController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SlideCreationController" class="App\Controller\SlideCreationController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UploadController" class="App\Controller\UploadController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UploadController" class="App\Controller\UploadController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UploadController" class="App\Controller\UploadController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5246,6 +5256,12 @@
         <argument key="passwordEncoder" type="service" id="security.user_password_encoder.generic"/>
       </argument>
     </service>
+    <service id=".service_locator.OrNxJB7" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service" id="App\Repository\UploadRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.7M9lt7P" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5253,14 +5269,20 @@
         <argument key="repo" type="service" id="App\Repository\UploadRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.fVPr35O" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.QqXr7Qe" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.q6jLs_L"/>
         <argument key="App\Controller\SecurityController::register" type="service" id=".service_locator.8Z_jHRB"/>
+        <argument key="App\Controller\SlideCreationController::addImage" type="service" id=".service_locator.OrNxJB7"/>
+        <argument key="App\Controller\SlideCreationController::index" type="service" id=".service_locator.OrNxJB7"/>
+        <argument key="App\Controller\UploadController::deleteImage" type="service" id=".service_locator.7M9lt7P"/>
         <argument key="App\Controller\UploadController::index" type="service" id=".service_locator.7M9lt7P"/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.q6jLs_L"/>
         <argument key="App\Controller\SecurityController:register" type="service" id=".service_locator.8Z_jHRB"/>
+        <argument key="App\Controller\SlideCreationController:addImage" type="service" id=".service_locator.OrNxJB7"/>
+        <argument key="App\Controller\SlideCreationController:index" type="service" id=".service_locator.OrNxJB7"/>
+        <argument key="App\Controller\UploadController:deleteImage" type="service" id=".service_locator.7M9lt7P"/>
         <argument key="App\Controller\UploadController:index" type="service" id=".service_locator.7M9lt7P"/>
       </argument>
     </service>
@@ -5561,6 +5583,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.pNNo5z3" method="withContext"/>
     </service>
+    <service id=".service_locator.pNNo5z3.App\Controller\SlideCreationController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\SlideCreationController"/>
+      <argument>App\Controller\SlideCreationController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.pNNo5z3" method="withContext"/>
+    </service>
     <service id=".service_locator.pNNo5z3.App\Controller\UploadController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\UploadController"/>
       <argument>App\Controller\UploadController</argument>
@@ -5706,12 +5734,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.fVPr35O"/>
+      <argument type="service" id=".service_locator.QqXr7Qe"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.fVPr35O"/>
+      <argument type="service" id=".service_locator.QqXr7Qe"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6112,7 +6140,7 @@
     <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.fVPr35O"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.QqXr7Qe"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

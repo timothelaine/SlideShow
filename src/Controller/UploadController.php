@@ -49,5 +49,28 @@ class UploadController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/deleteimage", name="deleteimage")
+     */
+    public function deleteImage(Request $request, UploadRepository $repo, EntityManagerInterface $manager){
+
+        $files =  $request->request->get('name');
+        $image = $repo->findAll($files);
+        $manager = $this->getDoctrine()->getEntityManager;
+        $manager->remove($image);
+        $manager->flush();
+
+        if (isset($files)) // Check if  name if empty
+        {
+
+            return $this->json(['message' => $files]);
+
+        }else{
+
+            return $this->json(['message' => $files]);
+        }
+
+    }
+
 
 }

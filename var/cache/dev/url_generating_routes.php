@@ -18,6 +18,9 @@ return [
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'register' => [[], ['_controller' => 'App\\Controller\\SecurityController::register'], [], [['text', '/register']], [], []],
+    'creation' => [[], ['_controller' => 'App\\Controller\\SlideCreationController::index'], [], [['text', '/creation']], [], []],
+    'add' => [[], ['_controller' => 'App\\Controller\\SlideCreationController::addImage'], [], [['text', '/add']], [], []],
     'upload' => [[], ['_controller' => 'App\\Controller\\UploadController::index'], [], [['text', '/upload']], [], []],
+    'deleteimage' => [[], ['_controller' => 'App\\Controller\\UploadController::deleteImage'], [], [['text', '/deleteimage']], [], []],
     'logout' => [[], [], [], [['text', '/logout']], [], []],
 ];

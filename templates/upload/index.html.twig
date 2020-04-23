@@ -3,8 +3,6 @@
 {% block title %}Mettre en ligne mes images{% endblock %}
 
 {% block body %}
-{#<body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">#}
-{#<body>#}
 {#Upload section#}
 <section class="flex w-full  p-2">
     <div class="flex flex-wrap w-full items-center justify-center">
@@ -37,18 +35,42 @@
         </div>
 {#        end of Upload form #}
             {{ form_end(form) }}
+        {#        Button to delete files#}
+        <div class="flex   items-center justify-center m-2" id="btnDelete">
+            <div class="flex w-full items-center justify-center bg-grey-lighter">
+                <label class="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-black hover:text-white">
+                    <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                    </svg>
+                    <span class="mt-2 text-base leading-normal font-mono">Supprimmer</span>
+                </label>
+            </div>
+        </div>
     </div>
 </section>
-{#Display of uploaded images section#}
-<section class="flex flex-wrap w-full m-2 items-center justify-center">
-{% for image in imagesUploaded %}
- <div class="m-1 border-solid border-2 border-gray-800 shadow-2xl ">
-    <img class="h-32 object-cover" id="{{ image.id }}" src="/uploads/{{ image.name }}">
-</div>
     <div id="log"></div>
+{#Display of uploaded images section#}
+<section class="flex flex-wrap w-full m-2 items-center justify-center" id="imagesDisplay">
+{% for image in imagesUploaded %}
+ <div class="relative m-2 border-solid border-2 border-gray-800 shadow-2xl rounded" id="{{ image.id }}">
+     <div class="absolute top-0 right-0">
+          <svg id="selected{{ image.id }}" version="1.1"  xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 hidden m-2" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <ellipse style="fill:firebrick;" cx="256" cy="256" rx="256" ry="255.832"/>
+             <polygon style="fill:#FFFFFF;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+391.88,166.392 "/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+          </svg>
+         <input type="checkbox" name="checkImage" id="check{{ image.id }}" class="opacity-0" autocomplete="off">
+     </div>
+    <img class="h-32 object-cover"  src="/uploads/{{ image.name }}">
+</div>
 {% endfor %}
 </section>
+    <script
+            src="https://code.jquery.com/jquery-3.5.0.js"
+            integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+            crossorigin="anonymous"></script>
 <script src="/js/upload.js"></script>
-</body>
+
+
 
 {% endblock %}
