@@ -157,21 +157,21 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
             </div>
 
             <div class=\"m-3\">
-                <button id=\"kenburnEffect\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-yellow-500 hover:border-yellow-600 hover:bg-yellow-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
+                <button id=\"kenburnEffect\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-gray-800  hover:gray-800 hover:bg-gray-800 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
                     <span class=\"mr-2\">Effet ken burn</span>
                     <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
                         <path fill=\"currentcolor\" d=\"M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6zm10 14.5V20H8v-3.5l4-4 4 4zm-4-5l-4-4V4h8v3.5l-4 4z\"></path>
                     </svg>
                 </button>
             </div>
-            <div class=\"flex flex-wrap\">
+            <div class=\"flex flex-wrap \">
                 <div class=\"flex w-8/12\">
                     <input type=\"text\" value=\"7\" id=\"inputNbr\"
                            class=\"bg-white text-sm text-gray-900 text-center focus:outline-none border border-gray-800 focus:border-gray-600 rounded-l-md w-full\">
                 </div>
                 <div class=\"flex flex-col w-4/12\">
                     <button id=\"btnUp\"
-                            class=\"text-white text-center text-md font-semibold rounded-tr-md px-1 bg-gray-800 focus:bg-gray-600 focus:outline-none border border-gray-800 focus:border-gray-600\">
+                            class=\"text-white text-center text-md font-semibold rounded-tr-md  bg-gray-800 focus:bg-gray-600 focus:outline-none border border-gray-800 focus:border-gray-600\">
                         +
                     </button>
                     <button id=\"btnDown\"
@@ -294,21 +294,21 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
             </div>
 
             <div class=\"m-3\">
-                <button id=\"kenburnEffect\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-yellow-500 hover:border-yellow-600 hover:bg-yellow-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
+                <button id=\"kenburnEffect\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-gray-800  hover:gray-800 hover:bg-gray-800 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
                     <span class=\"mr-2\">Effet ken burn</span>
                     <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
                         <path fill=\"currentcolor\" d=\"M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6zm10 14.5V20H8v-3.5l4-4 4 4zm-4-5l-4-4V4h8v3.5l-4 4z\"></path>
                     </svg>
                 </button>
             </div>
-            <div class=\"flex flex-wrap\">
+            <div class=\"flex flex-wrap \">
                 <div class=\"flex w-8/12\">
                     <input type=\"text\" value=\"7\" id=\"inputNbr\"
                            class=\"bg-white text-sm text-gray-900 text-center focus:outline-none border border-gray-800 focus:border-gray-600 rounded-l-md w-full\">
                 </div>
                 <div class=\"flex flex-col w-4/12\">
                     <button id=\"btnUp\"
-                            class=\"text-white text-center text-md font-semibold rounded-tr-md px-1 bg-gray-800 focus:bg-gray-600 focus:outline-none border border-gray-800 focus:border-gray-600\">
+                            class=\"text-white text-center text-md font-semibold rounded-tr-md  bg-gray-800 focus:bg-gray-600 focus:outline-none border border-gray-800 focus:border-gray-600\">
                         +
                     </button>
                     <button id=\"btnDown\"

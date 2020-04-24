@@ -1,19 +1,18 @@
 :root {
-    --x: 40;
-    --y: 40;
-    --z: 0;
-    --timer: 4;
+    --x: 40px;
+    --y: 40px;
+    --z: 0px;
+    --timer: 4s;
 }
 
-
-#imageContainer {
+.imageContainer {
     background-color: #333;
     width: 450px;
     height: 300px;
     overflow: hidden;
 }
 
-#imageContainer img {
+.imageContainer img {
     animation: kenburn var(--timer) infinite;
 }
 
