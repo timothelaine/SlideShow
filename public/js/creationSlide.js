@@ -7,7 +7,7 @@ $( document ).ready(function() {
     $("#slideName").hide(); // Hide the input to insert slideName
     $("#contentSlide").hide(); // Hide the creation slide  fonctionnality as long as a slide is not created
     $("#timer").hide(); // Hide of ken burn effect time input
-    $("#messageSlide").hide();
+    $("#messageSlide").hide(); // Hide of success message
 
 
 
@@ -44,7 +44,7 @@ $( document ).ready(function() {
            svg = parent.children[0].children[0];
            input = parent.children[0].children[1];
            input.checked = false;
-           svg.style.display = "none";
+           svg.style.display = "none";Po
 
         });
     }
@@ -105,11 +105,12 @@ $( document ).ready(function() {
                 div.classList.remove("imageContainer"); // Remove the last ken burn effect
                 div.innerHTML = "";
                 div.appendChild(img);
+
             });
         });
     });
 
-    /****************   Save slide function   ****************************/
+    /****************   Save slide function   **************************/
     /**           Allow to select image to add on slide                  */
     /*********************************************************************/
     $("#confirm").click(function() {
@@ -137,45 +138,48 @@ $( document ).ready(function() {
         listSlide.push(data);
     });
 
+    // hide success message
+    function hideMessage() {
+        $("#messageSlide").hide('slow');
+    }
 
     // Save the slide data in DB
     $("#save").click(function() {
-
-        $.post("/slide/store", { listSlide }, function (message) {
+        $.post("/slide/store", { listSlide, nameOfSlide }, function (message) {
             $("#messageSlide").show(slow);
+            setTimeout(hideMessage, 5000);
         });
     });
 
 
 
-
-    // Increment the timer of Ken burn effect and the image timer value when it's clicked
+    // Increment the timer of 1
     $(".btnUp").click(function(e) {
 
-        if ( e.target.id == "timerUp"){ // For the kenBurn Effect timer
+        if ( e.target.id == "timerUp"){ // For a Ken burn timer
 
             value = parseInt( $("#inputTimer").val()) + 1;
             $("#inputTimer").val(value);
 
-        } else{  // For the image timer
-            $("#inputNbr").val(parseInt( $("#inputNbr").val()) + 1);
+        } else{
+            $("#inputNbr").val(parseInt( $("#inputNbr").val()) + 1); // For a image timer
         }
     });
 
-    // Increment the timer of Ken burn effect and the image timer value when it's clicked
+    // Decrement the timer of 1
     $(".btnDown").click(function(e) {
 
-        if ( e.target.id == "timerDown"){  // For the kenBurn Effect timer
-
+        if ( e.target.id == "timerDown"){  // For a Ken burn timer
             value = parseInt( $("#inputTimer").val()) - 1;
             $("#inputTimer").val(value);
 
-        } else{ // For the image timer
-            $("#inputNbr").val(parseInt( $("#inputNbr").val()) - 1);
+        } else{
+            $("#inputNbr").val(parseInt( $("#inputNbr").val()) - 1);  // For a image timer
         }
     });
 
-    // Show timer input when user click on KenBurn effect button
+
+    // Display the ken burn timer
     $("#kenburnEffect").click(function() {
 
         $("#timer").show();
@@ -191,18 +195,19 @@ $( document ).ready(function() {
 
     });
 
-    // show the input name slide
+    // Display the input slide name
     $("#slideCreate").click(function() {
 
         $("#slideName").show('slow');
 
     });
 
-
+    // Display the content slide creation
     $("#slideNameSend").click(function() {
+        nameOfSlide = $("#nameOfSlide").val();
+        $("#slideName").hide();
+        $("#contentSlide").show('slow');
 
-          $("#slideName").hide();
-          $("#contentSlide").show('slow');
     });
 
 });

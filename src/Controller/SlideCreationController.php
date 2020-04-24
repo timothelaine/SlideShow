@@ -18,8 +18,9 @@ class SlideCreationController extends AbstractController
      */
     public function index(UploadRepository $repo)
     {
+        // Récupération de toutes les images
         $upload = $repo->findAll();
-//        diplay all images uploaded
+
         return $this->render('slide_creation/index.html.twig', [
             'controller_name' => 'SlideCreationController', 'imagesUploaded' => $upload
         ]);
@@ -30,23 +31,28 @@ class SlideCreationController extends AbstractController
      */
     public function addImage(Request $request, UploadRepository $repo)
     {
-//        add image to slide creation section
         $image =  $request->request->get('id');
-        $imageSelected = $repo->find($image);
-        return $this->json(['imageName' => $imageSelected->getName()]);
 
+        // Récupération de l'image séléctionnée
+        $imageSelected = $repo->find($image);
+
+        return $this->json(['imageName' => $imageSelected->getName()]);
     }
 
     /**
      * @Route("/slide/store", name="slide_store")
      */
     public function store(Request $request) {
-//        Save the slides into DB
         $entityManager = $this->getDoctrine()->getManager();
+        
 
+        // Récupération du nom du slide
         $nameSlide = $request->get('nameOfSlide');
+
+        // Récupération des informations des images du slide
         $content = $request->get('listSlide');
 
+        // Création du slide
         $slide = new Slide();
         $slide->setName($nameSlide);
         $slide->setCreatedAt(new \DateTime());
@@ -54,14 +60,13 @@ class SlideCreationController extends AbstractController
         $entityManager->persist($slide);
         $entityManager->flush();
 
-
-//        set attribut for each slide's image
         foreach ($content as $image) {
             $entityRepository = $this->getDoctrine()->getRepository(Upload::class);
 
+            // Récupération de l'image courante
             $imageCurrent = $entityRepository->find($image['id']);
 
-
+            // Association de l'image avec le slide
             $slideUpload = new SlideUpload();
             $slideUpload->setSlide($slide);
             $slideUpload->setUpload($imageCurrent);
@@ -88,10 +93,20 @@ class SlideCreationController extends AbstractController
     public function list() {
         $entityRepository = $this->getDoctrine()->getRepository(Slide::class);
 
+        // Récupération de tous les slides
         $slides = $entityRepository->findAll();
 
         return $this->render('slide_creation/list.html.twig', [
             'slides' => $slides
         ]);
     }
+
+    /*public function show($id) {
+        $entityRepository = $this->getDoctrine()->getRepository(Slide::class);
+
+        // Récupération du slide séléctionné
+        $slide = $entityRepository->find($id);
+
+        // Récupération des
+    }*/
 }
