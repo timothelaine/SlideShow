@@ -1,8 +1,8 @@
 $( document ).ready(function() {
+    var listSlide = [];
 
     var slideNumber = 0;
     $("#timer").hide();
-    var listSlide = [];
 
     $('#imagesDisplay').bind('click', function(event) {
         if (event.target.parentNode.parentNode.parentNode.id == 'imagesDisplay') {
@@ -101,10 +101,19 @@ $( document ).ready(function() {
 
         data = { "id":imageId, "x" : 40, "y" : 40, "z" : 0, 'timer' : 5, 'kenburnTimer' : 3 };
         listSlide.push(data);
-        });
-
-
     });
+
+
+    $("#save").click(function() {
+        console.log(listSlide);
+        $.post("/slide/store", { listSlide }, function (message) {
+            console.log(message);
+
+        });
+    });
+});
+
+
 
 $(".btnUp").click(function(e) {
 
@@ -148,11 +157,3 @@ $("#valideTimer").click(function() {
         $("#slide").addClass('imageContainer');
 
     });
-
-    $("#save").click(function() {
-        $.post("/slide/store", { listSlide }, function (message) {
-            console.log(message);
-
-        });
-
-});
