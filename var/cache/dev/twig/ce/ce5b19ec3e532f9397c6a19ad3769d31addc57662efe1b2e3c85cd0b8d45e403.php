@@ -85,35 +85,82 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    ";
-        // line 7
+        echo "
+    ";
+        // line 8
+        echo "    <button class=\"modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full\">Open Modal</button>
+
+    <!--Modal-->
+    <div class=\"modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center\">
+        <div class=\"modal-overlay absolute w-full h-full bg-gray-900 opacity-50\"></div>
+
+        <div class=\"modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto\">
+
+            <div class=\"modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50\">
+                <svg class=\"fill-current text-white\" xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\">
+                    <path d=\"M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z\"></path>
+                </svg>
+                <span class=\"text-sm\">(Esc)</span>
+            </div>
+
+            <!-- Add margin if you want to see some of the overlay behind the modal-->
+            <div class=\"modal-content py-4 text-left px-6\">
+                <!--Title-->
+                <div class=\"flex justify-between items-center pb-3\">
+                    <p class=\"text-2xl font-bold\">Simple Modal!</p>
+                    <div class=\"modal-close cursor-pointer z-50\">
+                        <svg class=\"fill-current text-black\" xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\">
+                            <path d=\"M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z\"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!--Body-->
+                <p>Modal content can go here</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+
+                <!--Footer-->
+                <div class=\"flex justify-end pt-2\">
+                    <button class=\"px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2\">Action</button>
+                    <button class=\"modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400\">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    ";
+        // line 53
         echo "    <section class=\"flex flex-wrap w-full m-2 items-center justify-center\" id=\"imagesDisplay\">
         ";
-        // line 8
+        // line 54
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["imagesUploaded"]) || array_key_exists("imagesUploaded", $context) ? $context["imagesUploaded"] : (function () { throw new RuntimeError('Variable "imagesUploaded" does not exist.', 8, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["imagesUploaded"]) || array_key_exists("imagesUploaded", $context) ? $context["imagesUploaded"] : (function () { throw new RuntimeError('Variable "imagesUploaded" does not exist.', 54, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
-            // line 9
+            // line 55
             echo "            <div class=\"relative m-2 border-solid border-2 border-gray-800 shadow-2xl rounded\" id=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 9), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 55), "html", null, true);
             echo "\">
                 <div class=\"absolute top-0 right-0\">
                     <svg id=\"selected";
-            // line 11
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 11), "html", null, true);
+            // line 57
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 57), "html", null, true);
             echo "\" version=\"1.1\"  xmlns=\"http://www.w3.org/2000/svg\" class=\"w-4 h-4 hidden m-2\" viewBox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xml:space=\"preserve\">
               <ellipse style=\"fill:darkseagreen;\" cx=\"256\" cy=\"256\" rx=\"256\" ry=\"255.832\"/>
                         <polygon style=\"fill:#FFFFFF;\" points=\"235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
 391.88,166.392 \"/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
           </svg>
                     <input type=\"checkbox\" name=\"checkImage\" id=\"check";
-            // line 16
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 16), "html", null, true);
+            // line 62
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 62), "html", null, true);
             echo "\" class=\"opacity-0\" autocomplete=\"off\">
                 </div>
                 <img class=\"h-32 object-cover\"  src=\"/uploads/";
-            // line 18
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "name", [], "any", false, false, false, 18), "html", null, true);
+            // line 64
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "name", [], "any", false, false, false, 64), "html", null, true);
             echo "\">
             </div>
         ";
@@ -121,12 +168,12 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 21
+        // line 67
         echo "    </section>
 
 
 ";
-        // line 25
+        // line 71
         echo "<div class=\"flex items-center justify-center m-2\">
 
     <button type=\"button\" id=\"selectImage\"  class=\"check bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-2xl py-2 px-6 inline-flex items-center\">
@@ -136,7 +183,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
 </div>
 
 ";
-        // line 34
+        // line 80
         echo "    <section class=\"flex items-center justify-center\">
         <div class=\"flex m-2 p-3 w-2/4 shadow-2xl items-center justify-center\">
             <div id=\"slide\" class=\"flex items-center justify-center bg-gray-200 w-3/4 h-64\">
@@ -149,7 +196,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
 
 
 ";
-        // line 46
+        // line 92
         echo "    <section>
         <div class=\"flex  flex-wrap items-center justify-center\">
 
@@ -268,7 +315,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
     </section>
 
     ";
-        // line 164
+        // line 210
         echo "    <section class=\"flex flex-col items-center m-8\">
 
         <div id=\"slideShow\" class=\"rounded overflow-x-hidden flex snap-x shadow-2xl p-2\">
@@ -306,7 +353,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
 
     public function getDebugInfo()
     {
-        return array (  272 => 164,  153 => 46,  140 => 34,  130 => 25,  125 => 21,  116 => 18,  111 => 16,  103 => 11,  97 => 9,  93 => 8,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  319 => 210,  200 => 92,  187 => 80,  177 => 71,  172 => 67,  163 => 64,  158 => 62,  150 => 57,  144 => 55,  140 => 54,  137 => 53,  91 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -316,6 +363,52 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
 {% block title %}Créer un slide{% endblock %}
 
 {% block body %}
+
+    {#    Add create slide button #}
+    <button class=\"modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full\">Open Modal</button>
+
+    <!--Modal-->
+    <div class=\"modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center\">
+        <div class=\"modal-overlay absolute w-full h-full bg-gray-900 opacity-50\"></div>
+
+        <div class=\"modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto\">
+
+            <div class=\"modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50\">
+                <svg class=\"fill-current text-white\" xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\">
+                    <path d=\"M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z\"></path>
+                </svg>
+                <span class=\"text-sm\">(Esc)</span>
+            </div>
+
+            <!-- Add margin if you want to see some of the overlay behind the modal-->
+            <div class=\"modal-content py-4 text-left px-6\">
+                <!--Title-->
+                <div class=\"flex justify-between items-center pb-3\">
+                    <p class=\"text-2xl font-bold\">Simple Modal!</p>
+                    <div class=\"modal-close cursor-pointer z-50\">
+                        <svg class=\"fill-current text-black\" xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\">
+                            <path d=\"M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z\"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!--Body-->
+                <p>Modal content can go here</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+
+                <!--Footer-->
+                <div class=\"flex justify-end pt-2\">
+                    <button class=\"px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2\">Action</button>
+                    <button class=\"modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400\">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     {#Display of uploaded images section#}
     <section class=\"flex flex-wrap w-full m-2 items-center justify-center\" id=\"imagesDisplay\">
         {% for image in imagesUploaded %}
