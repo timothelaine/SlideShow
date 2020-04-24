@@ -85,14 +85,15 @@ class __TwigTemplate_335d13ff0947f9a2058d7a6ead378e43e7e9aa14a915e56f48f4dfb1cba
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <div class=\"jumbotron\">
-        <h2 class=\"display-4\">Accueil</h2>
-        <p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat eget purus sit amet condimentum. Praesent eget nibh quam. </p>
-        <hr class=\"my-4\">
-        <p>Nam ipsum risus, vestibulum et convallis ut, suscipit et risus.</p>
-        <p class=\"lead\">
-            <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a>
-        </p>
+        echo "    <div class=\"container mx-auto mt-6\">
+        <div class=\"text-center text-3xl font-semibold text-gray-800 uppercase border-b-2 border-gray-800 p-2\">
+            Accueil
+        </div>
+        <p class=\"mt-4\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere sodales eros id venenatis. Aliquam eget felis sed eros tempus ultricies a non tortor. Fusce hendrerit vel eros et facilisis. Fusce mauris purus, tempus eu pellentesque id, faucibus ac libero. Quisque purus risus, tempus id sem quis, aliquet viverra diam. Duis sit amet laoreet lorem. Cras scelerisque lobortis risus, id lacinia ipsum rutrum sed. Cras et magna feugiat, tempus orci non, efficitur sem. Ut id nisi venenatis, vehicula mi in, aliquet mi. Praesent suscipit hendrerit est. Nullam maximus neque ante, sed finibus odio cursus nec. Vestibulum viverra nisi quis neque vehicula consectetur. Nunc vel augue a turpis scelerisque tristique. Fusce tincidunt malesuada vehicula.</p>
+
+        <p class=\"mt-4\">Ut non odio ac risus feugiat viverra ut id mi. Proin mi massa, convallis eu euismod ac, pellentesque vel nisi. Maecenas et turpis consequat, fringilla ligula et, volutpat nulla. In molestie vel felis pellentesque rutrum. Donec rhoncus arcu sed libero congue, ac placerat lorem vulputate. Suspendisse imperdiet molestie hendrerit. Sed id sem imperdiet, placerat lacus nec, mattis dui. Ut non odio eget felis maximus ultrices eget ut purus. Morbi posuere nulla ut ex dignissim, ac ullamcorper risus varius. Fusce volutpat nibh eget rhoncus imperdiet. Phasellus magna ante, facilisis molestie semper ac, porta et mi. Sed sollicitudin risus odio, at bibendum purus efficitur eu. </p>
+
+        <p class=\"mt-4\">Nulla sit amet pulvinar arcu. Maecenas porta dui luctus scelerisque aliquet. Phasellus euismod eget nulla vitae vulputate. In facilisis imperdiet leo, eget rutrum nibh venenatis nec. Vestibulum feugiat accumsan ante vel scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam porttitor mi sed magna ultrices vestibulum. Mauris arcu nibh, tempus non aliquam id, fringilla ut felis. Mauris vulputate a eros quis imperdiet. Aenean dapibus consequat nibh rutrum euismod. Fusce lobortis dapibus ligula, ac maximus augue tempor finibus. Quisque eget diam dolor. </p>
     </div>
 ";
         
@@ -125,14 +126,15 @@ class __TwigTemplate_335d13ff0947f9a2058d7a6ead378e43e7e9aa14a915e56f48f4dfb1cba
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    <div class=\"jumbotron\">
-        <h2 class=\"display-4\">Accueil</h2>
-        <p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat eget purus sit amet condimentum. Praesent eget nibh quam. </p>
-        <hr class=\"my-4\">
-        <p>Nam ipsum risus, vestibulum et convallis ut, suscipit et risus.</p>
-        <p class=\"lead\">
-            <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a>
-        </p>
+    <div class=\"container mx-auto mt-6\">
+        <div class=\"text-center text-3xl font-semibold text-gray-800 uppercase border-b-2 border-gray-800 p-2\">
+            Accueil
+        </div>
+        <p class=\"mt-4\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere sodales eros id venenatis. Aliquam eget felis sed eros tempus ultricies a non tortor. Fusce hendrerit vel eros et facilisis. Fusce mauris purus, tempus eu pellentesque id, faucibus ac libero. Quisque purus risus, tempus id sem quis, aliquet viverra diam. Duis sit amet laoreet lorem. Cras scelerisque lobortis risus, id lacinia ipsum rutrum sed. Cras et magna feugiat, tempus orci non, efficitur sem. Ut id nisi venenatis, vehicula mi in, aliquet mi. Praesent suscipit hendrerit est. Nullam maximus neque ante, sed finibus odio cursus nec. Vestibulum viverra nisi quis neque vehicula consectetur. Nunc vel augue a turpis scelerisque tristique. Fusce tincidunt malesuada vehicula.</p>
+
+        <p class=\"mt-4\">Ut non odio ac risus feugiat viverra ut id mi. Proin mi massa, convallis eu euismod ac, pellentesque vel nisi. Maecenas et turpis consequat, fringilla ligula et, volutpat nulla. In molestie vel felis pellentesque rutrum. Donec rhoncus arcu sed libero congue, ac placerat lorem vulputate. Suspendisse imperdiet molestie hendrerit. Sed id sem imperdiet, placerat lacus nec, mattis dui. Ut non odio eget felis maximus ultrices eget ut purus. Morbi posuere nulla ut ex dignissim, ac ullamcorper risus varius. Fusce volutpat nibh eget rhoncus imperdiet. Phasellus magna ante, facilisis molestie semper ac, porta et mi. Sed sollicitudin risus odio, at bibendum purus efficitur eu. </p>
+
+        <p class=\"mt-4\">Nulla sit amet pulvinar arcu. Maecenas porta dui luctus scelerisque aliquet. Phasellus euismod eget nulla vitae vulputate. In facilisis imperdiet leo, eget rutrum nibh venenatis nec. Vestibulum feugiat accumsan ante vel scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam porttitor mi sed magna ultrices vestibulum. Mauris arcu nibh, tempus non aliquam id, fringilla ut felis. Mauris vulputate a eros quis imperdiet. Aenean dapibus consequat nibh rutrum euismod. Fusce lobortis dapibus ligula, ac maximus augue tempor finibus. Quisque eget diam dolor. </p>
     </div>
 {% endblock %}
 ", "home/index.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\slideproject\\templates\\home\\index.html.twig");

@@ -19,6 +19,7 @@ class SlideCreationController extends AbstractController
     public function index(UploadRepository $repo)
     {
         $upload = $repo->findAll();
+//        diplay all images uploaded
         return $this->render('slide_creation/index.html.twig', [
             'controller_name' => 'SlideCreationController', 'imagesUploaded' => $upload
         ]);
@@ -29,6 +30,7 @@ class SlideCreationController extends AbstractController
      */
     public function addImage(Request $request, UploadRepository $repo)
     {
+//        add image to slide creation section
         $image =  $request->request->get('id');
         $imageSelected = $repo->find($image);
         return $this->json(['imageName' => $imageSelected->getName()]);
@@ -39,9 +41,8 @@ class SlideCreationController extends AbstractController
      * @Route("/slide/store", name="slide_store")
      */
     public function store(Request $request) {
+//        Save the slides into DB
         $entityManager = $this->getDoctrine()->getManager();
-
-        //return $this->json(['imageName' => $request->get('nameOfSlide')]);
 
         $nameSlide = $request->get('nameOfSlide');
         $content = $request->get('listSlide');
@@ -54,6 +55,7 @@ class SlideCreationController extends AbstractController
         $entityManager->flush();
 
 
+//        set attribut for each slide's image
         foreach ($content as $image) {
             $entityRepository = $this->getDoctrine()->getRepository(Upload::class);
 

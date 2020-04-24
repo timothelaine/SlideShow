@@ -7,6 +7,7 @@ $( document ).ready(function() {
     $("#slideName").hide(); // Hide the input to insert slideName
     $("#contentSlide").hide(); // Hide the creation slide  fonctionnality as long as a slide is not created
     $("#timer").hide(); // Hide of ken burn effect time input
+    $("#messageSlide").hide();
 
 
 
@@ -43,7 +44,7 @@ $( document ).ready(function() {
            svg = parent.children[0].children[0];
            input = parent.children[0].children[1];
            input.checked = false;
-           svg.style.display = "none";Po
+           svg.style.display = "none";
 
         });
     }
@@ -104,12 +105,11 @@ $( document ).ready(function() {
                 div.classList.remove("imageContainer"); // Remove the last ken burn effect
                 div.innerHTML = "";
                 div.appendChild(img);
-
             });
         });
     });
 
-    /****************   Save slide function   **************************/
+    /****************   Save slide function   ****************************/
     /**           Allow to select image to add on slide                  */
     /*********************************************************************/
     $("#confirm").click(function() {
@@ -138,65 +138,71 @@ $( document ).ready(function() {
     });
 
 
+    // Save the slide data in DB
     $("#save").click(function() {
-        console.log(listSlide);
-        $.post("/slide/store", { listSlide }, function (message) {
-            console.log(message);
 
+        $.post("/slide/store", { listSlide }, function (message) {
+            $("#messageSlide").show(slow);
         });
     });
 
 
 
 
-$(".btnUp").click(function(e) {
+    // Increment the timer of Ken burn effect and the image timer value when it's clicked
+    $(".btnUp").click(function(e) {
 
-    if ( e.target.id == "timerUp"){
+        if ( e.target.id == "timerUp"){ // For the kenBurn Effect timer
 
-        value = parseInt( $("#inputTimer").val()) + 1;
-        $("#inputTimer").val(value);
+            value = parseInt( $("#inputTimer").val()) + 1;
+            $("#inputTimer").val(value);
 
-    } else{
-        $("#inputNbr").val(parseInt( $("#inputNbr").val()) + 1);
-    }
-});
+        } else{  // For the image timer
+            $("#inputNbr").val(parseInt( $("#inputNbr").val()) + 1);
+        }
+    });
 
-$(".btnDown").click(function(e) {
+    // Increment the timer of Ken burn effect and the image timer value when it's clicked
+    $(".btnDown").click(function(e) {
 
-    if ( e.target.id == "timerDown"){
-        value = parseInt( $("#inputTimer").val()) - 1;
-        $("#inputTimer").val(value);
+        if ( e.target.id == "timerDown"){  // For the kenBurn Effect timer
 
-    } else{
-        $("#inputNbr").val(parseInt( $("#inputNbr").val()) - 1);
-    }
-});
+            value = parseInt( $("#inputTimer").val()) - 1;
+            $("#inputTimer").val(value);
 
-$("#kenburnEffect").click(function() {
+        } else{ // For the image timer
+            $("#inputNbr").val(parseInt( $("#inputNbr").val()) - 1);
+        }
+    });
 
-    $("#timer").show();
+    // Show timer input when user click on KenBurn effect button
+    $("#kenburnEffect").click(function() {
 
-});
+        $("#timer").show();
 
-$("#valideTimer").click(function() {
+    });
 
-    $("#timer").hide();
-    // document.documentElement.style.setProperty('--timer', $("#inputNbr").val() + "s");
-    $("#slide").addClass('imageContainer');
+    // Apply the ken burn effect when the timer is defined
+    $("#valideTimer").click(function() {
 
-});
+        $("#timer").hide();
+        // document.documentElement.style.setProperty('--timer', $("#inputNbr").val() + "s");
+        $("#slide").addClass('imageContainer');
 
+    });
+
+    // show the input name slide
     $("#slideCreate").click(function() {
 
         $("#slideName").show('slow');
 
     });
 
+
     $("#slideNameSend").click(function() {
 
-        $("#slideName").hide();
-        $("#contentSlide").show('slow');
-
+          $("#slideName").hide();
+          $("#contentSlide").show('slow');
     });
 
 });
