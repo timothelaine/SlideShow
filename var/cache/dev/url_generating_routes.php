@@ -22,6 +22,7 @@ return [
     'creation' => [[], ['_controller' => 'App\\Controller\\SlideCreationController::index'], [], [['text', '/creation']], [], []],
     'add' => [[], ['_controller' => 'App\\Controller\\SlideCreationController::addImage'], [], [['text', '/add']], [], []],
     'slide_store' => [[], ['_controller' => 'App\\Controller\\SlideCreationController::store'], [], [['text', '/slide/store']], [], []],
+    'slide_list' => [[], ['_controller' => 'App\\Controller\\SlideCreationController::list'], [], [['text', '/slide']], [], []],
     'upload' => [[], ['_controller' => 'App\\Controller\\UploadController::index'], [], [['text', '/upload']], [], []],
     'deleteimage' => [[], ['_controller' => 'App\\Controller\\UploadController::deleteImage'], [], [['text', '/deleteimage']], [], []],
     'logout' => [[], [], [], [['text', '/logout']], [], []],

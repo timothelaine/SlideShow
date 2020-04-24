@@ -75,6 +75,18 @@ class SlideCreationController extends AbstractController
         }
 
         return new Response(json_encode(array('result' => 'success')));
+    }
 
+    /**
+     * @Route("/slide", name="slide_list")
+     */
+    public function list() {
+        $entityRepository = $this->getDoctrine()->getRepository(Slide::class);
+
+        $slides = $entityRepository->findAll();
+
+        return $this->render('slide_creation/list.html.twig', [
+            'slides' => $slides
+        ]);
     }
 }
