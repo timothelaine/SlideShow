@@ -2,6 +2,8 @@ $( document ).ready(function() {
 
 var slideNumber = 0;
     $("#timer").hide();
+    $("#inputTimer").val(parseInt(0));
+    $("#inputNbr").val(parseInt(0));
 
     $('#imagesDisplay').bind('click', function(event) {
         if (event.target.parentNode.parentNode.parentNode.id == 'imagesDisplay') {
@@ -98,24 +100,32 @@ var slideNumber = 0;
 
         slideNumber++;
 
-         data = { "id":imageId, "x" : 40 + "px", "y" : 40 + "px", "z" : 0 + "px", 'timer' : 5, 'kenburnTimer' : 3 };
-        $.post("/slide/store", data, function (message) {
-
-
         });
 
 
     });
 
-    $("#btnUp").click(function() {
+    $(".btnUp").click(function(e) {
 
-        value = parseInt( $("#inputNbr").val()) + 1;
-        $("#inputNbr").val(parseInt( $("#inputNbr").val()) + 1);
+        if ( e.target.id == "timerUp"){
+
+            value = parseInt( $("#inputTimer").val()) + 1;
+            $("#inputTimer").val(value);
+
+        } else{
+            $("#inputNbr").val(parseInt( $("#inputNbr").val()) + 1);
+        }
     });
 
-    $("#btnDown").click(function() {
+    $(".btnDown").click(function(e) {
 
-        $("#inputNbr").val(parseInt( $("#inputNbr").val()) - 1);
+        if ( e.target.id == "timerDown"){
+            value = parseInt( $("#inputTimer").val()) - 1;
+            $("#inputTimer").val(value);
+
+        } else{
+            $("#inputNbr").val(parseInt( $("#inputNbr").val()) - 1);
+        }
     });
 
     $("#kenburnEffect").click(function() {
@@ -124,7 +134,7 @@ var slideNumber = 0;
 
     });
 
-    $("#timerKenburnValidate").click(function() {
+    $("#valideTimer").click(function() {
 
         $("#timer").hide();
         document.documentElement.style.setProperty('--timer', $("#inputNbr").val() + "s");
@@ -137,4 +147,11 @@ var slideNumber = 0;
         $("#slide").addClass('imageContainer');
 
     });
+
+    $("#save").click(function() {
+        $.post("/slide/store", { listSlide }, function (message) {
+            console.log(message);
+
+        });
+
 });
