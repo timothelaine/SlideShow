@@ -52,113 +52,34 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">
-        ";
+";
         // line 7
-        $this->displayBlock('stylesheets', $context, $blocks);
+        echo "        <link href=\"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css\" rel=\"stylesheet\">
+        ";
         // line 8
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 9
         echo "    </head>
-    <body>
-        <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
-            <a class=\"navbar-brand\" href=\"";
-        // line 11
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\">Slide</a>
-            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                <span class=\"navbar-toggler-icon\"></span>
-            </button>
-
-            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-                <ul class=\"navbar-nav mr-auto\">
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\"";
-        // line 19
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\">Accueil</a>
-                    </li>
-                    ";
-        // line 21
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21)) {
-            // line 22
-            echo "                        ";
-            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                // line 23
-                echo "                            <li class=\"nav-item\">
-                                <a class=\"nav-link\" href=\"";
-                // line 24
-                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("upload");
-                echo "\">Upload</a>
-                            </li>
-                        ";
-            }
-            // line 27
-            echo "                    ";
-        }
-        // line 28
-        echo "                </ul>
-                <ul class=\"navbar-nav ml-auto\">
-                    ";
-        // line 30
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 30, $this->source); })()), "user", [], "any", false, false, false, 30)) {
-            // line 31
-            echo "                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"/logout\">Déconnexion</a>
-                        </li>
-                    ";
-        } else {
-            // line 35
-            echo "                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"";
-            // line 36
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
-            echo "\">Connexion</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"";
-            // line 39
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register");
-            echo "\">Inscription</a>
-                        </li>
-                    ";
-        }
-        // line 42
-        echo "                </ul>
-            </div>
-        </nav>
-        <div class=\"container mt-3\">
-            ";
-        // line 46
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 46, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 46));
-        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 47
-            echo "                <div class=\"alert alert-success\" role=\"alert\">
-                    <h4 class=\"alert-heading\">Succès !</h4>
-                    <p>";
-            // line 49
-            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
-            echo "</p>
-                </div>
-            ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 52
+    <body style=\"background: #edf2f7;\">
+";
+        // line 16
+        echo "
+";
+        // line 53
         echo "
             ";
-        // line 53
-        $this->displayBlock('body', $context, $blocks);
         // line 54
+        $this->displayBlock('body', $context, $blocks);
+        // line 55
         echo "        </div>
 
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>
         ";
-        // line 59
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 60
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 61
         echo "    </body>
 </html>
 ";
@@ -189,7 +110,7 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
 
     }
 
-    // line 7
+    // line 8
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -207,7 +128,7 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
 
     }
 
-    // line 53
+    // line 54
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -225,7 +146,7 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
 
     }
 
-    // line 59
+    // line 60
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -248,14 +169,9 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
         return "base.html.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  229 => 59,  211 => 53,  193 => 7,  174 => 5,  162 => 60,  160 => 59,  153 => 54,  151 => 53,  148 => 52,  139 => 49,  135 => 47,  131 => 46,  125 => 42,  119 => 39,  113 => 36,  110 => 35,  104 => 31,  102 => 30,  98 => 28,  95 => 27,  89 => 24,  86 => 23,  83 => 22,  81 => 21,  76 => 19,  65 => 11,  60 => 8,  58 => 7,  53 => 5,  47 => 1,);
+        return array (  150 => 60,  132 => 54,  114 => 8,  95 => 5,  83 => 61,  81 => 60,  74 => 55,  72 => 54,  69 => 53,  66 => 16,  62 => 9,  60 => 8,  57 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -265,52 +181,53 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
     <head>
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">
+{#        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">#}
+        <link href=\"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css\" rel=\"stylesheet\">
         {% block stylesheets %}{% endblock %}
     </head>
-    <body>
-        <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
-            <a class=\"navbar-brand\" href=\"{{ path('home') }}\">Slide</a>
-            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                <span class=\"navbar-toggler-icon\"></span>
-            </button>
+    <body style=\"background: #edf2f7;\">
+{#        <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">#}
+{#            <a class=\"navbar-brand\" href=\"{{ path('home') }}\">Slide</a>#}
+{#            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">#}
+{#                <span class=\"navbar-toggler-icon\"></span>#}
+{#            </button>#}
 
-            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-                <ul class=\"navbar-nav mr-auto\">
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\"{{ path('home') }}\">Accueil</a>
-                    </li>
-                    {% if(app.user) %}
-                        {% if is_granted('ROLE_ADMIN') %}
-                            <li class=\"nav-item\">
-                                <a class=\"nav-link\" href=\"{{ path('upload') }}\">Upload</a>
-                            </li>
-                        {% endif %}
-                    {% endif %}
-                </ul>
-                <ul class=\"navbar-nav ml-auto\">
-                    {% if(app.user) %}
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"/logout\">Déconnexion</a>
-                        </li>
-                    {% else %}
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"{{ path('login') }}\">Connexion</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"{{ path('register') }}\">Inscription</a>
-                        </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
-        <div class=\"container mt-3\">
-            {% for message in app.flashes('success') %}
-                <div class=\"alert alert-success\" role=\"alert\">
-                    <h4 class=\"alert-heading\">Succès !</h4>
-                    <p>{{ message }}</p>
-                </div>
-            {% endfor %}
+{#            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">#}
+{#                <ul class=\"navbar-nav mr-auto\">#}
+{#                    <li class=\"nav-item\">#}
+{#                        <a class=\"nav-link\" href=\"{{ path('home') }}\">Accueil</a>#}
+{#                    </li>#}
+{#                    {% if(app.user) %}#}
+{#                        {% if is_granted('ROLE_ADMIN') %}#}
+{#                            <li class=\"nav-item\">#}
+{#                                <a class=\"nav-link\" href=\"{{ path('upload') }}\">Upload</a>#}
+{#                            </li>#}
+{#                        {% endif %}#}
+{#                    {% endif %}#}
+{#                </ul>#}
+{#                <ul class=\"navbar-nav ml-auto\">#}
+{#                    {% if(app.user) %}#}
+{#                        <li class=\"nav-item\">#}
+{#                            <a class=\"nav-link\" href=\"/logout\">Déconnexion</a>#}
+{#                        </li>#}
+{#                    {% else %}#}
+{#                        <li class=\"nav-item\">#}
+{#                            <a class=\"nav-link\" href=\"{{ path('login') }}\">Connexion</a>#}
+{#                        </li>#}
+{#                        <li class=\"nav-item\">#}
+{#                            <a class=\"nav-link\" href=\"{{ path('register') }}\">Inscription</a>#}
+{#                        </li>#}
+{#                    {% endif %}#}
+{#                </ul>#}
+{#            </div>#}
+{#        </nav>#}
+{#        <div class=\"container mt-3\">#}
+{#            {% for message in app.flashes('success') %}#}
+{#                <div class=\"alert alert-success\" role=\"alert\">#}
+{#                    <h4 class=\"alert-heading\">Succès !</h4>#}
+{#                    <p>{{ message }}</p>#}
+{#                </div>#}
+{#            {% endfor %}#}
 
             {% block body %}{% endblock %}
         </div>

@@ -347,6 +347,13 @@
         <argument type="service" id=".service_locator.pNNo5z3.App\Controller\SecurityController"/>
       </call>
     </service>
+    <service id="App\Controller\SlideController" class="App\Controller\SlideController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\SlideController"/>
+      </call>
+    </service>
     <service id="App\Controller\SlideCreationController" class="App\Controller\SlideCreationController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -363,6 +370,14 @@
     </service>
     <service id="App\Form\UploadType" class="App\Form\UploadType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
+    </service>
+    <service id="App\Repository\SlideRepository" class="App\Repository\SlideRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\SlideUploadRepository" class="App\Repository\SlideUploadRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\UploadRepository" class="App\Repository\UploadRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -3503,7 +3518,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.RvA8LKt"/>
+      <argument type="service" id=".service_locator..vxASBV"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5022,6 +5037,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SlideController" class="App\Controller\SlideController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SlideController" class="App\Controller\SlideController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SlideController" class="App\Controller\SlideController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SlideCreationController" class="App\Controller\SlideCreationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SlideCreationController" class="App\Controller\SlideCreationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SlideCreationController" class="App\Controller\SlideCreationController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5030,6 +5048,10 @@
     <service id=".abstract.instanceof.App\Controller\UploadController" class="App\Controller\UploadController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UploadType" class="App\Form\UploadType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UploadType" class="App\Form\UploadType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SlideRepository" class="App\Repository\SlideRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\SlideRepository" class="App\Repository\SlideRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SlideUploadRepository" class="App\Repository\SlideUploadRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\SlideUploadRepository" class="App\Repository\SlideUploadRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UploadRepository" class="App\Repository\UploadRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UploadRepository" class="App\Repository\UploadRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
@@ -5368,9 +5390,11 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.RvA8LKt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator..vxASBV" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Repository\SlideRepository" type="service" id="App\Repository\SlideRepository"/>
+        <argument key="App\Repository\SlideUploadRepository" type="service" id="App\Repository\SlideUploadRepository"/>
         <argument key="App\Repository\UploadRepository" type="service" id="App\Repository\UploadRepository"/>
         <argument key="App\Repository\UserRepository" type="service" id="App\Repository\UserRepository"/>
       </argument>
@@ -5580,6 +5604,12 @@
     <service id=".service_locator.pNNo5z3.App\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\SecurityController"/>
       <argument>App\Controller\SecurityController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.pNNo5z3" method="withContext"/>
+    </service>
+    <service id=".service_locator.pNNo5z3.App\Controller\SlideController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\SlideController"/>
+      <argument>App\Controller\SlideController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.pNNo5z3" method="withContext"/>
     </service>
