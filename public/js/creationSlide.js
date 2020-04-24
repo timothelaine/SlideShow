@@ -121,6 +121,12 @@ var slideNumber = 0;
     $("#kenburnEffect").click(function() {
 
         $("#timer").show();
+
+    });
+
+    $("#timerKenburnValidate").click(function() {
+
+        $("#timer").hide();
         document.documentElement.style.setProperty('--timer', $("#inputNbr").val() + "s");
         $("#slide").addClass('imageContainer');
 

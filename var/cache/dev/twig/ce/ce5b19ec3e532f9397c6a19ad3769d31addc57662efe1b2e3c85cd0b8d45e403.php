@@ -151,7 +151,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
 ";
         // line 46
         echo "    <section>
-        <div class=\"flex items-center justify-center\">
+        <div class=\"flex  flex-wrap items-center justify-center\">
 
             <div class=\"m-3\">
                 <button id=\"confirm\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
@@ -160,22 +160,32 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
             </div>
 
             <div class=\"flex flex-col m-3\">
+
                 <button id=\"kenburnEffect\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-gray-800  hover:gray-800 hover:bg-gray-800 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
                     <span class=\"mr-2\">Effet ken burn</span>
                     <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
                         <path fill=\"currentcolor\" d=\"M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6zm10 14.5V20H8v-3.5l4-4 4 4zm-4-5l-4-4V4h8v3.5l-4 4z\"></path>
                     </svg>
                 </button>
-                <div class=\"mt-1 flex flex-wrap \" id=\"timer\">
-                    <div class=\"flex flex-row w-2/12\">
+                <div class=\"mt-1 flex flex-wrap \" id=\"timerKenburnValidate\">
+                    <div class=\"flex flex-row w-3/12 \">
                         <button id=\"btnUp\"
-                                class=\"text-white text-center text-md font-semibold rounded-tr-md  bg-gray-800 focus:bg-gray-600 focus:outline-none border border-gray-800 focus:border-gray-600\">
-                            +
+                                class=\"text-white text-center text-md w-full font-semibold rounded-tl-md rounded-bl-md bg-gray-800 focus:bg-gray-600 focus:outline-none border border-gray-800 focus:border-gray-600 \">
+                            <svg class=\"m-3\" version=\"1.1\" fill=\"currentcolor\" width=\"18\" height=\"18\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"
+                                 viewBox=\"0 0 492 492\" style=\"enable-background:new 0 0 492 492;\" xml:space=\"preserve\">
+<g>
+    <g>
+        <path d=\"M484.128,104.478l-16.116-16.116c-5.064-5.068-11.816-7.856-19.024-7.856c-7.208,0-13.964,2.788-19.028,7.856
+\t\t\tL203.508,314.81L62.024,173.322c-5.064-5.06-11.82-7.852-19.028-7.852c-7.204,0-13.956,2.792-19.024,7.852l-16.12,16.112
+\t\t\tC2.784,194.51,0,201.27,0,208.47c0,7.204,2.784,13.96,7.852,19.028l159.744,159.736c0.212,0.3,0.436,0.58,0.696,0.836
+\t\t\tl16.12,15.852c5.064,5.048,11.82,7.572,19.084,7.572h0.084c7.212,0,13.968-2.524,19.024-7.572l16.124-15.992
+\t\t\tc0.26-0.256,0.48-0.468,0.612-0.684l244.784-244.76C494.624,132.01,494.624,114.966,484.128,104.478z\"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+</svg>
                         </button>
                     </div>
-                    <div class=\"flex w-6/12\">
+                    <div class=\"flex w-5/12\">
                         <input type=\"text\" value=\"7\" id=\"inputNbr\"
-                               class=\"bg-white text-sm text-gray-900 text-center focus:outline-none border border-gray-800 focus:border-gray-600 rounded-l-md w-full\">
+                               class=\"bg-white text-sm text-gray-900 text-center focus:outline-none border border-gray-800 focus:border-gray-600  w-full\">
                     </div>
                     <div class=\"flex flex-col w-4/12\">
                         <button id=\"btnUp\"
@@ -209,7 +219,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
     </section>
 
     ";
-        // line 105
+        // line 115
         echo "    <section class=\"flex flex-col items-center m-8\">
 
         <div id=\"slideShow\" class=\"rounded overflow-x-hidden flex snap-x shadow-2xl p-2\">
@@ -247,7 +257,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
 
     public function getDebugInfo()
     {
-        return array (  213 => 105,  153 => 46,  140 => 34,  130 => 25,  125 => 21,  116 => 18,  111 => 16,  103 => 11,  97 => 9,  93 => 8,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  223 => 115,  153 => 46,  140 => 34,  130 => 25,  125 => 21,  116 => 18,  111 => 16,  103 => 11,  97 => 9,  93 => 8,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -298,7 +308,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
 
 {#    Action button#}
     <section>
-        <div class=\"flex items-center justify-center\">
+        <div class=\"flex  flex-wrap items-center justify-center\">
 
             <div class=\"m-3\">
                 <button id=\"confirm\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
@@ -307,22 +317,32 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
             </div>
 
             <div class=\"flex flex-col m-3\">
+
                 <button id=\"kenburnEffect\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-gray-800  hover:gray-800 hover:bg-gray-800 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
                     <span class=\"mr-2\">Effet ken burn</span>
                     <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
                         <path fill=\"currentcolor\" d=\"M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6zm10 14.5V20H8v-3.5l4-4 4 4zm-4-5l-4-4V4h8v3.5l-4 4z\"></path>
                     </svg>
                 </button>
-                <div class=\"mt-1 flex flex-wrap \" id=\"timer\">
-                    <div class=\"flex flex-row w-2/12\">
+                <div class=\"mt-1 flex flex-wrap \" id=\"timerKenburnValidate\">
+                    <div class=\"flex flex-row w-3/12 \">
                         <button id=\"btnUp\"
-                                class=\"text-white text-center text-md font-semibold rounded-tr-md  bg-gray-800 focus:bg-gray-600 focus:outline-none border border-gray-800 focus:border-gray-600\">
-                            +
+                                class=\"text-white text-center text-md w-full font-semibold rounded-tl-md rounded-bl-md bg-gray-800 focus:bg-gray-600 focus:outline-none border border-gray-800 focus:border-gray-600 \">
+                            <svg class=\"m-3\" version=\"1.1\" fill=\"currentcolor\" width=\"18\" height=\"18\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"
+                                 viewBox=\"0 0 492 492\" style=\"enable-background:new 0 0 492 492;\" xml:space=\"preserve\">
+<g>
+    <g>
+        <path d=\"M484.128,104.478l-16.116-16.116c-5.064-5.068-11.816-7.856-19.024-7.856c-7.208,0-13.964,2.788-19.028,7.856
+\t\t\tL203.508,314.81L62.024,173.322c-5.064-5.06-11.82-7.852-19.028-7.852c-7.204,0-13.956,2.792-19.024,7.852l-16.12,16.112
+\t\t\tC2.784,194.51,0,201.27,0,208.47c0,7.204,2.784,13.96,7.852,19.028l159.744,159.736c0.212,0.3,0.436,0.58,0.696,0.836
+\t\t\tl16.12,15.852c5.064,5.048,11.82,7.572,19.084,7.572h0.084c7.212,0,13.968-2.524,19.024-7.572l16.124-15.992
+\t\t\tc0.26-0.256,0.48-0.468,0.612-0.684l244.784-244.76C494.624,132.01,494.624,114.966,484.128,104.478z\"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+</svg>
                         </button>
                     </div>
-                    <div class=\"flex w-6/12\">
+                    <div class=\"flex w-5/12\">
                         <input type=\"text\" value=\"7\" id=\"inputNbr\"
-                               class=\"bg-white text-sm text-gray-900 text-center focus:outline-none border border-gray-800 focus:border-gray-600 rounded-l-md w-full\">
+                               class=\"bg-white text-sm text-gray-900 text-center focus:outline-none border border-gray-800 focus:border-gray-600  w-full\">
                     </div>
                     <div class=\"flex flex-col w-4/12\">
                         <button id=\"btnUp\"
