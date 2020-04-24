@@ -55,32 +55,33 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 ";
         // line 7
         echo "        <link href=\"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css\" rel=\"stylesheet\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/style.css\">
         ";
-        // line 8
-        $this->displayBlock('stylesheets', $context, $blocks);
         // line 9
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 10
         echo "    </head>
     <body style=\"background: #edf2f7;\">
 ";
-        // line 16
+        // line 17
         echo "
 ";
-        // line 53
+        // line 54
         echo "
             ";
-        // line 54
-        $this->displayBlock('body', $context, $blocks);
         // line 55
+        $this->displayBlock('body', $context, $blocks);
+        // line 56
         echo "        </div>
 
 ";
-        // line 58
+        // line 59
         echo "        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>
         ";
-        // line 60
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 61
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 62
         echo "    </body>
 </html>
 ";
@@ -111,7 +112,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     }
 
-    // line 8
+    // line 9
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -129,7 +130,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     }
 
-    // line 54
+    // line 55
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -147,7 +148,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     }
 
-    // line 60
+    // line 61
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -172,7 +173,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     public function getDebugInfo()
     {
-        return array (  151 => 60,  133 => 54,  115 => 8,  96 => 5,  84 => 61,  82 => 60,  78 => 58,  74 => 55,  72 => 54,  69 => 53,  66 => 16,  62 => 9,  60 => 8,  57 => 7,  53 => 5,  47 => 1,);
+        return array (  152 => 61,  134 => 55,  116 => 9,  97 => 5,  85 => 62,  83 => 61,  79 => 59,  75 => 56,  73 => 55,  70 => 54,  67 => 17,  63 => 10,  61 => 9,  57 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -184,6 +185,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
         <title>{% block title %}Welcome!{% endblock %}</title>
 {#        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">#}
         <link href=\"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css\" rel=\"stylesheet\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/style.css\">
         {% block stylesheets %}{% endblock %}
     </head>
     <body style=\"background: #edf2f7;\">

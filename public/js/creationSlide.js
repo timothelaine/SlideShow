@@ -65,6 +65,7 @@ var slideNumber = 0;
                 img.src = url;
                 img.setAttribute('class', 'h-64 object-cover'); <!-- Class define -->
                 var div = document.getElementById("slide");
+                div.classList.remove("imageContainer");
                 div.innerHTML = "";
                 div.appendChild(img);
 

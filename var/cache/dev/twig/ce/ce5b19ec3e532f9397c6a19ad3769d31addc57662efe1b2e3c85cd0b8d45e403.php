@@ -139,14 +139,17 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
         // line 34
         echo "    <section class=\"flex items-center justify-center\">
         <div class=\"flex m-2 p-3 w-2/4 shadow-2xl items-center justify-center\">
-            <div id=\"slide\" class=\"flex items-center justify-center bg-gray-200 w-3/4 h-64 imageContainer \">
+            <div id=\"slide\" class=\"flex items-center justify-center bg-gray-200 w-3/4 h-64\">
 
             </div>
         </div>
     </section>
 
+
+
+
 ";
-        // line 43
+        // line 46
         echo "    <section>
         <div class=\"flex items-center justify-center\">
 
@@ -199,7 +202,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
     </section>
 
     ";
-        // line 95
+        // line 98
         echo "    <section class=\"flex flex-col items-center m-8\">
 
         <div id=\"slideShow\" class=\"rounded overflow-x-hidden flex snap-x shadow-2xl p-2\">
@@ -237,7 +240,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
 
     public function getDebugInfo()
     {
-        return array (  203 => 95,  150 => 43,  140 => 34,  130 => 25,  125 => 21,  116 => 18,  111 => 16,  103 => 11,  97 => 9,  93 => 8,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  206 => 98,  153 => 46,  140 => 34,  130 => 25,  125 => 21,  116 => 18,  111 => 16,  103 => 11,  97 => 9,  93 => 8,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -277,11 +280,14 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
 {#    slide creation#}
     <section class=\"flex items-center justify-center\">
         <div class=\"flex m-2 p-3 w-2/4 shadow-2xl items-center justify-center\">
-            <div id=\"slide\" class=\"flex items-center justify-center bg-gray-200 w-3/4 h-64 imageContainer \">
+            <div id=\"slide\" class=\"flex items-center justify-center bg-gray-200 w-3/4 h-64\">
 
             </div>
         </div>
     </section>
+
+
+
 
 {#    Action button#}
     <section>
