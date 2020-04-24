@@ -44,7 +44,6 @@ class SlideCreationController extends AbstractController
      */
     public function store(Request $request) {
         $entityManager = $this->getDoctrine()->getManager();
-        
 
         // Récupération du nom du slide
         $nameSlide = $request->get('nameOfSlide');
