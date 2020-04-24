@@ -41,10 +41,13 @@ class SlideCreationController extends AbstractController
     public function store(Request $request) {
         $entityManager = $this->getDoctrine()->getManager();
 
+        //return $this->json(['imageName' => $request->get('nameOfSlide')]);
+
+        $nameSlide = $request->get('nameOfSlide');
         $content = $request->get('listSlide');
 
         $slide = new Slide();
-        $slide->setName("TEEEST");
+        $slide->setName($nameSlide);
         $slide->setCreatedAt(new \DateTime());
 
         $entityManager->persist($slide);

@@ -113,7 +113,7 @@ class __TwigTemplate_79bef1226a76a451441e21b51188d089c20c16fc48905fe58895b3ce251
         echo "\">
                                 <div class=\"mx-auto max-w-lg\">
                                     <div class=\"py-2\">
-                                        <span class=\"px-1 text-sm text-gray-600\">Nom d'utilisateur</span>
+                                        <label class=\"px-1 text-sm text-gray-600\" for=\"username\">Email</label>
                                         <input id=\"email\" name=\"_username\" type=\"email\" type=\"text\" value=\"";
         // line 26
         echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 26, $this->source); })()), "html", null, true);
@@ -121,10 +121,8 @@ class __TwigTemplate_79bef1226a76a451441e21b51188d089c20c16fc48905fe58895b3ce251
                                                class=\"text-md block px-3 py-2  rounded-lg w-full
                 bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none\">
                                     </div>
-                                    ";
-        // line 31
-        echo "                                    <div class=\"py-2\" x-data=\"{ show: true }\">
-                                        <span class=\"px-1 text-sm text-gray-600\">Mot de passe</span>
+                                    <div class=\"py-2\" x-data=\"{ show: true }\">
+                                      <label class=\"px-1 text-sm text-gray-600\" for=\"password\">Mot de passe</label>
                                         <div class=\"relative\">
                                             <input id=\"password\" name=\"_password\" type=\"password\"  :type=\"show ? 'password' : 'text'\" class=\"text-md block px-3 py-2 rounded-lg w-full
                 bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md
@@ -154,7 +152,7 @@ class __TwigTemplate_79bef1226a76a451441e21b51188d089c20c16fc48905fe58895b3ce251
                                             </div>
                                         </div>
                                     </div>
- <button class=\"mt-3 text-lg font-semibold
+ <button type=\"submit\" class=\"mt-3 text-lg font-semibold
                 bg-gray-800 w-full text-white rounded-lg
                 px-6 py-3 block shadow-xl hover:text-white hover:bg-black\">
                                         Se connecter
@@ -169,13 +167,13 @@ class __TwigTemplate_79bef1226a76a451441e21b51188d089c20c16fc48905fe58895b3ce251
         </div>
     </div>
 ";
-        // line 86
+        // line 85
         echo "
 ";
-        // line 91
+        // line 90
         echo "
 ";
-        // line 96
+        // line 95
         echo "
 ";
         
@@ -198,7 +196,7 @@ class __TwigTemplate_79bef1226a76a451441e21b51188d089c20c16fc48905fe58895b3ce251
 
     public function getDebugInfo()
     {
-        return array (  179 => 96,  176 => 91,  173 => 86,  126 => 31,  119 => 26,  112 => 22,  97 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  177 => 95,  174 => 90,  171 => 85,  119 => 26,  112 => 22,  97 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -227,14 +225,13 @@ class __TwigTemplate_79bef1226a76a451441e21b51188d089c20c16fc48905fe58895b3ce251
                             <form class=\"mt-8\" method=\"post\" action=\"{{ path('login') }}\">
                                 <div class=\"mx-auto max-w-lg\">
                                     <div class=\"py-2\">
-                                        <span class=\"px-1 text-sm text-gray-600\">Nom d'utilisateur</span>
+                                        <label class=\"px-1 text-sm text-gray-600\" for=\"username\">Email</label>
                                         <input id=\"email\" name=\"_username\" type=\"email\" type=\"text\" value=\"{{ last_username }}\"
                                                class=\"text-md block px-3 py-2  rounded-lg w-full
                 bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none\">
                                     </div>
-                                    {#                    <input id=\"email\" name=\"_username\" type=\"email\" class=\"form-control\" value=\"{{ last_username }}\">#}
                                     <div class=\"py-2\" x-data=\"{ show: true }\">
-                                        <span class=\"px-1 text-sm text-gray-600\">Mot de passe</span>
+                                      <label class=\"px-1 text-sm text-gray-600\" for=\"password\">Mot de passe</label>
                                         <div class=\"relative\">
                                             <input id=\"password\" name=\"_password\" type=\"password\"  :type=\"show ? 'password' : 'text'\" class=\"text-md block px-3 py-2 rounded-lg w-full
                 bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md
@@ -264,7 +261,7 @@ class __TwigTemplate_79bef1226a76a451441e21b51188d089c20c16fc48905fe58895b3ce251
                                             </div>
                                         </div>
                                     </div>
- <button class=\"mt-3 text-lg font-semibold
+ <button type=\"submit\" class=\"mt-3 text-lg font-semibold
                 bg-gray-800 w-full text-white rounded-lg
                 px-6 py-3 block shadow-xl hover:text-white hover:bg-black\">
                                         Se connecter
