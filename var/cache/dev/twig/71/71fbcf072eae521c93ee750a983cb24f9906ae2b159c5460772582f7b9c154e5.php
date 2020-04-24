@@ -85,16 +85,16 @@ class __TwigTemplate_55fe9f1feefb106024087060aec38abe899051c27d84c683ffa44346fb8
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"container mx-auto mt-6\">
-    <div class=\"text-center text-3xl font-semibold text-gray-800 uppercase border-b-2 border-gray-800 p-2\">
-        Accueil
+        echo "    <div class=\"container mx-auto mt-6\">
+        <div class=\"text-center text-3xl font-semibold text-gray-800 uppercase border-b-2 border-gray-800 p-2\">
+            Accueil
+        </div>
+        <p class=\"mt-4\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere sodales eros id venenatis. Aliquam eget felis sed eros tempus ultricies a non tortor. Fusce hendrerit vel eros et facilisis. Fusce mauris purus, tempus eu pellentesque id, faucibus ac libero. Quisque purus risus, tempus id sem quis, aliquet viverra diam. Duis sit amet laoreet lorem. Cras scelerisque lobortis risus, id lacinia ipsum rutrum sed. Cras et magna feugiat, tempus orci non, efficitur sem. Ut id nisi venenatis, vehicula mi in, aliquet mi. Praesent suscipit hendrerit est. Nullam maximus neque ante, sed finibus odio cursus nec. Vestibulum viverra nisi quis neque vehicula consectetur. Nunc vel augue a turpis scelerisque tristique. Fusce tincidunt malesuada vehicula.</p>
+
+        <p class=\"mt-4\">Ut non odio ac risus feugiat viverra ut id mi. Proin mi massa, convallis eu euismod ac, pellentesque vel nisi. Maecenas et turpis consequat, fringilla ligula et, volutpat nulla. In molestie vel felis pellentesque rutrum. Donec rhoncus arcu sed libero congue, ac placerat lorem vulputate. Suspendisse imperdiet molestie hendrerit. Sed id sem imperdiet, placerat lacus nec, mattis dui. Ut non odio eget felis maximus ultrices eget ut purus. Morbi posuere nulla ut ex dignissim, ac ullamcorper risus varius. Fusce volutpat nibh eget rhoncus imperdiet. Phasellus magna ante, facilisis molestie semper ac, porta et mi. Sed sollicitudin risus odio, at bibendum purus efficitur eu. </p>
+
+        <p class=\"mt-4\">Nulla sit amet pulvinar arcu. Maecenas porta dui luctus scelerisque aliquet. Phasellus euismod eget nulla vitae vulputate. In facilisis imperdiet leo, eget rutrum nibh venenatis nec. Vestibulum feugiat accumsan ante vel scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam porttitor mi sed magna ultrices vestibulum. Mauris arcu nibh, tempus non aliquam id, fringilla ut felis. Mauris vulputate a eros quis imperdiet. Aenean dapibus consequat nibh rutrum euismod. Fusce lobortis dapibus ligula, ac maximus augue tempor finibus. Quisque eget diam dolor. </p>
     </div>
-    <p class=\"mt-4\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere sodales eros id venenatis. Aliquam eget felis sed eros tempus ultricies a non tortor. Fusce hendrerit vel eros et facilisis. Fusce mauris purus, tempus eu pellentesque id, faucibus ac libero. Quisque purus risus, tempus id sem quis, aliquet viverra diam. Duis sit amet laoreet lorem. Cras scelerisque lobortis risus, id lacinia ipsum rutrum sed. Cras et magna feugiat, tempus orci non, efficitur sem. Ut id nisi venenatis, vehicula mi in, aliquet mi. Praesent suscipit hendrerit est. Nullam maximus neque ante, sed finibus odio cursus nec. Vestibulum viverra nisi quis neque vehicula consectetur. Nunc vel augue a turpis scelerisque tristique. Fusce tincidunt malesuada vehicula.</p>
-
-    <p class=\"mt-4\">Ut non odio ac risus feugiat viverra ut id mi. Proin mi massa, convallis eu euismod ac, pellentesque vel nisi. Maecenas et turpis consequat, fringilla ligula et, volutpat nulla. In molestie vel felis pellentesque rutrum. Donec rhoncus arcu sed libero congue, ac placerat lorem vulputate. Suspendisse imperdiet molestie hendrerit. Sed id sem imperdiet, placerat lacus nec, mattis dui. Ut non odio eget felis maximus ultrices eget ut purus. Morbi posuere nulla ut ex dignissim, ac ullamcorper risus varius. Fusce volutpat nibh eget rhoncus imperdiet. Phasellus magna ante, facilisis molestie semper ac, porta et mi. Sed sollicitudin risus odio, at bibendum purus efficitur eu. </p>
-
-    <p class=\"mt-4\">Nulla sit amet pulvinar arcu. Maecenas porta dui luctus scelerisque aliquet. Phasellus euismod eget nulla vitae vulputate. In facilisis imperdiet leo, eget rutrum nibh venenatis nec. Vestibulum feugiat accumsan ante vel scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam porttitor mi sed magna ultrices vestibulum. Mauris arcu nibh, tempus non aliquam id, fringilla ut felis. Mauris vulputate a eros quis imperdiet. Aenean dapibus consequat nibh rutrum euismod. Fusce lobortis dapibus ligula, ac maximus augue tempor finibus. Quisque eget diam dolor. </p>
-</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -126,16 +126,16 @@ class __TwigTemplate_55fe9f1feefb106024087060aec38abe899051c27d84c683ffa44346fb8
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-<div class=\"container mx-auto mt-6\">
-    <div class=\"text-center text-3xl font-semibold text-gray-800 uppercase border-b-2 border-gray-800 p-2\">
-        Accueil
+    <div class=\"container mx-auto mt-6\">
+        <div class=\"text-center text-3xl font-semibold text-gray-800 uppercase border-b-2 border-gray-800 p-2\">
+            Accueil
+        </div>
+        <p class=\"mt-4\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere sodales eros id venenatis. Aliquam eget felis sed eros tempus ultricies a non tortor. Fusce hendrerit vel eros et facilisis. Fusce mauris purus, tempus eu pellentesque id, faucibus ac libero. Quisque purus risus, tempus id sem quis, aliquet viverra diam. Duis sit amet laoreet lorem. Cras scelerisque lobortis risus, id lacinia ipsum rutrum sed. Cras et magna feugiat, tempus orci non, efficitur sem. Ut id nisi venenatis, vehicula mi in, aliquet mi. Praesent suscipit hendrerit est. Nullam maximus neque ante, sed finibus odio cursus nec. Vestibulum viverra nisi quis neque vehicula consectetur. Nunc vel augue a turpis scelerisque tristique. Fusce tincidunt malesuada vehicula.</p>
+
+        <p class=\"mt-4\">Ut non odio ac risus feugiat viverra ut id mi. Proin mi massa, convallis eu euismod ac, pellentesque vel nisi. Maecenas et turpis consequat, fringilla ligula et, volutpat nulla. In molestie vel felis pellentesque rutrum. Donec rhoncus arcu sed libero congue, ac placerat lorem vulputate. Suspendisse imperdiet molestie hendrerit. Sed id sem imperdiet, placerat lacus nec, mattis dui. Ut non odio eget felis maximus ultrices eget ut purus. Morbi posuere nulla ut ex dignissim, ac ullamcorper risus varius. Fusce volutpat nibh eget rhoncus imperdiet. Phasellus magna ante, facilisis molestie semper ac, porta et mi. Sed sollicitudin risus odio, at bibendum purus efficitur eu. </p>
+
+        <p class=\"mt-4\">Nulla sit amet pulvinar arcu. Maecenas porta dui luctus scelerisque aliquet. Phasellus euismod eget nulla vitae vulputate. In facilisis imperdiet leo, eget rutrum nibh venenatis nec. Vestibulum feugiat accumsan ante vel scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam porttitor mi sed magna ultrices vestibulum. Mauris arcu nibh, tempus non aliquam id, fringilla ut felis. Mauris vulputate a eros quis imperdiet. Aenean dapibus consequat nibh rutrum euismod. Fusce lobortis dapibus ligula, ac maximus augue tempor finibus. Quisque eget diam dolor. </p>
     </div>
-    <p class=\"mt-4\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere sodales eros id venenatis. Aliquam eget felis sed eros tempus ultricies a non tortor. Fusce hendrerit vel eros et facilisis. Fusce mauris purus, tempus eu pellentesque id, faucibus ac libero. Quisque purus risus, tempus id sem quis, aliquet viverra diam. Duis sit amet laoreet lorem. Cras scelerisque lobortis risus, id lacinia ipsum rutrum sed. Cras et magna feugiat, tempus orci non, efficitur sem. Ut id nisi venenatis, vehicula mi in, aliquet mi. Praesent suscipit hendrerit est. Nullam maximus neque ante, sed finibus odio cursus nec. Vestibulum viverra nisi quis neque vehicula consectetur. Nunc vel augue a turpis scelerisque tristique. Fusce tincidunt malesuada vehicula.</p>
-
-    <p class=\"mt-4\">Ut non odio ac risus feugiat viverra ut id mi. Proin mi massa, convallis eu euismod ac, pellentesque vel nisi. Maecenas et turpis consequat, fringilla ligula et, volutpat nulla. In molestie vel felis pellentesque rutrum. Donec rhoncus arcu sed libero congue, ac placerat lorem vulputate. Suspendisse imperdiet molestie hendrerit. Sed id sem imperdiet, placerat lacus nec, mattis dui. Ut non odio eget felis maximus ultrices eget ut purus. Morbi posuere nulla ut ex dignissim, ac ullamcorper risus varius. Fusce volutpat nibh eget rhoncus imperdiet. Phasellus magna ante, facilisis molestie semper ac, porta et mi. Sed sollicitudin risus odio, at bibendum purus efficitur eu. </p>
-
-    <p class=\"mt-4\">Nulla sit amet pulvinar arcu. Maecenas porta dui luctus scelerisque aliquet. Phasellus euismod eget nulla vitae vulputate. In facilisis imperdiet leo, eget rutrum nibh venenatis nec. Vestibulum feugiat accumsan ante vel scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam porttitor mi sed magna ultrices vestibulum. Mauris arcu nibh, tempus non aliquam id, fringilla ut felis. Mauris vulputate a eros quis imperdiet. Aenean dapibus consequat nibh rutrum euismod. Fusce lobortis dapibus ligula, ac maximus augue tempor finibus. Quisque eget diam dolor. </p>
-</div>
 {% endblock %}
 ", "home/index.html.twig", "/home/pierre/Documents/SlideShow/templates/home/index.html.twig");
     }
