@@ -124,7 +124,10 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
         // line 21
         echo "    </section>
 
-<div class=\"flex items-center justify-center\">
+
+";
+        // line 25
+        echo "<div class=\"flex items-center justify-center m-2\">
 
     <button type=\"button\" id=\"selectImage\"  class=\"check bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
         <span class=\"mr-2\">Ajouter une image</span>
@@ -132,24 +135,23 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
             <path fill=\"currentcolor\" d=\"M2.01 21L23 12 2.01 3 2 10l15 2-15 2z\"></path>
         </svg>
     </button>
-
 </div>
 
 ";
-        // line 35
+        // line 36
         echo "    <section>
-        <div id=\"slide\" class=\"bg-white m-6  border-solid border-1 rounded border-gray-800 items-center justify-center\">
+        <div id=\"slide\" class=\"flex items-center justify-center bg-white m-2 w-4/8 h-64 border-solid border-2 border-gray-800\">
 
         </div>
     </section>
 
 ";
-        // line 42
+        // line 43
         echo "    <section>
         <div class=\"flex items-center justify-center\">
 
             <div class=\"m-3\">
-                <button class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
+                <button id=\"confirm\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
                     <span class=\"mr-2\">Valider</span>
                     <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
                         <path fill=\"currentcolor\" d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z\"/>
@@ -193,9 +195,14 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
     </section>
 
     ";
-        // line 90
-        echo "    <section>
-        <div class=\"bg-white m-6 w-4/8 h-64 border-solid border-1 rounded border-gray-800\">
+        // line 91
+        echo "    <section class=\"flex flex-col items-center m-8\">
+
+        <div id=\"slideShow\" class=\"rounded overflow-x-hidden flex snap-x shadow-2xl p-2\">
+
+        </div>
+
+        <div id=\"index\" class=\"flex mt-8\">
 
         </div>
     </section>
@@ -226,7 +233,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
 
     public function getDebugInfo()
     {
-        return array (  197 => 90,  148 => 42,  140 => 35,  125 => 21,  116 => 18,  111 => 16,  103 => 11,  97 => 9,  93 => 8,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  199 => 91,  150 => 43,  142 => 36,  130 => 25,  125 => 21,  116 => 18,  111 => 16,  103 => 11,  97 => 9,  93 => 8,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -253,7 +260,9 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
         {% endfor %}
     </section>
 
-<div class=\"flex items-center justify-center\">
+
+{#    Add image button #}
+<div class=\"flex items-center justify-center m-2\">
 
     <button type=\"button\" id=\"selectImage\"  class=\"check bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
         <span class=\"mr-2\">Ajouter une image</span>
@@ -261,12 +270,11 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
             <path fill=\"currentcolor\" d=\"M2.01 21L23 12 2.01 3 2 10l15 2-15 2z\"></path>
         </svg>
     </button>
-
 </div>
 
 {#    slide creation#}
     <section>
-        <div id=\"slide\" class=\"bg-white m-6  border-solid border-1 rounded border-gray-800 items-center justify-center\">
+        <div id=\"slide\" class=\"flex items-center justify-center bg-white m-2 w-4/8 h-64 border-solid border-2 border-gray-800\">
 
         </div>
     </section>
@@ -276,7 +284,7 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
         <div class=\"flex items-center justify-center\">
 
             <div class=\"m-3\">
-                <button class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
+                <button id=\"confirm\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center\">
                     <span class=\"mr-2\">Valider</span>
                     <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
                         <path fill=\"currentcolor\" d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z\"/>
@@ -320,8 +328,13 @@ class __TwigTemplate_4254e6429759901cca7def7ec65206f13eb16301f1ee6b73cb8750b238c
     </section>
 
     {#    slide preview#}
-    <section>
-        <div class=\"bg-white m-6 w-4/8 h-64 border-solid border-1 rounded border-gray-800\">
+    <section class=\"flex flex-col items-center m-8\">
+
+        <div id=\"slideShow\" class=\"rounded overflow-x-hidden flex snap-x shadow-2xl p-2\">
+
+        </div>
+
+        <div id=\"index\" class=\"flex mt-8\">
 
         </div>
     </section>
