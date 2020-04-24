@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-
+    var nameOfSlide = "";
     var listSlide = []; // Stock the liste of slide
     var slideNumber = 0; // Number of image into slide preview
 
@@ -140,7 +140,7 @@ $( document ).ready(function() {
 
     $("#save").click(function() {
         console.log(listSlide);
-        $.post("/slide/store", { listSlide }, function (message) {
+        $.post("/slide/store", { listSlide, nameOfSlide }, function (message) {
             console.log(message);
 
         });
@@ -178,6 +178,8 @@ $("#kenburnEffect").click(function() {
 
 });
 
+
+
 $("#valideTimer").click(function() {
 
     $("#timer").hide();
@@ -193,7 +195,7 @@ $("#valideTimer").click(function() {
     });
 
     $("#slideNameSend").click(function() {
-
+        nameOfSlide = $("#nameOfSlide").val();
         $("#slideName").hide();
         $("#contentSlide").show('slow');
 

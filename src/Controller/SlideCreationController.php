@@ -44,6 +44,7 @@ class SlideCreationController extends AbstractController
      */
     public function store(Request $request) {
         $entityManager = $this->getDoctrine()->getManager();
+        
 
         // Récupération du nom du slide
         $nameSlide = $request->get('nameOfSlide');
@@ -99,4 +100,13 @@ class SlideCreationController extends AbstractController
             'slides' => $slides
         ]);
     }
+
+    /*public function show($id) {
+        $entityRepository = $this->getDoctrine()->getRepository(Slide::class);
+
+        // Récupération du slide séléctionné
+        $slide = $entityRepository->find($id);
+
+        // Récupération des
+    }*/
 }
