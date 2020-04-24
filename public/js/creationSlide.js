@@ -78,7 +78,7 @@ var slideNumber = 0;
         var slide = document.getElementById("slide");
         console.log(slideNumber);
         let div = document.createElement("div");   <!-- Element creation -->
-        div.setAttribute('class', 'snap-start w-full h-full flex items-center justify-center flex-shrink-0'); <!-- Class define -->
+        div.setAttribute('class', 'snap-start w-full h-full flex items-center justify-center flex-shrink-0 shadow-2xl p-2'); <!-- Class define -->
         div.setAttribute('id', 'slide' + slideNumber);
 
         var slideShow = document.getElementById("slideShow");
@@ -87,7 +87,7 @@ var slideNumber = 0;
         slide.innerHTML ="";
 
         let a = document.createElement("a");   <!-- Element creation -->
-        a.setAttribute('class', 'w-8 mr-1 h-8 text-gray-700 rounded-full bg-white flex justify-center items-center'); <!-- Class define -->
+        a.setAttribute('class', 'w-8 mr-1 h-8 text-white rounded-full bg-gray-800 flex justify-center items-center'); <!-- Class define -->
         a.setAttribute('href', '#' + 'slide' + slideNumber); <!-- Class define -->
         a.innerHTML = slideNumber;
         var index = document.getElementById("index");
@@ -95,6 +95,23 @@ var slideNumber = 0;
 
         slideNumber++;
 
+
+    });
+
+    $("#btnUp").click(function() {
+
+        value = parseInt( $("#inputNbr").val()) + 1;
+        $("#inputNbr").val(parseInt( $("#inputNbr").val()) + 1);
+    });
+
+    $("#btnDown").click(function() {
+
+        $("#inputNbr").val(parseInt( $("#inputNbr").val()) - 1);
+    });
+
+    $("#kenburnEffect").click(function() {
+console.log("ok");
+        $("#slide").addClass('imageContainer');
 
     });
 });
