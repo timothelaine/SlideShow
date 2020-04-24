@@ -88,7 +88,7 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
             // line 29
             echo "                        <a class=\"px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-800 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("slide_list");
-            echo "\">Gallery</a>
+            echo "\">Galerie</a>
                     ";
         }
         // line 31
@@ -99,7 +99,7 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
             // line 33
             echo "                        <a class=\"px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-800 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-800 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("upload");
-            echo "\">Upload</a>
+            echo "\">Ajouter une image</a>
                         <a class=\"px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-800 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-800 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline\" href=\"";
             // line 34
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("creation");
@@ -294,11 +294,11 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
                 </div>
                 <nav :class=\"{'flex': open, 'hidden': !open}\" class=\"flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row\">
                     {% if app.request.pathinfo != '/login' and app.request.pathinfo != '/register' %}
-                        <a class=\"px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-800 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline\" href=\"{{ path('slide_list') }}\">Gallery</a>
+                        <a class=\"px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-800 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline\" href=\"{{ path('slide_list') }}\">Galerie</a>
                     {% endif %}
 
                     {% if(app.user) %}
-                        <a class=\"px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-800 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-800 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline\" href=\"{{ path('upload') }}\">Upload</a>
+                        <a class=\"px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-800 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-800 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline\" href=\"{{ path('upload') }}\">Ajouter une image</a>
                         <a class=\"px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-800 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-800 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline\" href=\"{{ path('creation') }}\">Créer un slide</a>
                         <a class=\"px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-800 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-800 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline\" href=\"{{ path('logout') }}\">Déconnexion</a>
                     {% else %}
