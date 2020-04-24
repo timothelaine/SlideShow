@@ -20,6 +20,7 @@ return [
         '/creation' => [[['_route' => 'creation', '_controller' => 'App\\Controller\\SlideCreationController::index'], null, null, null, false, false, null]],
         '/add' => [[['_route' => 'add', '_controller' => 'App\\Controller\\SlideCreationController::addImage'], null, null, null, false, false, null]],
         '/slide/store' => [[['_route' => 'slide_store', '_controller' => 'App\\Controller\\SlideCreationController::store'], null, null, null, false, false, null]],
+        '/slide' => [[['_route' => 'slide_list', '_controller' => 'App\\Controller\\SlideCreationController::list'], null, null, null, false, false, null]],
         '/upload' => [[['_route' => 'upload', '_controller' => 'App\\Controller\\UploadController::index'], null, null, null, false, false, null]],
         '/deleteimage' => [[['_route' => 'deleteimage', '_controller' => 'App\\Controller\\UploadController::deleteImage'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout'], null, null, null, false, false, null]],
