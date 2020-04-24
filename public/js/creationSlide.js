@@ -149,7 +149,7 @@ $("#kenburnEffect").click(function() {
 $("#valideTimer").click(function() {
 
     $("#timer").hide();
-    document.documentElement.style.setProperty('--timer', $("#inputNbr").val() + "s");
+    // document.documentElement.style.setProperty('--timer', $("#inputNbr").val() + "s");
     $("#slide").addClass('imageContainer');
 
 });
