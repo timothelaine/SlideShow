@@ -283,6 +283,6 @@ class __TwigTemplate_cb1574f4fc64a8ff22a01de1a5870eb140d27a6366add750fdfb5e73872
     {%- set label = label|trans|default(label) -%}
     {{- block('form_label') -}}
 {%- endblock -%}
-", "@VichUploader/Form/fields.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\slideproject\\vendor\\vich\\uploader-bundle\\templates\\Form\\fields.html.twig");
+", "@VichUploader/Form/fields.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\uni\\SlideShow\\vendor\\vich\\uploader-bundle\\templates\\Form\\fields.html.twig");
     }
 }

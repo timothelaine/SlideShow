@@ -434,6 +434,6 @@ class __TwigTemplate_51d970b5b88b0f30bbdc8fe9bee1b7496c75090cba9cb8b32f4e1d5ec5f
         {% endif %}
     </div>
 {% endblock %}
-", "@WebProfiler/Collector/http_client.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\slideproject\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\http_client.html.twig");
+", "@WebProfiler/Collector/http_client.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\uni\\SlideShow\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\http_client.html.twig");
     }
 }

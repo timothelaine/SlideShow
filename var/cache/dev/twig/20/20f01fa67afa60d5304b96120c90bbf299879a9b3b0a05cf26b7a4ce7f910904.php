@@ -803,6 +803,6 @@ class __TwigTemplate_ae6310361f8417642651d873160f7372f0a0f19227ab32dce1b9c5e1b4c
         </table>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/config.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\slideproject\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\config.html.twig");
+", "@WebProfiler/Collector/config.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\uni\\SlideShow\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\config.html.twig");
     }
 }

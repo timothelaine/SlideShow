@@ -223,6 +223,6 @@ class __TwigTemplate_3480e4292a05eac998d0c822288086b33f41c9d1d73ad92a54e1e15b1f2
         </div>
     </div>
 {% endblock %}
-", "security/login.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\slideproject\\templates\\security\\login.html.twig");
+", "security/login.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\uni\\SlideShow\\templates\\security\\login.html.twig");
     }
 }

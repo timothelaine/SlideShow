@@ -137,6 +137,6 @@ class __TwigTemplate_335d13ff0947f9a2058d7a6ead378e43e7e9aa14a915e56f48f4dfb1cba
         <p class=\"mt-4\">Nulla sit amet pulvinar arcu. Maecenas porta dui luctus scelerisque aliquet. Phasellus euismod eget nulla vitae vulputate. In facilisis imperdiet leo, eget rutrum nibh venenatis nec. Vestibulum feugiat accumsan ante vel scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam porttitor mi sed magna ultrices vestibulum. Mauris arcu nibh, tempus non aliquam id, fringilla ut felis. Mauris vulputate a eros quis imperdiet. Aenean dapibus consequat nibh rutrum euismod. Fusce lobortis dapibus ligula, ac maximus augue tempor finibus. Quisque eget diam dolor. </p>
     </div>
 {% endblock %}
-", "home/index.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\slideproject\\templates\\home\\index.html.twig");
+", "home/index.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\uni\\SlideShow\\templates\\home\\index.html.twig");
     }
 }

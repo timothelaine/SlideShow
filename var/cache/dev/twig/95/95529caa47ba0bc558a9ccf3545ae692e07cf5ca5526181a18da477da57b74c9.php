@@ -439,6 +439,6 @@ class __TwigTemplate_ffdfd0d19799ab591538d096cd615dd7ed6bf00b8bdbcccf2ff0e38afd4
     <script src=\"https://code.jquery.com/jquery-3.5.0.js\" integrity=\"sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=\" crossorigin=\"anonymous\"></script>
     <script src=\"/js/upload.js\"></script>
 {% endblock %}
-", "upload/index.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\slideproject\\templates\\upload\\index.html.twig");
+", "upload/index.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\uni\\SlideShow\\templates\\upload\\index.html.twig");
     }
 }

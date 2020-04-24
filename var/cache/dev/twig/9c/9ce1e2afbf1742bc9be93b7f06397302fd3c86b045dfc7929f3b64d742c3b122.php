@@ -291,6 +291,6 @@ class __TwigTemplate_175c959508acaf72f9b57f2f42d230636937bc40eed55cc500ddc5764be
         </tbody>
     </table>
 {% endblock %}
-", "@VichUploader/Collector/mapping_collector.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\slideproject\\vendor\\vich\\uploader-bundle\\templates\\Collector\\mapping_collector.html.twig");
+", "@VichUploader/Collector/mapping_collector.html.twig", "C:\\Users\\MAIN\\Documents\\PROJET\\PHP\\uni\\SlideShow\\vendor\\vich\\uploader-bundle\\templates\\Collector\\mapping_collector.html.twig");
     }
 }

@@ -44,7 +44,7 @@ $( document ).ready(function() {
            svg = parent.children[0].children[0];
            input = parent.children[0].children[1];
            input.checked = false;
-           svg.style.display = "none";Po
+           svg.style.display = "none";
 
         });
     }
@@ -134,7 +134,9 @@ $( document ).ready(function() {
 
         slideNumber++;
 
-        data = { "id":imageId, "x" : 40, "y" : 40, "z" : 0, 'timer' : 5, 'kenburnTimer' : 3 };
+        if ($("#inputTimer").val() < 0 ) { $("#inputTimer").val(0) }
+        if ($("#inputNbr").val() < 0 ) { $("#inputNbr").val(0) }
+        data = { "id":imageId, "x" : 40, "y" : 40, "z" : 0, 'timer' : $("#inputTimer").val(), 'kenburnTimer' :  $("#inputNbr").val() };
         listSlide.push(data);
     });
 
@@ -170,11 +172,18 @@ $( document ).ready(function() {
     $(".btnDown").click(function(e) {
 
         if ( e.target.id == "timerDown"){  // For a Ken burn timer
+
             value = parseInt( $("#inputTimer").val()) - 1;
+
+            if (value < 0){ value = 0;}
+
             $("#inputTimer").val(value);
 
         } else{
-            $("#inputNbr").val(parseInt( $("#inputNbr").val()) - 1);  // For a image timer
+
+            value = parseInt( $("#inputNbr").val()) - 1;
+            if (value < 0){ value = 0;}
+            $("#inputNbr").val(value);  // For a image timer
         }
     });
 
@@ -198,6 +207,7 @@ $( document ).ready(function() {
     // Display the input slide name
     $("#slideCreate").click(function() {
 
+        $("#contentSlide").hide();
         $("#slideName").show('slow');
 
     });
