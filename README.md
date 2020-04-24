@@ -55,9 +55,9 @@ Un preview du slide est disponible en bas de page.
 
 ### Mise en production
 
-1 - Changer les log de la base donnée dans le fichier .env afin de correspondre à votre environnement local.
-2 - Taper la commande `php bin/console doctrine:database:create`
-3 - Taper la commande `php bin/console make:migration`
-4 - Taper la commande `php bin/console doctrine:migration:migrate`
-5 - Créer un utilisateurs via la page `/register`
-6 - Se connecter via la page `login`
+1. Changer les log de la base donnée dans le fichier .env afin de correspondre à votre environnement local.
+2. Taper la commande `php bin/console doctrine:database:create`
+3. Taper la commande `php bin/console make:migration`
+4. Taper la commande `php bin/console doctrine:migration:migrate`
+5. Créer un utilisateurs via la page `/register`
+6. Se connecter via la page `login`
