@@ -1,9 +1,8 @@
 $( document ).ready(function() {
 
-var slideNumber = 0;
+    var slideNumber = 0;
     $("#timer").hide();
-    $("#inputTimer").val(parseInt(0));
-    $("#inputNbr").val(parseInt(0));
+    var listSlide = [];
 
     $('#imagesDisplay').bind('click', function(event) {
         if (event.target.parentNode.parentNode.parentNode.id == 'imagesDisplay') {
@@ -100,47 +99,49 @@ var slideNumber = 0;
 
         slideNumber++;
 
+        data = { "id":imageId, "x" : 40, "y" : 40, "z" : 0, 'timer' : 5, 'kenburnTimer' : 3 };
+        listSlide.push(data);
         });
 
 
     });
 
-    $(".btnUp").click(function(e) {
+$(".btnUp").click(function(e) {
 
-        if ( e.target.id == "timerUp"){
+    if ( e.target.id == "timerUp"){
 
-            value = parseInt( $("#inputTimer").val()) + 1;
-            $("#inputTimer").val(value);
+        value = parseInt( $("#inputTimer").val()) + 1;
+        $("#inputTimer").val(value);
 
-        } else{
-            $("#inputNbr").val(parseInt( $("#inputNbr").val()) + 1);
-        }
-    });
+    } else{
+        $("#inputNbr").val(parseInt( $("#inputNbr").val()) + 1);
+    }
+});
 
-    $(".btnDown").click(function(e) {
+$(".btnDown").click(function(e) {
 
-        if ( e.target.id == "timerDown"){
-            value = parseInt( $("#inputTimer").val()) - 1;
-            $("#inputTimer").val(value);
+    if ( e.target.id == "timerDown"){
+        value = parseInt( $("#inputTimer").val()) - 1;
+        $("#inputTimer").val(value);
 
-        } else{
-            $("#inputNbr").val(parseInt( $("#inputNbr").val()) - 1);
-        }
-    });
+    } else{
+        $("#inputNbr").val(parseInt( $("#inputNbr").val()) - 1);
+    }
+});
 
-    $("#kenburnEffect").click(function() {
+$("#kenburnEffect").click(function() {
 
-        $("#timer").show();
+    $("#timer").show();
 
-    });
+});
 
-    $("#valideTimer").click(function() {
+$("#valideTimer").click(function() {
 
-        $("#timer").hide();
-        document.documentElement.style.setProperty('--timer', $("#inputNbr").val() + "s");
-        $("#slide").addClass('imageContainer');
+    $("#timer").hide();
+    document.documentElement.style.setProperty('--timer', $("#inputNbr").val() + "s");
+    $("#slide").addClass('imageContainer');
 
-    });
+});
 
     $("#slideShow").click(function() {
 
