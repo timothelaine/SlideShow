@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Slides{% endblock %}
+
+{% block body %}
+    <section class="flex flex-wrap w-full m-2 items-center justify-center" id="imagesDisplay">
+        {% for slide_upload in slide_uploads %}
+            <div class="relative m-2 border-solid border-2 border-gray-800 shadow-2xl rounded">
+                <div class="absolute top-0 right-0">
+                    <input type="checkbox" name="checkImage" class="opacity-0" autocomplete="off">
+                </div>
+                <img class="h-32 object-cover"  src="/uploads/{{ slide_upload.upload.name }}">
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}

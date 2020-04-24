@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-
+    var nameOfSlide = "";
     var listSlide = []; // Stock the liste of slide
     var slideNumber = 0; // Number of image into slide preview
 
@@ -146,7 +146,7 @@ $( document ).ready(function() {
     // Save the slide data in DB
     $("#save").click(function() {
         $.post("/slide/store", { listSlide, nameOfSlide }, function (message) {
-            $("#messageSlide").show(slow);
+            $("#messageSlide").show('slow');
             setTimeout(hideMessage, 5000);
         });
     });

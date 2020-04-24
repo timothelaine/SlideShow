@@ -87,6 +87,25 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
         // line 6
         echo "    ";
         // line 7
+        echo "    <div class=\"flex m-2\" id=\"messageSlide\">
+        <div class=\"m-auto\">
+            <div class=\"bg-white rounded-lg border-gray-300 border p-3 shadow-lg\">
+                <div class=\"flex flex-row\">
+                    <div class=\"p-2\">
+                        <svg width=\"32\" height=\"32\" viewBox=\"0 0 1792 1792\" fill=\"#44C997\" xmlns=\"http://www.w3.org/2000/svg\">
+                            <path d=\"M1299 813l-422 422q-19 19-45 19t-45-19l-294-294q-19-19-19-45t19-45l102-102q19-19 45-19t45 19l147 147 275-275q19-19 45-19t45 19l102 102q19 19 19 45t-19 45zm141 83q0-148-73-273t-198-198-273-73-273 73-198 198-73 273 73 273 198 198 273 73 273-73 198-198 73-273zm224 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z\"/>
+                        </svg>
+                    </div>
+                    <div class=\"ml-2 mr-6\">
+                        <span class=\"font-semibold\">Création réussie !</span>
+                        <span class=\"block text-gray-500\">La slide a bien été créé.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    ";
+        // line 25
         echo "    <div class=\"flex flex-row items-center justify-center m-2\">
         <div class=\"m-1\">
             <button type=\"button\" id=\"slideCreate\"  class=\"check bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-2xl py-2 px-6 inline-flex items-center\">
@@ -95,7 +114,9 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
             </button>
         </div>
 
-        <div class=\"m-1 flex flex-wrap \" id=\"slideName\">
+";
+        // line 34
+        echo "        <div class=\"m-1 flex flex-wrap \" id=\"slideName\">
             <div class=\"flex w-5/12\">
                 <input type=\"text\" value=\"0\" id=\"nameOfSlide\" class=\"bg-white text-sm text-gray-900 text-center focus:outline-none border rounded-tl-md rounded-bl-md border-gray-800 focus:border-gray-600 hover:border-green-600  w-full\">
             </div>
@@ -114,35 +135,35 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
     </div>
 
     ";
-        // line 34
+        // line 53
         echo "    <div id=\"contentSlide\">
         <section class=\"flex flex-wrap w-full m-2 items-center justify-center\" id=\"imagesDisplay\">
             ";
-        // line 36
+        // line 55
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["imagesUploaded"]) || array_key_exists("imagesUploaded", $context) ? $context["imagesUploaded"] : (function () { throw new RuntimeError('Variable "imagesUploaded" does not exist.', 36, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["imagesUploaded"]) || array_key_exists("imagesUploaded", $context) ? $context["imagesUploaded"] : (function () { throw new RuntimeError('Variable "imagesUploaded" does not exist.', 55, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
-            // line 37
+            // line 56
             echo "                <div class=\"relative m-2 border-solid border-2 border-gray-800 shadow-2xl rounded\" id=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 37), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 56), "html", null, true);
             echo "\">
                     <div class=\"absolute top-0 right-0\">
                         <svg id=\"selected";
-            // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 39), "html", null, true);
+            // line 58
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 58), "html", null, true);
             echo "\" version=\"1.1\"  xmlns=\"http://www.w3.org/2000/svg\" class=\"w-4 h-4 hidden m-2\" viewBox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xml:space=\"preserve\">
                             <ellipse style=\"fill:darkseagreen;\" cx=\"256\" cy=\"256\" rx=\"256\" ry=\"255.832\"/>
                             <polygon style=\"fill:#FFFFFF;\" points=\"235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
                                 391.88,166.392 \"/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                         </svg>
                         <input type=\"checkbox\" name=\"checkImage\" id=\"check";
-            // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 44), "html", null, true);
+            // line 63
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 63), "html", null, true);
             echo "\" class=\"opacity-0\" autocomplete=\"off\">
                     </div>
                     <img class=\"h-32 object-cover\"  src=\"/uploads/";
-            // line 46
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "name", [], "any", false, false, false, 46), "html", null, true);
+            // line 65
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "name", [], "any", false, false, false, 65), "html", null, true);
             echo "\">
                 </div>
             ";
@@ -150,11 +171,11 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 49
+        // line 68
         echo "        </section>
 
         ";
-        // line 52
+        // line 71
         echo "        <div class=\"flex items-center justify-center m-2\">
             <button type=\"button\" id=\"selectImage\"  class=\"check bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-2xl py-2 px-6 inline-flex items-center\">
                 <span class=\"mr-2\">Ajouter une image</span>
@@ -163,7 +184,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
         </div>
 
         ";
-        // line 60
+        // line 79
         echo "        <section class=\"flex items-center justify-center\">
             <div class=\"flex m-2 p-3 w-2/4 shadow-2xl items-center justify-center\">
                 <div id=\"slide\" class=\"flex items-center justify-center bg-gray-200 w-3/4 h-64\"></div>
@@ -171,7 +192,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
         </section>
 
         ";
-        // line 67
+        // line 86
         echo "        <section>
             <div class=\"flex flex-wrap items-center justify-center\">
                 <div class=\"m-3\">
@@ -216,8 +237,9 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
                         </div>
                     </div>
                 </div>
-
-                <div class=\"flex flex-col m-3\">
+            ";
+        // line 131
+        echo "                <div class=\"flex flex-col m-3\">
                     <button id=\"kenburnEffect\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-gray-800  hover:gray-800 hover:bg-gray-800 hover:text-white shadow-2xl p-3 inline-flex items-center\">
                         <span class=\"mr-2\">Effet ken burn</span>
                         <svg width=\"24\" height=\"24\" fill=\"currentcolor\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xml:space=\"preserve\"><g><g>
@@ -255,7 +277,9 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
                     </div>
                 </div>
 
-                <div class=\"m-3\">
+";
+        // line 170
+        echo "                <div class=\"m-3\">
                     <button id=\"save\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-2xl p-3 inline-flex items-center\">
                         <span class=\"mr-3\">Sauvegarder le slide</span>
                         <svg version=\"1.1\" fill=\"currentcolor\" width=\"18\" height=\"18\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 492 492\" style=\"enable-background:new 0 0 492 492;\" xml:space=\"preserve\"><g><g>
@@ -271,7 +295,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
         </section>
 
         ";
-        // line 166
+        // line 186
         echo "        <section class=\"flex flex-col items-center m-8\">
             <div id=\"slideShow\" class=\"rounded overflow-x-hidden flex snap-x shadow-2xl p-2\">
 
@@ -306,7 +330,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
 
     public function getDebugInfo()
     {
-        return array (  275 => 166,  175 => 67,  167 => 60,  158 => 52,  154 => 49,  145 => 46,  140 => 44,  132 => 39,  126 => 37,  122 => 36,  118 => 34,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  299 => 186,  282 => 170,  242 => 131,  196 => 86,  188 => 79,  179 => 71,  175 => 68,  166 => 65,  161 => 63,  153 => 58,  147 => 56,  143 => 55,  139 => 53,  119 => 34,  109 => 25,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -316,7 +340,25 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
 {% block title %}Créer un slide{% endblock %}
 
 {% block body %}
-    {# Add create slide button #}
+    {#message display#}
+    <div class=\"flex m-2\" id=\"messageSlide\">
+        <div class=\"m-auto\">
+            <div class=\"bg-white rounded-lg border-gray-300 border p-3 shadow-lg\">
+                <div class=\"flex flex-row\">
+                    <div class=\"p-2\">
+                        <svg width=\"32\" height=\"32\" viewBox=\"0 0 1792 1792\" fill=\"#44C997\" xmlns=\"http://www.w3.org/2000/svg\">
+                            <path d=\"M1299 813l-422 422q-19 19-45 19t-45-19l-294-294q-19-19-19-45t19-45l102-102q19-19 45-19t45 19l147 147 275-275q19-19 45-19t45 19l102 102q19 19 19 45t-19 45zm141 83q0-148-73-273t-198-198-273-73-273 73-198 198-73 273 73 273 198 198 273 73 273-73 198-198 73-273zm224 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z\"/>
+                        </svg>
+                    </div>
+                    <div class=\"ml-2 mr-6\">
+                        <span class=\"font-semibold\">Création réussie !</span>
+                        <span class=\"block text-gray-500\">La slide a bien été créé.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# Create slide button #}
     <div class=\"flex flex-row items-center justify-center m-2\">
         <div class=\"m-1\">
             <button type=\"button\" id=\"slideCreate\"  class=\"check bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-2xl py-2 px-6 inline-flex items-center\">
@@ -325,6 +367,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
             </button>
         </div>
 
+{#        Input name Slide#}
         <div class=\"m-1 flex flex-wrap \" id=\"slideName\">
             <div class=\"flex w-5/12\">
                 <input type=\"text\" value=\"0\" id=\"nameOfSlide\" class=\"bg-white text-sm text-gray-900 text-center focus:outline-none border rounded-tl-md rounded-bl-md border-gray-800 focus:border-gray-600 hover:border-green-600  w-full\">
@@ -361,7 +404,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
             {% endfor %}
         </section>
 
-        {# Add image button #}
+        {# Button to add image #}
         <div class=\"flex items-center justify-center m-2\">
             <button type=\"button\" id=\"selectImage\"  class=\"check bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-2xl py-2 px-6 inline-flex items-center\">
                 <span class=\"mr-2\">Ajouter une image</span>
@@ -369,7 +412,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
             </button>
         </div>
 
-        {# Slide creation #}
+        {# Slide creation section #}
         <section class=\"flex items-center justify-center\">
             <div class=\"flex m-2 p-3 w-2/4 shadow-2xl items-center justify-center\">
                 <div id=\"slide\" class=\"flex items-center justify-center bg-gray-200 w-3/4 h-64\"></div>
@@ -421,7 +464,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
                         </div>
                     </div>
                 </div>
-
+            {#Ken burn effect button#}
                 <div class=\"flex flex-col m-3\">
                     <button id=\"kenburnEffect\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-gray-800  hover:gray-800 hover:bg-gray-800 hover:text-white shadow-2xl p-3 inline-flex items-center\">
                         <span class=\"mr-2\">Effet ken burn</span>
@@ -460,6 +503,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
                     </div>
                 </div>
 
+{#                save slide button#}
                 <div class=\"m-3\">
                     <button id=\"save\" class=\"bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-2xl p-3 inline-flex items-center\">
                         <span class=\"mr-3\">Sauvegarder le slide</span>

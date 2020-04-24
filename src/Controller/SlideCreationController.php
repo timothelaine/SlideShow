@@ -101,12 +101,24 @@ class SlideCreationController extends AbstractController
         ]);
     }
 
-    /*public function show($id) {
+    /**
+     * @Route("/slide/show/{id}", name="slide_show")
+     */
+    public function show($id) {
         $entityRepository = $this->getDoctrine()->getRepository(Slide::class);
 
         // Récupération du slide séléctionné
         $slide = $entityRepository->find($id);
 
-        // Récupération des
-    }*/
+        $entityRepository = $this->getDoctrine()->getRepository(SlideUpload::class);
+
+        // Récupération des images de la slide
+        $slideUpload = $entityRepository->findBy(['slide' => $slide]);
+
+        //dd($slideUpload);
+
+        return $this->render('slide_creation/show.html.twig', [
+            'slide_uploads' => $slideUpload
+        ]);
+    }
 }
