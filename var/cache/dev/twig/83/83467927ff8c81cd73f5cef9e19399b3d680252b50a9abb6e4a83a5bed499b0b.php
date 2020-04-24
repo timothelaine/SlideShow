@@ -107,7 +107,10 @@ class __TwigTemplate_3480e4292a05eac998d0c822288086b33f41c9d1d73ad92a54e1e15b1f2
                                 Connexion
                             </div>
 
-                            <form class=\"mt-8\">
+                            <form class=\"mt-8\" method=\"post\" action=\"";
+        // line 22
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+        echo "\">
                                 <div class=\"mx-auto max-w-lg\">
                                     <div class=\"py-2\">
                                         <label class=\"px-1 text-sm text-gray-600\" for=\"username\">Email</label>
@@ -193,7 +196,7 @@ class __TwigTemplate_3480e4292a05eac998d0c822288086b33f41c9d1d73ad92a54e1e15b1f2
 
     public function getDebugInfo()
     {
-        return array (  174 => 95,  171 => 90,  168 => 85,  116 => 26,  97 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  177 => 95,  174 => 90,  171 => 85,  119 => 26,  112 => 22,  97 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -219,7 +222,7 @@ class __TwigTemplate_3480e4292a05eac998d0c822288086b33f41c9d1d73ad92a54e1e15b1f2
                                 Connexion
                             </div>
 
-                            <form class=\"mt-8\">
+                            <form class=\"mt-8\" method=\"post\" action=\"{{ path('login') }}\">
                                 <div class=\"mx-auto max-w-lg\">
                                     <div class=\"py-2\">
                                         <label class=\"px-1 text-sm text-gray-600\" for=\"username\">Email</label>

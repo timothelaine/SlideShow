@@ -1,8 +1,10 @@
 $( document ).ready(function() {
+    var listSlide = [];
+    $("#slideName").hide();
+    $("#contentSlide").hide();
 
     var slideNumber = 0;
     $("#timer").hide();
-    var listSlide = [];
 
     $('#imagesDisplay').bind('click', function(event) {
         if (event.target.parentNode.parentNode.parentNode.id == 'imagesDisplay') {
@@ -101,10 +103,19 @@ $( document ).ready(function() {
 
         data = { "id":imageId, "x" : 40, "y" : 40, "z" : 0, 'timer' : 5, 'kenburnTimer' : 3 };
         listSlide.push(data);
-        });
-
-
     });
+
+
+    $("#save").click(function() {
+        console.log(listSlide);
+        $.post("/slide/store", { listSlide }, function (message) {
+            console.log(message);
+
+        });
+    });
+
+
+
 
 $(".btnUp").click(function(e) {
 
@@ -143,54 +154,18 @@ $("#valideTimer").click(function() {
 
 });
 
-    $("#slideShow").click(function() {
+    $("#slideCreate").click(function() {
 
-        $("#slide").addClass('imageContainer');
+        $("#slideName").show();
 
     });
 
-    $("#save").click(function() {
-        $.post("/slide/store", { listSlide }, function (message) {
-            console.log(message);
+    $("#slideNameSend").click(function() {
 
-        });
+        $("#slideName").hide();
+        $("#contentSlide").show();
 
-        var openmodal = document.querySelectorAll('.modal-open');
-        for (var i = 0; i < openmodal.length; i++) {
-            openmodal[i].addEventListener('click', function(event){
-                event.preventDefault();
-                toggleModal()
-            })
-        }
-
-        const overlay = document.querySelector('.modal-overlay');
-        overlay.addEventListener('click', toggleModal);
-
-        var closemodal = document.querySelectorAll('.modal-close');
-        for (var i = 0; i < closemodal.length; i++) {
-            closemodal[i].addEventListener('click', toggleModal)
-        }
-
-        document.onkeydown = function(evt) {
-            evt = evt || window.event;
-            var isEscape = false;
-            if ("key" in evt) {
-                isEscape = (evt.key === "Escape" || evt.key === "Esc")
-            } else {
-                isEscape = (evt.keyCode === 27)
-            }
-            if (isEscape && document.body.classList.contains('modal-active')) {
-                toggleModal()
-            }
-        };
-
-
-        function toggleModal () {
-            const body = document.querySelector('body');
-            const modal = document.querySelector('.modal');
-            modal.classList.toggle('opacity-0');
-            modal.classList.toggle('pointer-events-none');
-            body.classList.toggle('modal-active')
-        }
+    });
 
 });
+
