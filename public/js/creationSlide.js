@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+    var listSlide = [];
+
 var slideNumber = 0;
     $("#timer").hide();
 
@@ -78,7 +80,6 @@ var slideNumber = 0;
     });
 
     $("#confirm").click(function() {
-
         var slide = document.getElementById("slide");
         imageId = slide.children[0].id;
         let div = document.createElement("div");   <!-- Element creation -->
@@ -98,13 +99,16 @@ var slideNumber = 0;
 
         slideNumber++;
 
-         data = { "id":imageId, "x" : 40 + "px", "y" : 40 + "px", "z" : 0 + "px", 'timer' : 5, 'kenburnTimer' : 3 };
-        $.post("/slide/store", data, function (message) {
+        data = { "id":imageId, "x" : 40, "y" : 40, "z" : 0, 'timer' : 5, 'kenburnTimer' : 3 };
 
+        listSlide.push(data);
+    });
+
+    $("#save").click(function() {
+        $.post("/slide/store", { listSlide }, function (message) {
+            console.log(message);
 
         });
-
-
     });
 
     $("#btnUp").click(function() {

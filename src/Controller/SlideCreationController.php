@@ -2,10 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\Slide;
+use App\Entity\SlideUpload;
 use App\Entity\Upload;
 use App\Repository\UploadRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class SlideCreationController extends AbstractController
@@ -29,6 +32,49 @@ class SlideCreationController extends AbstractController
         $image =  $request->request->get('id');
         $imageSelected = $repo->find($image);
         return $this->json(['imageName' => $imageSelected->getName()]);
+
+    }
+
+    /**
+     * @Route("/slide/store", name="slide_store")
+     */
+    public function store(Request $request) {
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $content = $request->get('listSlide');
+
+        $slide = new Slide();
+        $slide->setName("TEEEST");
+        $slide->setCreatedAt(new \DateTime());
+
+        $entityManager->persist($slide);
+        $entityManager->flush();
+
+
+        foreach ($content as $image) {
+            $entityRepository = $this->getDoctrine()->getRepository(Upload::class);
+
+            $imageCurrent = $entityRepository->find($image['id']);
+
+
+            $slideUpload = new SlideUpload();
+            $slideUpload->setSlide($slide);
+            $slideUpload->setUpload($imageCurrent);
+            $slideUpload->setX1($image['x']);
+            $slideUpload->setY1($image['y']);
+            $slideUpload->setZ1($image['z']);
+            $slideUpload->setX2($image['x']);
+            $slideUpload->setY2($image['y']);
+            $slideUpload->setZ2($image['z']);
+
+            $slideUpload->setTimer($image['timer']);
+            $slideUpload->setKenburnTimer($image['kenburnTimer']);
+
+            $entityManager->persist($slideUpload);
+            $entityManager->flush();
+        }
+
+        return new Response(json_encode(array('result' => 'success')));
 
     }
 }

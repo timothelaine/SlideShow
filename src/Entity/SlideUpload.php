@@ -56,6 +56,16 @@ class SlideUpload
      */
     private $z2;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $timer;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $kenburn_timer;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -153,6 +163,30 @@ class SlideUpload
     public function setZ2(float $z2): self
     {
         $this->z2 = $z2;
+
+        return $this;
+    }
+
+    public function getTimer(): ?int
+    {
+        return $this->timer;
+    }
+
+    public function setTimer(?int $timer): self
+    {
+        $this->timer = $timer;
+
+        return $this;
+    }
+
+    public function getKenburnTimer(): ?int
+    {
+        return $this->kenburn_timer;
+    }
+
+    public function setKenburnTimer(?int $kenburn_timer): self
+    {
+        $this->kenburn_timer = $kenburn_timer;
 
         return $this;
     }
