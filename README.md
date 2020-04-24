@@ -5,23 +5,23 @@
 ## Les sections du site
 Le site propose 5 pages proposant divers fonctionnalitées à l'utilisateur.
 
-### **Connexion**
+### Connexion
 Accessible via l'url /login.
 Cette page permet de se connecter à son compte.
 
-### **Inscription**
+### Inscription
 Accessible via l'url /register.
 Cette page permet d'enregsitrer un utilisateur.
 
-###**Upload**
+### Upload
 Accessible via l'url /upload.
 Cette page permet d'upload plusieurs images en même temps, d'afficher les images upload ainsi que de les supprimmer.
 
-### **Gallery**
+### Gallery
 Accessible via l'url /gallery.
 Cette page permet d'afficher les slides créé.
 
-### **Créer un slide**
+### Créer un slide
 Accessible via l'url /creation.
 Cette page permet de créer un slide.
 
