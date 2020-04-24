@@ -127,22 +127,44 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
     </div>
 
 
-";
-        // line 53
+            ";
+        // line 46
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 46, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 46));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 47
+            echo "                <div class=\"m-3\">
+                    <div class=\"bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative\" role=\"alert\">
+                        <strong class=\"font-bold\">Succès !</strong>
+                        <span class=\"block sm:inline\">";
+            // line 50
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "</span>
+                        <span class=\"absolute top-0 bottom-0 right-0 px-4 py-3\">
+                            <svg class=\"fill-current h-6 w-6 text-red-500\" role=\"button\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><title>Close</title><path d=\"M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z\"/></svg>
+                        </span>
+                    </div>
+                </div>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 57
         echo "
             ";
-        // line 54
+        // line 58
         $this->displayBlock('body', $context, $blocks);
-        // line 55
+        // line 59
         echo "        </div>
 
 
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>
         ";
-        // line 60
+        // line 64
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 61
+        // line 65
         echo "    </body>
 </html>
 ";
@@ -191,7 +213,7 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
 
     }
 
-    // line 54
+    // line 58
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -209,7 +231,7 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
 
     }
 
-    // line 60
+    // line 64
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -239,7 +261,7 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
 
     public function getDebugInfo()
     {
-        return array (  213 => 60,  195 => 54,  177 => 9,  158 => 5,  146 => 61,  144 => 60,  137 => 55,  135 => 54,  132 => 53,  124 => 40,  119 => 38,  114 => 37,  109 => 35,  105 => 34,  100 => 33,  98 => 32,  95 => 31,  89 => 29,  87 => 28,  75 => 19,  67 => 13,  63 => 10,  61 => 9,  57 => 7,  53 => 5,  47 => 1,);
+        return array (  235 => 64,  217 => 58,  199 => 9,  180 => 5,  168 => 65,  166 => 64,  159 => 59,  157 => 58,  154 => 57,  141 => 50,  136 => 47,  132 => 46,  124 => 40,  119 => 38,  114 => 37,  109 => 35,  105 => 34,  100 => 33,  98 => 32,  95 => 31,  89 => 29,  87 => 28,  75 => 19,  67 => 13,  63 => 10,  61 => 9,  57 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -289,13 +311,17 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
     </div>
 
 
-{#        <div class=\"container mt-3\">#}
-{#            {% for message in app.flashes('success') %}#}
-{#                <div class=\"alert alert-success\" role=\"alert\">#}
-{#                    <h4 class=\"alert-heading\">Succès !</h4>#}
-{#                    <p>{{ message }}</p>#}
-{#                </div>#}
-{#            {% endfor %}#}
+            {% for message in app.flashes('success') %}
+                <div class=\"m-3\">
+                    <div class=\"bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative\" role=\"alert\">
+                        <strong class=\"font-bold\">Succès !</strong>
+                        <span class=\"block sm:inline\">{{ message }}</span>
+                        <span class=\"absolute top-0 bottom-0 right-0 px-4 py-3\">
+                            <svg class=\"fill-current h-6 w-6 text-red-500\" role=\"button\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><title>Close</title><path d=\"M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z\"/></svg>
+                        </span>
+                    </div>
+                </div>
+            {% endfor %}
 
             {% block body %}{% endblock %}
         </div>

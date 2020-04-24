@@ -85,35 +85,72 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    ";
-        // line 7
-        echo "    <section class=\"flex flex-wrap w-full m-2 items-center justify-center\" id=\"imagesDisplay\">
-        ";
+        echo "
+    ";
         // line 8
+        echo "
+    <div class=\"flex flex-row items-center justify-center m-2\">
+
+        <div class=\"m-1\">
+            <button type=\"button\" id=\"slideCreate\"  class=\"check bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-2xl py-2 px-6 inline-flex items-center\">
+                <span class=\"mr-2\">Créer un slide</span>
+                <svg width=\"16\" fill=\"currentcolor\" height=\"16\" viewBox=\"0 0 448 448\"  xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m408 184h-136c-4.417969 0-8-3.582031-8-8v-136c0-22.089844-17.910156-40-40-40s-40 17.910156-40 40v136c0 4.417969-3.582031 8-8 8h-136c-22.089844 0-40 17.910156-40 40s17.910156 40 40 40h136c4.417969 0 8 3.582031 8 8v136c0 22.089844 17.910156 40 40 40s40-17.910156 40-40v-136c0-4.417969 3.582031-8 8-8h136c22.089844 0 40-17.910156 40-40s-17.910156-40-40-40zm0 0\"/></svg>
+            </button>
+        </div>
+
+        <div class=\"m-1 flex flex-wrap \" id=\"slideName\">
+            <div class=\"flex w-5/12\">
+                <input type=\"text\" value=\"0\" id=\"nameOfSlide\"
+                       class=\"bg-white text-sm text-gray-900 text-center focus:outline-none border   rounded-tl-md rounded-bl-md border-gray-800 focus:border-gray-600 hover:border-green-600  w-full\">
+            </div>
+            <div class=\"flex flex-row w-3/12 \">
+                <button id=\"slideNameSend\"
+                        class=\"text-white text-center text-md w-full font-semibold rounded-tr-md rounded-br-md bg-gray-800 hover:border-green-600 hover:bg-green-500 focus:bg-gray-600 focus:outline-none border border-gray-800 focus:border-gray-600 \">
+                    <svg class=\"m-3\" version=\"1.1\" fill=\"currentcolor\" width=\"18\" height=\"18\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"
+                         viewBox=\"0 0 492 492\" style=\"enable-background:new 0 0 492 492;\" xml:space=\"preserve\">
+<g>
+    <g>
+        <path d=\"M484.128,104.478l-16.116-16.116c-5.064-5.068-11.816-7.856-19.024-7.856c-7.208,0-13.964,2.788-19.028,7.856
+\t\t\tL203.508,314.81L62.024,173.322c-5.064-5.06-11.82-7.852-19.028-7.852c-7.204,0-13.956,2.792-19.024,7.852l-16.12,16.112
+\t\t\tC2.784,194.51,0,201.27,0,208.47c0,7.204,2.784,13.96,7.852,19.028l159.744,159.736c0.212,0.3,0.436,0.58,0.696,0.836
+\t\t\tl16.12,15.852c5.064,5.048,11.82,7.572,19.084,7.572h0.084c7.212,0,13.968-2.524,19.024-7.572l16.124-15.992
+\t\t\tc0.26-0.256,0.48-0.468,0.612-0.684l244.784-244.76C494.624,132.01,494.624,114.966,484.128,104.478z\"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+</svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    ";
+        // line 42
+        echo "    <div id=\"contentSlide\">
+    <section class=\"flex flex-wrap w-full m-2 items-center justify-center\" id=\"imagesDisplay\">
+        ";
+        // line 44
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["imagesUploaded"]) || array_key_exists("imagesUploaded", $context) ? $context["imagesUploaded"] : (function () { throw new RuntimeError('Variable "imagesUploaded" does not exist.', 8, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["imagesUploaded"]) || array_key_exists("imagesUploaded", $context) ? $context["imagesUploaded"] : (function () { throw new RuntimeError('Variable "imagesUploaded" does not exist.', 44, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
-            // line 9
+            // line 45
             echo "            <div class=\"relative m-2 border-solid border-2 border-gray-800 shadow-2xl rounded\" id=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 9), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 45), "html", null, true);
             echo "\">
                 <div class=\"absolute top-0 right-0\">
                     <svg id=\"selected";
-            // line 11
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 11), "html", null, true);
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 47), "html", null, true);
             echo "\" version=\"1.1\"  xmlns=\"http://www.w3.org/2000/svg\" class=\"w-4 h-4 hidden m-2\" viewBox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xml:space=\"preserve\">
               <ellipse style=\"fill:darkseagreen;\" cx=\"256\" cy=\"256\" rx=\"256\" ry=\"255.832\"/>
                         <polygon style=\"fill:#FFFFFF;\" points=\"235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
 391.88,166.392 \"/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
           </svg>
                     <input type=\"checkbox\" name=\"checkImage\" id=\"check";
-            // line 16
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 16), "html", null, true);
+            // line 52
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 52), "html", null, true);
             echo "\" class=\"opacity-0\" autocomplete=\"off\">
                 </div>
                 <img class=\"h-32 object-cover\"  src=\"/uploads/";
-            // line 18
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "name", [], "any", false, false, false, 18), "html", null, true);
+            // line 54
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "name", [], "any", false, false, false, 54), "html", null, true);
             echo "\">
             </div>
         ";
@@ -121,12 +158,12 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 21
+        // line 57
         echo "    </section>
 
 
 ";
-        // line 25
+        // line 61
         echo "<div class=\"flex items-center justify-center m-2\">
 
     <button type=\"button\" id=\"selectImage\"  class=\"check bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-2xl py-2 px-6 inline-flex items-center\">
@@ -136,7 +173,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
 </div>
 
 ";
-        // line 34
+        // line 70
         echo "    <section class=\"flex items-center justify-center\">
         <div class=\"flex m-2 p-3 w-2/4 shadow-2xl items-center justify-center\">
             <div id=\"slide\" class=\"flex items-center justify-center bg-gray-200 w-3/4 h-64\">
@@ -149,7 +186,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
 
 
 ";
-        // line 46
+        // line 82
         echo "    <section>
         <div class=\"flex  flex-wrap items-center justify-center\">
 
@@ -268,7 +305,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
     </section>
 
     ";
-        // line 164
+        // line 200
         echo "    <section class=\"flex flex-col items-center m-8\">
 
         <div id=\"slideShow\" class=\"rounded overflow-x-hidden flex snap-x shadow-2xl p-2\">
@@ -279,6 +316,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
 
         </div>
     </section>
+    </div>
 
     <script
             src=\"https://code.jquery.com/jquery-3.5.0.js\"
@@ -306,7 +344,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
 
     public function getDebugInfo()
     {
-        return array (  272 => 164,  153 => 46,  140 => 34,  130 => 25,  125 => 21,  116 => 18,  111 => 16,  103 => 11,  97 => 9,  93 => 8,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  309 => 200,  190 => 82,  177 => 70,  167 => 61,  162 => 57,  153 => 54,  148 => 52,  140 => 47,  134 => 45,  130 => 44,  126 => 42,  91 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -316,7 +354,43 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
 {% block title %}Créer un slide{% endblock %}
 
 {% block body %}
+
+    {#    Add create slide button #}
+
+    <div class=\"flex flex-row items-center justify-center m-2\">
+
+        <div class=\"m-1\">
+            <button type=\"button\" id=\"slideCreate\"  class=\"check bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-2xl py-2 px-6 inline-flex items-center\">
+                <span class=\"mr-2\">Créer un slide</span>
+                <svg width=\"16\" fill=\"currentcolor\" height=\"16\" viewBox=\"0 0 448 448\"  xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m408 184h-136c-4.417969 0-8-3.582031-8-8v-136c0-22.089844-17.910156-40-40-40s-40 17.910156-40 40v136c0 4.417969-3.582031 8-8 8h-136c-22.089844 0-40 17.910156-40 40s17.910156 40 40 40h136c4.417969 0 8 3.582031 8 8v136c0 22.089844 17.910156 40 40 40s40-17.910156 40-40v-136c0-4.417969 3.582031-8 8-8h136c22.089844 0 40-17.910156 40-40s-17.910156-40-40-40zm0 0\"/></svg>
+            </button>
+        </div>
+
+        <div class=\"m-1 flex flex-wrap \" id=\"slideName\">
+            <div class=\"flex w-5/12\">
+                <input type=\"text\" value=\"0\" id=\"nameOfSlide\"
+                       class=\"bg-white text-sm text-gray-900 text-center focus:outline-none border   rounded-tl-md rounded-bl-md border-gray-800 focus:border-gray-600 hover:border-green-600  w-full\">
+            </div>
+            <div class=\"flex flex-row w-3/12 \">
+                <button id=\"slideNameSend\"
+                        class=\"text-white text-center text-md w-full font-semibold rounded-tr-md rounded-br-md bg-gray-800 hover:border-green-600 hover:bg-green-500 focus:bg-gray-600 focus:outline-none border border-gray-800 focus:border-gray-600 \">
+                    <svg class=\"m-3\" version=\"1.1\" fill=\"currentcolor\" width=\"18\" height=\"18\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"
+                         viewBox=\"0 0 492 492\" style=\"enable-background:new 0 0 492 492;\" xml:space=\"preserve\">
+<g>
+    <g>
+        <path d=\"M484.128,104.478l-16.116-16.116c-5.064-5.068-11.816-7.856-19.024-7.856c-7.208,0-13.964,2.788-19.028,7.856
+\t\t\tL203.508,314.81L62.024,173.322c-5.064-5.06-11.82-7.852-19.028-7.852c-7.204,0-13.956,2.792-19.024,7.852l-16.12,16.112
+\t\t\tC2.784,194.51,0,201.27,0,208.47c0,7.204,2.784,13.96,7.852,19.028l159.744,159.736c0.212,0.3,0.436,0.58,0.696,0.836
+\t\t\tl16.12,15.852c5.064,5.048,11.82,7.572,19.084,7.572h0.084c7.212,0,13.968-2.524,19.024-7.572l16.124-15.992
+\t\t\tc0.26-0.256,0.48-0.468,0.612-0.684l244.784-244.76C494.624,132.01,494.624,114.966,484.128,104.478z\"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+</svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
     {#Display of uploaded images section#}
+    <div id=\"contentSlide\">
     <section class=\"flex flex-wrap w-full m-2 items-center justify-center\" id=\"imagesDisplay\">
         {% for image in imagesUploaded %}
             <div class=\"relative m-2 border-solid border-2 border-gray-800 shadow-2xl rounded\" id=\"{{ image.id }}\">
@@ -484,6 +558,7 @@ class __TwigTemplate_bf75089a4a172ce2165ade81af904e2f4a687943971fb411d148350c329
 
         </div>
     </section>
+    </div>
 
     <script
             src=\"https://code.jquery.com/jquery-3.5.0.js\"

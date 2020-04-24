@@ -1,5 +1,6 @@
 $( document ).ready(function() {
     var listSlide = [];
+    var nameOfSlide = "";
     $("#slideName").hide();
     $("#contentSlide").hide();
 
@@ -108,7 +109,7 @@ $( document ).ready(function() {
 
     $("#save").click(function() {
         console.log(listSlide);
-        $.post("/slide/store", { listSlide }, function (message) {
+        $.post("/slide/store", { listSlide, nameOfSlide }, function (message) {
             console.log(message);
 
         });
@@ -161,7 +162,7 @@ $("#valideTimer").click(function() {
     });
 
     $("#slideNameSend").click(function() {
-
+        nameOfSlide = $("#nameOfSlide").val();
         $("#slideName").hide();
         $("#contentSlide").show();
 
