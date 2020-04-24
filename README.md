@@ -18,16 +18,16 @@ Cette page permet de se connecter à son compte.
 ### Ajouter des images
 Accessible via l'url /upload.
 Cette page permet de mettre en ligne plusieurs images en même temps, d'afficher les images ainsi que de les supprimer.
-![Upload](https://ibb.co/vmPtrfF "Upload")
+https://ibb.co/vmPtrfF
 
 Appuyer sur **Sélectionner des images** pour sélectionner des images:
-![Séléctionner](https://ibb.co/k053Q2p " Sélectionner")
+https://ibb.co/pjt6zXf
 
 Appuyer sur **Envoyer** pour upload les images:
-![Envoyer](https://ibb.co/kGg1GMF "Envoyer")
+https://ibb.co/k053Q2p
 
 Appuyer sur **Supprimer** après avoir sélectionné une ou plusieur image pour les supprimer :
-![Supprimer](https://ibb.co/kGg1GMF "Supprimer")
+https://ibb.co/kGg1GMF
 
 ### Galerie
 Accessible via l'url /gallery.
