@@ -1,6 +1,7 @@
 $( document ).ready(function() {
 
 var slideNumber = 0;
+    $("#timer").hide();
 
     $('#imagesDisplay').bind('click', function(event) {
         if (event.target.parentNode.parentNode.parentNode.id == 'imagesDisplay') {
@@ -64,6 +65,8 @@ var slideNumber = 0;
                 let img = document.createElement("img");   <!-- Element creation -->
                 img.src = url;
                 img.setAttribute('class', 'h-64 object-cover'); <!-- Class define -->
+                console.log(image.parentNode.parentNode.id);
+                img.setAttribute('id',image.parentNode.parentNode.id ); <!-- Class define -->
                 var div = document.getElementById("slide");
                 div.classList.remove("imageContainer");
                 div.innerHTML = "";
@@ -77,7 +80,7 @@ var slideNumber = 0;
     $("#confirm").click(function() {
 
         var slide = document.getElementById("slide");
-        console.log(slideNumber);
+        imageId = slide.children[0].id;
         let div = document.createElement("div");   <!-- Element creation -->
         div.setAttribute('class', 'snap-start w-full h-full flex items-center justify-center flex-shrink-0 shadow-2xl p-2'); <!-- Class define -->
         div.setAttribute('id', 'slide' + slideNumber);
@@ -85,7 +88,6 @@ var slideNumber = 0;
         var slideShow = document.getElementById("slideShow");
         div.innerHTML = slide.innerHTML;
         slideShow.appendChild(div);
-        slide.innerHTML ="";
 
         let a = document.createElement("a");   <!-- Element creation -->
         a.setAttribute('class', 'w-8 mr-1 h-8 text-white rounded-full bg-gray-800 flex justify-center items-center'); <!-- Class define -->
@@ -95,6 +97,12 @@ var slideNumber = 0;
         index.appendChild(a);
 
         slideNumber++;
+
+         data = { "id":imageId, "x" : 40 + "px", "y" : 40 + "px", "z" : 0 + "px", 'timer' : 5, 'kenburnTimer' : 3 };
+        $.post("/slide/store", data, function (message) {
+
+
+        });
 
 
     });
@@ -111,7 +119,15 @@ var slideNumber = 0;
     });
 
     $("#kenburnEffect").click(function() {
-console.log("ok");
+
+        $("#timer").show();
+        document.documentElement.style.setProperty('--timer', $("#inputNbr").val() + "s");
+        $("#slide").addClass('imageContainer');
+
+    });
+
+    $("#slideShow").click(function() {
+
         $("#slide").addClass('imageContainer');
 
     });

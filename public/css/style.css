@@ -13,7 +13,7 @@
 }
 
 .imageContainer img {
-    animation: kenburn var(--timer) infinite;
+    animation: kenburn var(--timer);
 }
 
 @keyframes kenburn {
