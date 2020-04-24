@@ -1,85 +1,117 @@
 $( document ).ready(function() {
-    var listSlide = [];
-    $("#slideName").hide();
-    $("#contentSlide").hide();
 
-    var slideNumber = 0;
-    $("#timer").hide();
 
+    var listSlide = []; // Stock the liste of slide
+    var slideNumber = 0; // Number of image into slide preview
+
+    $("#slideName").hide(); // Hide the input to insert slideName
+    $("#contentSlide").hide(); // Hide the creation slide  fonctionnality as long as a slide is not created
+    $("#timer").hide(); // Hide of ken burn effect time input
+
+
+
+
+/****************   Select image function   **************************/
+/**           Allow to select image to add on slide                  */
+/*********************************************************************/
+
+    // change the style image (border red + check icon) when image is selected
     $('#imagesDisplay').bind('click', function(event) {
+
         if (event.target.parentNode.parentNode.parentNode.id == 'imagesDisplay') {
+
             var image = $(event.target.parentNode.parentNode);
             changeStyle(image);
+
         }else if(event.target.parentNode.parentNode.id == 'imagesDisplay'){
+
             var image = $(event.target.parentNode);
             changeStyle(image);
         }
     });
 
+    // Image must be added one by one, so only one image must be selected,
+    // when an image is selected, all other image must be unchecked
     function uncheckAll() {
-        let checkedBoxes = document.querySelectorAll('input:checked');
+
+        let checkedBoxes = document.querySelectorAll('input:checked'); // Get all image selected
 
         [].forEach.call(checkedBoxes, function (checked) {
+
            parent = checked.parentElement.parentElement;
            parent.className = "relative m-2 border-solid border-2 border-gray-800 shadow-2xl rounded";
            svg = parent.children[0].children[0];
            input = parent.children[0].children[1];
            input.checked = false;
-           svg.style.display = "none";
+           svg.style.display = "none";Po
+
         });
     }
+
+    // Allow to select check an image
     function changeToCheck(p_image) {
 
-        uncheckAll();
+        uncheckAll(); // Uncheck all image before check this image
+
+        // Change the image style to be 'selected'
         p_image.prop('class', 'relative m-2 border-solid border-2 border-green-500 shadow-2xl rounded');
         p_image.children().find("input").prop("checked", true);
         p_image.children().find("svg").show();
     }
 
+    // Allow to deselected an image
     function changeToUncheck(p_image) {
-        console.log(p_image);
         p_image.prop('class', 'relative m-2 border-solid border-2 border-gray-800 shadow-2xl rounded');
         p_image.children().find("input").prop("checked", false);
         p_image.children().find("svg").hide();
     }
 
-
+    // Call changeToUncheck is image is checked and changeToCheck if the image was not selected
     function changeStyle(p_image) {
+
         if (document.getElementById(p_image.children().find("input").attr('id')).checked || document.getElementById(p_image.children().find("input").attr('id')).checked) { <!-- Change layout if the line is checked -->
+
             changeToUncheck(p_image);
+
         } else {
             changeToCheck(p_image);
         }
     };
 
 
+    // Allow to add an image selected to the slide temporarily
+    // Image selected will be moved into slide construction section
     $("#selectImage").click(function() {
 
         // Get all image checked
         let checkedBoxes = document.querySelectorAll('input:checked');
-        [].forEach.call(checkedBoxes, function (image) {
-            console.log("log" + image.parentNode.parentNode.id );
 
+        [].forEach.call(checkedBoxes, function (image) {
+
+            // prepare the request
             data = { "id":image.parentNode.parentNode.id };
 
+            // Use Ajax to add image into slide section
             $.post("add", data, function (message) {
-                console.log(message.imageName);
-                url = '/uploads/' +  message.imageName;
-                let img = document.createElement("img");   <!-- Element creation -->
-                img.src = url;
+
+                // insert the image in section
+                url = '/uploads/' +  message.imageName; // url image storage
+                let img = document.createElement("img");   <!-- Image element creation -->
+                img.src = url; // Add url
                 img.setAttribute('class', 'h-64 object-cover'); <!-- Class define -->
-                console.log(image.parentNode.parentNode.id);
-                img.setAttribute('id',image.parentNode.parentNode.id ); <!-- Class define -->
+                img.setAttribute('id',image.parentNode.parentNode.id ); <!-- Give the Image ID as attribut ID -->
                 var div = document.getElementById("slide");
-                div.classList.remove("imageContainer");
+                div.classList.remove("imageContainer"); // Remove the last ken burn effect
                 div.innerHTML = "";
                 div.appendChild(img);
 
             });
         });
-
     });
 
+    /****************   Save slide function   **************************/
+    /**           Allow to select image to add on slide                  */
+    /*********************************************************************/
     $("#confirm").click(function() {
 
         var slide = document.getElementById("slide");
@@ -156,14 +188,14 @@ $("#valideTimer").click(function() {
 
     $("#slideCreate").click(function() {
 
-        $("#slideName").show();
+        $("#slideName").show('slow');
 
     });
 
     $("#slideNameSend").click(function() {
 
         $("#slideName").hide();
-        $("#contentSlide").show();
+        $("#contentSlide").show('slow');
 
     });
 
