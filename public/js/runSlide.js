@@ -4,6 +4,14 @@ $( document ).ready(function() {
     console.log();
 
     $("#run").click(function() {
-        $("#run").hide();
+        // console.log("ok");
+        // var data = {"start": "ok"};
+        // $.post("/slide/show/start", data, function (data) {
+        //     alert(data);
+        // });
     });
+
+
+
+
 });

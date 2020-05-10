@@ -106,7 +106,8 @@ class SlideCreationController extends AbstractController
     /**
      * @Route("/slide/show/{id}", name="slide_show")
      */
-    public function show($id) {
+    public function show($id, Request $request) {
+
         $entityRepository = $this->getDoctrine()->getRepository(Slide::class);
 
         // Récupération du slide séléctionné
@@ -123,4 +124,21 @@ class SlideCreationController extends AbstractController
             'slide' => $slide, 'slide_uploads' => $slideUpload
         ]);
     }
+
+    /**
+     * @Route("/slide/show/start", name="slide_start")
+     */
+    public function start() {
+
+////        try {
+////            $req = $request->request->get('start');
+//            return $this->json(["test" => 'ok']);
+////        }catch (Exception $e){
+////            return $this->json(["test" => "nop"]);
+////
+////        }
+
+    }
+
+
 }

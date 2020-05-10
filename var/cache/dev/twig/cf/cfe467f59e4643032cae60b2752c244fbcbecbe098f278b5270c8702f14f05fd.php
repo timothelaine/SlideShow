@@ -85,27 +85,27 @@ class __TwigTemplate_936285248850e82ef512d213631e30220af05de798041f91a926cd233cb
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <div class=\"flex content-start flex-wrap bg-gray-200 h-48\">
+        echo "    <div class=\"flex flex-wrap bg-gray-200 mt-6 m-2  \">
         ";
         // line 7
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["slides"]) || array_key_exists("slides", $context) ? $context["slides"] : (function () { throw new RuntimeError('Variable "slides" does not exist.', 7, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["slide"]) {
             // line 8
-            echo "            <div class=\"w-1/3 p-2\">
-                <a href=\"";
+            echo "            <div class=\"flex  sm:w-1/3 w-full p-2 \">
+                    <button  onclick=\"window.location.href='";
             // line 9
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("slide_show", ["id" => twig_get_attribute($this->env, $this->source, $context["slide"], "id", [], "any", false, false, false, 9)]), "html", null, true);
-            echo "\">
-                    <img class=\"h-32 object-cover\"  src=\"/uploads/";
+            echo "'\" type=\"button\" id=\"selectImage\"  class=\"w-full text-xl bg-white text-lg  tracking-widest text-gray-900 rounded border-b-2 border-gray-900 hover:border-gray-900 hover:bg-gray-700 hover:text-white shadow-2xl py-2 px-6 \">
+                        <span class=\"mr-2\">";
             // line 10
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["slide"], "upload", [], "any", false, false, false, 10), "name", [], "any", false, false, false, 10), "html", null, true);
-            echo "\">
-                    <div class=\"text-gray-700 text-center bg-gray-400 p-2\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["slide"], "name", [], "any", false, false, false, 10), "html", null, true);
+            echo "</span>
+                        <a href=\"";
             // line 11
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["slide"], "name", [], "any", false, false, false, 11), "html", null, true);
-            echo "</div>
-                </a>
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("slide_show", ["id" => twig_get_attribute($this->env, $this->source, $context["slide"], "id", [], "any", false, false, false, 11)]), "html", null, true);
+            echo "\"></a>
+                    </button>
             </div>
         ";
         }
@@ -145,13 +145,13 @@ class __TwigTemplate_936285248850e82ef512d213631e30220af05de798041f91a926cd233cb
 {% block title %}Slides{% endblock %}
 
 {% block body %}
-    <div class=\"flex content-start flex-wrap bg-gray-200 h-48\">
+    <div class=\"flex flex-wrap bg-gray-200 mt-6 m-2  \">
         {% for slide in slides %}
-            <div class=\"w-1/3 p-2\">
-                <a href=\"{{ path('slide_show', { 'id': slide.id }) }}\">
-                    <img class=\"h-32 object-cover\"  src=\"/uploads/{{ slide.upload.name }}\">
-                    <div class=\"text-gray-700 text-center bg-gray-400 p-2\">{{ slide.name }}</div>
-                </a>
+            <div class=\"flex  sm:w-1/3 w-full p-2 \">
+                    <button  onclick=\"window.location.href='{{ path('slide_show', { 'id': slide.id }) }}'\" type=\"button\" id=\"selectImage\"  class=\"w-full text-xl bg-white text-lg  tracking-widest text-gray-900 rounded border-b-2 border-gray-900 hover:border-gray-900 hover:bg-gray-700 hover:text-white shadow-2xl py-2 px-6 \">
+                        <span class=\"mr-2\">{{ slide.name }}</span>
+                        <a href=\"{{ path('slide_show', { 'id': slide.id }) }}\"></a>
+                    </button>
             </div>
         {% endfor %}
     </div>

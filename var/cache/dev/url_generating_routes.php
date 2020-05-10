@@ -23,6 +23,7 @@ return [
     'slide_store' => [[], ['_controller' => 'App\\Controller\\SlideCreationController::store'], [], [['text', '/slide/store']], [], []],
     'slide_list' => [[], ['_controller' => 'App\\Controller\\SlideCreationController::list'], [], [['text', '/slide']], [], []],
     'slide_show' => [['id'], ['_controller' => 'App\\Controller\\SlideCreationController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/slide/show']], [], []],
+    'slide_start' => [[], ['_controller' => 'App\\Controller\\SlideCreationController::start'], [], [['text', '/slide/show/start']], [], []],
     'upload' => [[], ['_controller' => 'App\\Controller\\UploadController::index'], [], [['text', '/upload']], [], []],
     'deleteimage' => [[], ['_controller' => 'App\\Controller\\UploadController::deleteImage'], [], [['text', '/deleteimage']], [], []],
     'logout' => [[], [], [], [['text', '/logout']], [], []],

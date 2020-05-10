@@ -88,12 +88,21 @@ class __TwigTemplate_3480e4292a05eac998d0c822288086b33f41c9d1d73ad92a54e1e15b1f2
         echo "    ";
         if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 6, $this->source); })())) {
             // line 7
-            echo "        ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 7, $this->source); })()), "messageKey", [], "any", false, false, false, 7), "html", null, true);
-            echo "
+            echo "        <div class=\"m-3\">
+            <div class=\"bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative\" role=\"alert\">
+                <strong class=\"font-bold\">Erreur !</strong>
+                <span class=\"block sm:inline\">";
+            // line 10
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 10, $this->source); })()), "messageKey", [], "any", false, false, false, 10), "html", null, true);
+            echo "</span>
+                <span class=\"absolute top-0 bottom-0 right-0 px-4 py-3\">
+                        <svg class=\"fill-current h-6 w-6 text-red-500\" role=\"button\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><title>Close</title><path d=\"M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z\"/></svg>
+                    </span>
+            </div>
+        </div>
     ";
         }
-        // line 9
+        // line 17
         echo "
     <script src=\"https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js\" defer></script>
 
@@ -108,15 +117,15 @@ class __TwigTemplate_3480e4292a05eac998d0c822288086b33f41c9d1d73ad92a54e1e15b1f2
                             </div>
 
                             <form class=\"mt-8\" method=\"post\" action=\"";
-        // line 22
+        // line 30
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
         echo "\">
                                 <div class=\"mx-auto max-w-lg\">
                                     <div class=\"py-2\">
                                         <label class=\"px-1 text-sm text-gray-600\" for=\"username\">Email</label>
                                         <input id=\"email\" name=\"_username\" type=\"email\" type=\"text\" value=\"";
-        // line 26
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 26, $this->source); })()), "html", null, true);
+        // line 34
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 34, $this->source); })()), "html", null, true);
         echo "\" class=\"text-md block px-3 py-2  rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none\">
                                     </div>
                                     <div class=\"py-2\" x-data=\"{ show: true }\">
@@ -165,7 +174,7 @@ class __TwigTemplate_3480e4292a05eac998d0c822288086b33f41c9d1d73ad92a54e1e15b1f2
 
     public function getDebugInfo()
     {
-        return array (  119 => 26,  112 => 22,  97 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  128 => 34,  121 => 30,  106 => 17,  96 => 10,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -176,7 +185,15 @@ class __TwigTemplate_3480e4292a05eac998d0c822288086b33f41c9d1d73ad92a54e1e15b1f2
 
 {% block body %}
     {% if error %}
-        {{ error.messageKey }}
+        <div class=\"m-3\">
+            <div class=\"bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative\" role=\"alert\">
+                <strong class=\"font-bold\">Erreur !</strong>
+                <span class=\"block sm:inline\">{{ error.messageKey }}</span>
+                <span class=\"absolute top-0 bottom-0 right-0 px-4 py-3\">
+                        <svg class=\"fill-current h-6 w-6 text-red-500\" role=\"button\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><title>Close</title><path d=\"M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z\"/></svg>
+                    </span>
+            </div>
+        </div>
     {% endif %}
 
     <script src=\"https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js\" defer></script>

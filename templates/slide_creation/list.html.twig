@@ -3,13 +3,13 @@
 {% block title %}Slides{% endblock %}
 
 {% block body %}
-    <div class="flex content-start flex-wrap bg-gray-200 h-48">
+    <div class="flex flex-wrap bg-gray-200 mt-6 m-2  ">
         {% for slide in slides %}
-            <div class="w-1/3 p-2">
-                <a href="{{ path('slide_show', { 'id': slide.id }) }}">
-                    <img class="h-32 object-cover"  src="/uploads/{{ slide.upload.name }}">
-                    <div class="text-gray-700 text-center bg-gray-400 p-2">{{ slide.name }}</div>
-                </a>
+            <div class="flex  sm:w-1/3 w-full p-2 ">
+                    <button  onclick="window.location.href='{{ path('slide_show', { 'id': slide.id }) }}'" type="button" id="selectImage"  class="w-full text-xl bg-white text-lg  tracking-widest text-gray-900 rounded border-b-2 border-gray-900 hover:border-gray-900 hover:bg-gray-700 hover:text-white shadow-2xl py-2 px-6 ">
+                        <span class="mr-2">{{ slide.name }}</span>
+                        <a href="{{ path('slide_show', { 'id': slide.id }) }}"></a>
+                    </button>
             </div>
         {% endfor %}
     </div>
