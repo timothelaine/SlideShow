@@ -7,9 +7,12 @@ use App\Entity\SlideUpload;
 use App\Entity\Upload;
 use App\Repository\UploadRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 class SlideCreationController extends AbstractController
 {
@@ -117,7 +120,7 @@ class SlideCreationController extends AbstractController
         //dd($slideUpload);
 
         return $this->render('slide_creation/show.html.twig', [
-            'slide_uploads' => $slideUpload
+            'slide' => $slide, 'slide_uploads' => $slideUpload
         ]);
     }
 }
