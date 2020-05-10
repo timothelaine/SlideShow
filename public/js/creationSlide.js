@@ -99,7 +99,7 @@ $( document ).ready(function() {
                 url = '/uploads/' +  message.imageName; // url image storage
                 let img = document.createElement("img");   <!-- Image element creation -->
                 img.src = url; // Add url
-                img.setAttribute('class', 'h-64 object-cover'); <!-- Class define -->
+                img.setAttribute('class', 'h-64 object-cover border-solid border-2 border-black shadow-2xl'); <!-- Class define -->
                 img.setAttribute('id',image.parentNode.parentNode.id ); <!-- Give the Image ID as attribut ID -->
                 var div = document.getElementById("slide");
                 div.classList.remove("imageContainer"); // Remove the last ken burn effect
@@ -118,7 +118,7 @@ $( document ).ready(function() {
         var slide = document.getElementById("slide");
         imageId = slide.children[0].id;
         let div = document.createElement("div");   <!-- Element creation -->
-        div.setAttribute('class', 'snap-start w-full h-full flex items-center justify-center flex-shrink-0 shadow-2xl p-2'); <!-- Class define -->
+        div.setAttribute('class', 'snap-start w-full h-full flex items-center justify-center flex-shrink-0'); <!-- Class define -->
         div.setAttribute('id', 'slide' + slideNumber);
 
         var slideShow = document.getElementById("slideShow");
@@ -126,9 +126,9 @@ $( document ).ready(function() {
         slideShow.appendChild(div);
 
         let a = document.createElement("a");   <!-- Element creation -->
-        a.setAttribute('class', 'w-8 mr-1 h-8 text-white rounded-full bg-gray-800 flex justify-center items-center'); <!-- Class define -->
+        a.setAttribute('class', 'w-8 mr-1 h-8 text-gray-900 border-solid border-2 rounded-full border-gray-900 hover:border-gray-900 hover:bg-gray-800 hover:text-white flex justify-center items-center'); <!-- Class define -->
         a.setAttribute('href', '#' + 'slide' + slideNumber); <!-- Class define -->
-        a.innerHTML = slideNumber;
+        a.innerHTML = slideNumber + 1;
         var index = document.getElementById("index");
         index.appendChild(a);
 
