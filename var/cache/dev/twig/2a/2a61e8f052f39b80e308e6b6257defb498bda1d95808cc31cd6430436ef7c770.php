@@ -86,7 +86,7 @@ class __TwigTemplate_f3d4d67fa9af15e43798688fd3556771a53652a2c56fb92382d56775bd3
 
         // line 6
         echo "    <div class=\"flex flex justify-center\">
-     <p class=\" text-center text-lg font-semibold tracking-widest text-gray-900  dark-mode:text-white focus:outline-none focus:shadow-outline border-b-2 border-gray-800 p-2 m-2\">";
+     <p class=\" text-center text-4xl font-hairline tracking-widest text-gray-900  dark-mode:text-white focus:outline-none focus:shadow-outline border-b-2 border-gray-800 p-2 m-2\">";
         // line 7
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["slide"]) || array_key_exists("slide", $context) ? $context["slide"] : (function () { throw new RuntimeError('Variable "slide" does not exist.', 7, $this->source); })()), "name", [], "any", false, false, false, 7), "html", null, true);
         echo "</p>
@@ -166,7 +166,7 @@ class __TwigTemplate_f3d4d67fa9af15e43798688fd3556771a53652a2c56fb92382d56775bd3
             // line 46
             echo "                    <a href=\"#";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 46), "html", null, true);
-            echo "\" class=\"w-8 mr-1 h-8 text-gray-900 border-solid border-2 rounded-full border-gray-900 hover:border-gray-900 hover:bg-gray-800 hover:text-white flex justify-center items-center\">";
+            echo "\" class=\"w-8 mr-1 h-8 text-gray-900 border-solid border-2 rounded-full bg-white border-gray-900 hover:border-gray-900 hover:bg-gray-800 hover:text-white flex justify-center items-center\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 46), "html", null, true);
             echo "</a>
                 ";
@@ -187,17 +187,6 @@ class __TwigTemplate_f3d4d67fa9af15e43798688fd3556771a53652a2c56fb92382d56775bd3
 
     </section>
 
-";
-        // line 57
-        echo "
-";
-        // line 59
-        echo "
-
-
-";
-        // line 63
-        echo "
     <script src=\"https://code.jquery.com/jquery-3.5.0.js\" integrity=\"sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=\" crossorigin=\"anonymous\"></script>
     <script src=\"/js/runSlide.js\"></script>
 ";
@@ -221,7 +210,7 @@ class __TwigTemplate_f3d4d67fa9af15e43798688fd3556771a53652a2c56fb92382d56775bd3
 
     public function getDebugInfo()
     {
-        return array (  200 => 63,  195 => 59,  192 => 57,  186 => 48,  167 => 46,  150 => 45,  146 => 43,  129 => 40,  124 => 39,  107 => 38,  102 => 35,  99 => 32,  96 => 23,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  186 => 48,  167 => 46,  150 => 45,  146 => 43,  129 => 40,  124 => 39,  107 => 38,  102 => 35,  99 => 32,  96 => 23,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -232,7 +221,7 @@ class __TwigTemplate_f3d4d67fa9af15e43798688fd3556771a53652a2c56fb92382d56775bd3
 
 {% block body %}
     <div class=\"flex flex justify-center\">
-     <p class=\" text-center text-lg font-semibold tracking-widest text-gray-900  dark-mode:text-white focus:outline-none focus:shadow-outline border-b-2 border-gray-800 p-2 m-2\">{{ slide.name }}</p>
+     <p class=\" text-center text-4xl font-hairline tracking-widest text-gray-900  dark-mode:text-white focus:outline-none focus:shadow-outline border-b-2 border-gray-800 p-2 m-2\">{{ slide.name }}</p>
     </div>
 {#    <section class=\"flex items-center justify-center\">#}
 {#        <div class=\"flex m-2 p-3 w-2/4 shadow-2xl items-center justify-center\">#}
@@ -271,23 +260,11 @@ class __TwigTemplate_f3d4d67fa9af15e43798688fd3556771a53652a2c56fb92382d56775bd3
         </div>
             <div id=\"index\" class=\"flex p-1\">
                 {% for slide_upload in slide_uploads %}
-                    <a href=\"#{{ loop.index }}\" class=\"w-8 mr-1 h-8 text-gray-900 border-solid border-2 rounded-full border-gray-900 hover:border-gray-900 hover:bg-gray-800 hover:text-white flex justify-center items-center\">{{ loop.index }}</a>
+                    <a href=\"#{{ loop.index }}\" class=\"w-8 mr-1 h-8 text-gray-900 border-solid border-2 rounded-full bg-white border-gray-900 hover:border-gray-900 hover:bg-gray-800 hover:text-white flex justify-center items-center\">{{ loop.index }}</a>
                 {% endfor %}
             </div>
 
     </section>
-
-{#<section class=\"flex flex-wrap w-full m-2 items-center justify-center\">#}
-{#    <div class=\"relative m-2 border-solid border-2 border-gray-800 shadow-2xl rounded\" >#}
-{#        <img id=\"imgSlide\" class=\"h-64 object-cover\"  src=\"\">#}
-{#    </div>#}
-{#</section>#}
-
-{#    {% for slide_upload in slide_uploads %}#}
-
-
-
-{#    {% endfor %}#}
 
     <script src=\"https://code.jquery.com/jquery-3.5.0.js\" integrity=\"sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=\" crossorigin=\"anonymous\"></script>
     <script src=\"/js/runSlide.js\"></script>

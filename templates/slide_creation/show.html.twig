@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="flex flex justify-center">
-     <p class=" text-center text-lg font-semibold tracking-widest text-gray-900  dark-mode:text-white focus:outline-none focus:shadow-outline border-b-2 border-gray-800 p-2 m-2">{{ slide.name }}</p>
+     <p class=" text-center text-4xl font-hairline tracking-widest text-gray-900  dark-mode:text-white focus:outline-none focus:shadow-outline border-b-2 border-gray-800 p-2 m-2">{{ slide.name }}</p>
     </div>
 {#    <section class="flex items-center justify-center">#}
 {#        <div class="flex m-2 p-3 w-2/4 shadow-2xl items-center justify-center">#}
@@ -43,7 +43,7 @@
         </div>
             <div id="index" class="flex p-1">
                 {% for slide_upload in slide_uploads %}
-                    <a href="#{{ loop.index }}" class="w-8 mr-1 h-8 text-gray-900 border-solid border-2 rounded-full border-gray-900 hover:border-gray-900 hover:bg-gray-800 hover:text-white flex justify-center items-center">{{ loop.index }}</a>
+                    <a href="#{{ loop.index }}" class="w-8 mr-1 h-8 text-gray-900 border-solid border-2 rounded-full bg-white border-gray-900 hover:border-gray-900 hover:bg-gray-800 hover:text-white flex justify-center items-center">{{ loop.index }}</a>
                 {% endfor %}
             </div>
 
