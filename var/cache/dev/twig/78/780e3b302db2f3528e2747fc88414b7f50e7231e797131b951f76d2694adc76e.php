@@ -88,25 +88,27 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
         echo "    ";
         // line 7
         echo "    <section class=\"m-2\">
-        ";
-        // line 8
-        if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 8, $this->source); })()), "type", [], "any", false, false, false, 8), "ok") || 0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 8, $this->source); })()), "type", [], "any", false, false, false, 8), "ko"))) {
-            // line 9
+";
+        // line 9
+        echo "        ";
+        if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 9, $this->source); })()), "type", [], "any", false, false, false, 9), "ok") || 0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 9, $this->source); })()), "type", [], "any", false, false, false, 9), "ko"))) {
+            // line 10
             echo "            <div class=\"flex\" id=\"message\">
                 <div class=\"m-auto\" >
                     <div class=\"bg-white rounded-lg border-gray-300 border p-3 shadow-lg\">
                         <div class=\"flex flex-row\">
                             <div class=\"px-2\">
-                                ";
-            // line 14
-            if (0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 14, $this->source); })()), "type", [], "any", false, false, false, 14), "ok")) {
-                // line 15
+";
+            // line 16
+            echo "                                ";
+            if (0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 16, $this->source); })()), "type", [], "any", false, false, false, 16), "ok")) {
+                // line 17
                 echo "                                <svg  width=\"24\" height=\"24\" viewBox=\"0 0 1792 1792\" fill=\"#44C997\" xmlns=\"http://www.w3.org/2000/svg\">
                                     <path d=\"M1299 813l-422 422q-19 19-45 19t-45-19l-294-294q-19-19-19-45t19-45l102-102q19-19 45-19t45 19l147 147 275-275q19-19 45-19t45 19l102 102q19 19 19 45t-19 45zm141 83q0-148-73-273t-198-198-273-73-273 73-198 198-73 273 73 273 198 198 273 73 273-73 198-198 73-273zm224 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z\"/>
                                 </svg>
                                 ";
             } else {
-                // line 19
+                // line 21
                 echo "                                <svg  width=\"24\" height=\"24\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"
                                      viewBox=\"0 0 455.111 455.111\" style=\"enable-background:new 0 0 455.111 455.111;\" xml:space=\"preserve\">
                                     <circle style=\"fill:#E24C4B;\" cx=\"227.556\" cy=\"227.556\" r=\"227.556\"/>
@@ -121,16 +123,16 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
                                     </svg>
                                 ";
             }
-            // line 32
+            // line 34
             echo "                            </div>
                             <div class=\"ml-2 mr-6\">
                                 <span class=\"font-semibold\">";
-            // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 34, $this->source); })()), "title", [], "any", false, false, false, 34), "html", null, true);
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 36, $this->source); })()), "title", [], "any", false, false, false, 36), "html", null, true);
             echo "</span>
                                 <span class=\"block text-gray-500\">";
-            // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 35, $this->source); })()), "content", [], "any", false, false, false, 35), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 37, $this->source); })()), "content", [], "any", false, false, false, 37), "html", null, true);
             echo "</span>
                             </div>
                         </div>
@@ -139,7 +141,7 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
             </div>
         ";
         }
-        // line 42
+        // line 44
         echo "
         <div class=\"flex\" id=\"deleteMessage\">
             <div class=\"m-auto\" id=\"deleteMessage\">
@@ -172,30 +174,30 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
     </section>
 
     ";
-        // line 74
+        // line 76
         echo "    <section class=\"flex w-full  p-2\">
         <div class=\"flex flex-wrap w-full items-center justify-center\">
             <div class=\"flex items-center justify-center m-2\">
                 ";
-        // line 78
+        // line 80
         echo "                ";
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 78, $this->source); })()), 'form_start');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 80, $this->source); })()), 'form_start');
         echo "
                 <div class=\"flex w-full items-center justify-center\">
                     <label class=\"w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-black hover:text-white\">
                         <svg class=\"w-8 h-8\" fill=\"currentColor\" viewBox=\"0 0 488.455 488.455\" width=\"512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m287.396 216.317c23.845 23.845 23.845 62.505 0 86.35s-62.505 23.845-86.35 0-23.845-62.505 0-86.35 62.505-23.845 86.35 0\"/><path d=\"m427.397 91.581h-42.187l-30.544-61.059h-220.906l-30.515 61.089-42.127.075c-33.585.06-60.925 27.429-60.954 61.029l-.164 244.145c0 33.675 27.384 61.074 61.059 61.074h366.338c33.675 0 61.059-27.384 61.059-61.059v-244.236c-.001-33.674-27.385-61.058-61.059-61.058zm-183.177 290.029c-67.335 0-122.118-54.783-122.118-122.118s54.783-122.118 122.118-122.118 122.118 54.783 122.118 122.118-54.783 122.118-122.118 122.118z\"/></svg>
                         <span class=\"mt-2 text-base leading-normal font-mono\">Sélectionner des images</span>
                         ";
-        // line 84
+        // line 86
         echo "                        ";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 84, $this->source); })()), "name", [], "any", false, false, false, 84), 'widget', ["attr" => ["class" => "hidden"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 86, $this->source); })()), "name", [], "any", false, false, false, 86), 'widget', ["attr" => ["class" => "hidden"]]);
         echo "
                     </label>
                 </div>
              </div>
 
             ";
-        // line 90
+        // line 92
         echo "            <div class=\"flex items-center justify-center m-2\">
                 <div class=\"flex w-full items-center justify-center bg-grey-lighter\">
                     <label class=\"w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-black hover:text-white\">
@@ -204,21 +206,21 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
                         </svg>
                         <span class=\"mt-2 text-base leading-normal font-mono\">Envoyer</span>
                         ";
-        // line 98
+        // line 100
         echo "                        ";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 98, $this->source); })()), "submit", [], "any", false, false, false, 98), 'widget', ["attr" => ["class" => "hidden"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 100, $this->source); })()), "submit", [], "any", false, false, false, 100), 'widget', ["attr" => ["class" => "hidden"]]);
         echo "
                     </label>
                 </div>
             </div>
             ";
-        // line 103
+        // line 105
         echo "            ";
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 103, $this->source); })()), 'form_end');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 105, $this->source); })()), 'form_end');
         echo "
 
             ";
-        // line 106
+        // line 108
         echo "            <div class=\"flex items-center justify-center m-2\" id=\"btnDelete\">
                 <div class=\"flex w-full items-center justify-center bg-grey-lighter\">
                     <label class=\"w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-black hover:text-white\">
@@ -231,34 +233,34 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
     </section>
 
     ";
-        // line 118
+        // line 120
         echo "    <section class=\"flex flex-wrap w-full m-2 items-center justify-center\" id=\"imagesDisplay\">
         ";
-        // line 119
+        // line 121
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["imagesUploaded"]) || array_key_exists("imagesUploaded", $context) ? $context["imagesUploaded"] : (function () { throw new RuntimeError('Variable "imagesUploaded" does not exist.', 119, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["imagesUploaded"]) || array_key_exists("imagesUploaded", $context) ? $context["imagesUploaded"] : (function () { throw new RuntimeError('Variable "imagesUploaded" does not exist.', 121, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
-            // line 120
+            // line 122
             echo "            <div class=\"relative m-2 border-solid border-2 border-gray-800 shadow-2xl rounded\" id=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 120), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 122), "html", null, true);
             echo "\">
                 <div class=\"absolute top-0 right-0\">
                     <svg id=\"selected";
-            // line 122
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 122), "html", null, true);
+            // line 124
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 124), "html", null, true);
             echo "\" version=\"1.1\"  xmlns=\"http://www.w3.org/2000/svg\" class=\"w-4 h-4 hidden m-2\" viewBox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xml:space=\"preserve\">
                         <ellipse style=\"fill:#b22222;\" cx=\"256\" cy=\"256\" rx=\"256\" ry=\"255.832\"/>
                         <polygon style=\"fill:#FFFFFF;\" points=\"235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
                         391.88,166.392 \"/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                     </svg>
                     <input type=\"checkbox\" name=\"checkImage\" id=\"check";
-            // line 127
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 127), "html", null, true);
+            // line 129
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "id", [], "any", false, false, false, 129), "html", null, true);
             echo "\" class=\"opacity-0\" autocomplete=\"off\">
                 </div>
                 <img class=\"h-32 object-cover\"  src=\"/uploads/";
-            // line 129
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "name", [], "any", false, false, false, 129), "html", null, true);
+            // line 131
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "name", [], "any", false, false, false, 131), "html", null, true);
             echo "\">
             </div>
         ";
@@ -266,7 +268,7 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 132
+        // line 134
         echo "    </section>
 
 
@@ -293,7 +295,7 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
 
     public function getDebugInfo()
     {
-        return array (  270 => 132,  261 => 129,  256 => 127,  248 => 122,  242 => 120,  238 => 119,  235 => 118,  222 => 106,  216 => 103,  208 => 98,  199 => 90,  190 => 84,  181 => 78,  176 => 74,  143 => 42,  133 => 35,  129 => 34,  125 => 32,  110 => 19,  104 => 15,  102 => 14,  95 => 9,  93 => 8,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  272 => 134,  263 => 131,  258 => 129,  250 => 124,  244 => 122,  240 => 121,  237 => 120,  224 => 108,  218 => 105,  210 => 100,  201 => 92,  192 => 86,  183 => 80,  178 => 76,  145 => 44,  135 => 37,  131 => 36,  127 => 34,  112 => 21,  106 => 17,  103 => 16,  96 => 10,  93 => 9,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -305,12 +307,14 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
 {% block body %}
     {# Message section #}
     <section class=\"m-2\">
+{#        Display is it only after upload refresh#}
         {% if message.type == 'ok'or message.type == 'ko' %}
             <div class=\"flex\" id=\"message\">
                 <div class=\"m-auto\" >
                     <div class=\"bg-white rounded-lg border-gray-300 border p-3 shadow-lg\">
                         <div class=\"flex flex-row\">
                             <div class=\"px-2\">
+{#                                if it's a sucess message#}
                                 {% if message.type == 'ok' %}
                                 <svg  width=\"24\" height=\"24\" viewBox=\"0 0 1792 1792\" fill=\"#44C997\" xmlns=\"http://www.w3.org/2000/svg\">
                                     <path d=\"M1299 813l-422 422q-19 19-45 19t-45-19l-294-294q-19-19-19-45t19-45l102-102q19-19 45-19t45 19l147 147 275-275q19-19 45-19t45 19l102 102q19 19 19 45t-19 45zm141 83q0-148-73-273t-198-198-273-73-273 73-198 198-73 273 73 273 198 198 273 73 273-73 198-198 73-273zm224 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z\"/>
@@ -435,6 +439,6 @@ class __TwigTemplate_0d0221780a4b226e9b8294589018c93e9e063e41afe6049ca8e66a5c7d3
     <script src=\"https://code.jquery.com/jquery-3.5.0.js\" integrity=\"sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=\" crossorigin=\"anonymous\"></script>
     <script src=\"/js/upload.js\"></script>
 {% endblock %}
-", "upload/index.html.twig", "/home/pierre/Documents/SlideShow/templates/upload/index.html.twig");
+", "upload/index.html.twig", "/home/pierre/Documents/applications/SlideShow/templates/upload/index.html.twig");
     }
 }
