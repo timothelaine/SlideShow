@@ -8,7 +8,7 @@ $( document ).ready(function() {
     $("#contentSlide").hide(); // Hide the creation slide  fonctionnality as long as a slide is not created
     $("#timer").hide(); // Hide of ken burn effect time input
     $("#messageSlide").hide(); // Hide of success message
-
+    $("#errorSlide").hide();
 
 
 
@@ -148,7 +148,25 @@ $( document ).ready(function() {
     // Save the slide data in DB
     $("#save").click(function() {
         $.post("/slide/store", { listSlide, nameOfSlide }, function (message) {
-            $("#messageSlide").show('slow');
+            $("#errorSlideDisplay").innerHTML = "";
+            $("#errorSlide").hide();
+
+            if(message.result === "error") {
+                message.errors.forEach(element => {
+                    let error = element;
+                    let msgError = document.createTextNode(error);
+                    let br = document.createElement("br");
+                    $("#errorSlideDisplay").append(msgError);
+                    $("#errorSlideDisplay").append(br);
+                });
+
+                $("#errorSlide").show('slow');
+            }
+
+            else {
+                $("#messageSlide").show('slow');
+            }
+
             setTimeout(hideMessage, 5000);
         });
     });
