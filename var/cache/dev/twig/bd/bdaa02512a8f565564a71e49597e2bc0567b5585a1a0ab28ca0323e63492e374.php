@@ -60,7 +60,7 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
         // line 9
         echo "    </head>
     <body style=\"background: #edf2f7;\">
-        <div class=\"antialiased bg-gray-100 dark-mode:bg-gray-900\">
+        <div class=\"antialiased bg-gray-100 dark-mode:bg-gray-900\" id=\"header\">
             <div class=\"w-full text-gray-900 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800\">
                 <div x-data=\"{ open: true }\" class=\"flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8\">
                     <div class=\"flex flex-row items-center justify-between p-4\">
@@ -268,7 +268,7 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
         {% block stylesheets %}{% endblock %}
     </head>
     <body style=\"background: #edf2f7;\">
-        <div class=\"antialiased bg-gray-100 dark-mode:bg-gray-900\">
+        <div class=\"antialiased bg-gray-100 dark-mode:bg-gray-900\" id=\"header\">
             <div class=\"w-full text-gray-900 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800\">
                 <div x-data=\"{ open: true }\" class=\"flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8\">
                     <div class=\"flex flex-row items-center justify-between p-4\">
@@ -318,6 +318,6 @@ class __TwigTemplate_fb9053a4801ffb36e88819e266f69c4bf95c9f2f18eec19f912b0386d90
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/home/pierre/Documents/SlideShow/templates/base.html.twig");
+", "base.html.twig", "/home/pierre/Documents/applications/SlideShow/templates/base.html.twig");
     }
 }

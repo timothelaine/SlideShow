@@ -283,6 +283,6 @@ class __TwigTemplate_570b2d7855636eec5e8c21dc29c1487ad0fed3634e42b050c2e2e027da3
     {%- set label = label|trans|default(label) -%}
     {{- block('form_label') -}}
 {%- endblock -%}
-", "@VichUploader/Form/fields.html.twig", "/home/pierre/Documents/SlideShow/vendor/vich/uploader-bundle/templates/Form/fields.html.twig");
+", "@VichUploader/Form/fields.html.twig", "/home/pierre/Documents/applications/SlideShow/vendor/vich/uploader-bundle/templates/Form/fields.html.twig");
     }
 }

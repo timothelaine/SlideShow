@@ -1843,6 +1843,6 @@ class __TwigTemplate_3c931a9a4c1cca3445597426c12f109f31a20007c41f3dc88c475c45343
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/home/pierre/Documents/SlideShow/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/home/pierre/Documents/applications/SlideShow/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }

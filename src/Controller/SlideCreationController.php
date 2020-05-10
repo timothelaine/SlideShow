@@ -48,11 +48,27 @@ class SlideCreationController extends AbstractController
     public function store(Request $request) {
         $entityManager = $this->getDoctrine()->getManager();
 
+        $errors = [];
+
         // Récupération du nom du slide
         $nameSlide = $request->get('nameOfSlide');
 
+        // Vérification de la longueur du nom
+        if(strlen($nameSlide) < 2 || strlen($nameSlide) > 20) {
+            array_push($errors, "Le nom du slide doit avoir une longueur comprise entre 2 et 20 caractères.");
+        }
+
         // Récupération des informations des images du slide
         $content = $request->get('listSlide');
+
+        // Vérification du nombre d'image
+        if(sizeof($content) < 2) {
+            array_push($errors, "Le slide doit comprendre 2 images au minimum.");
+        }
+
+        if(!empty($errors)) {
+            return $this->json(['result' => 'error', 'errors' => $errors]);
+        }
 
         // Création du slide
         $slide = new Slide();
